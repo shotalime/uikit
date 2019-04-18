@@ -1,0 +1,1 @@
+{"version":3,"sources":["saas\\base.sass","saas\\variables.sass"],"names":[],"mappings":"AAAA;EACE;EACA,OCDW","file":"style.cb3fd2d1.css","sourceRoot":"..\\src","sourcesContent":["body\r\n  font-family: 'Quicksand', sans-serif\r\n  color: $color-font","//colors\r\n$color-dark: #1F2041\r\n$color-purple: #BC9CFF\r\n$color-green: #6FCF97\r\n$color-font: $color-dark"]}
