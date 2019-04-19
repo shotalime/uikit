@@ -1,0 +1,13 @@
+@function tint($color, $percentage) 
+  @return mix(white, $color, $percentage)
+
+@function shade($color, $percentage) 
+  @return mix(black, $color, $percentage)
+
+$color-1: #1F2041
+$color-2: tint($color-1, 25)
+$color-3: tint($color-1, 50)
+$color-4: tint($color-1, 75)
+$color-5: tint($color-1, 95)
+$color-6: #BC9CFF
+$color-7: #6FCF97

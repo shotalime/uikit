@@ -1,0 +1,40 @@
+.rectangle {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  background-color: red;
+}
+
+.rectangle:first-child {
+  background-color: #1F2041;
+}
+
+.rectangle:nth-child(2) {
+  background-color: #575871;
+}
+
+.rectangle:nth-child(3) {
+  background-color: #8f90a0;
+}
+
+.rectangle:nth-child(4) {
+  background-color: #c7c7d0;
+}
+
+.rectangle:nth-child(5) {
+  background-color: #f4f4f6;
+}
+
+.rectangle:nth-child(6) {
+  background-color: #BC9CFF;
+}
+
+.rectangle:nth-child(7) {
+  background-color: #6FCF97;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+/*# sourceMappingURL=/style.a08d0c2a.css.map */
