@@ -1,40 +1,167 @@
-.rectangle {
-  width: 70px;
-  height: 70px;
-  border-radius: 6px;
-  background-color: red;
+h1 {
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: normal;
+  color: #1F2041;
 }
 
-.rectangle:first-child {
-  background-color: #1F2041;
+h2 {
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: normal;
+  color: #1F2041;
 }
 
-.rectangle:nth-child(2) {
-  background-color: #575871;
-}
-
-.rectangle:nth-child(3) {
-  background-color: #8f90a0;
-}
-
-.rectangle:nth-child(4) {
-  background-color: #c7c7d0;
-}
-
-.rectangle:nth-child(5) {
-  background-color: #f4f4f6;
-}
-
-.rectangle:nth-child(6) {
-  background-color: #BC9CFF;
-}
-
-.rectangle:nth-child(7) {
-  background-color: #6FCF97;
+h3 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: normal;
+  text-transform: uppercase;
+  color: #575871;
 }
 
 body {
-  font-family: "Quicksand", sans-serif;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: #575871;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.logo {
+  position: absolute;
+  top: 3%;
+  left: 2%;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.rectangles {
+  margin-top: 7.95%;
+  margin-left: 10%;
+}
+
+.colorDescription {
+  width: 300px;
+  margin-bottom: 29px;
+}
+
+.rectangle {
+  width: 70px;
+  height: 70px;
+  margin-right: 40px;
+  border-radius: 6px;
+  float: left;
+}
+
+.rectangle_color-name {
+  margin: 0;
+  padding: 7px 0 0 0;
+}
+
+.rectangle_color-code {
+  padding: 3px 0 0 0;
+  margin-top: 4px;
+  font-weight: normal;
+}
+
+.colorDescription:nth-child(1) .rectangle {
+  background-color: #1F2041;
+}
+
+.colorDescription:nth-child(2) .rectangle {
+  background-color: #575871;
+}
+
+.colorDescription:nth-child(3) .rectangle {
+  background-color: #8f90a0;
+}
+
+.colorDescription:nth-child(4) .rectangle {
+  background-color: #c7c7d0;
+}
+
+.colorDescription:nth-child(5) .rectangle {
+  background-color: #f4f4f6;
+}
+
+.colorDescription:nth-child(6) .rectangle {
+  background-color: #BC9CFF;
+}
+
+.colorDescription:nth-child(7) .rectangle {
+  background-color: #6FCF97;
+}
+
+.container-type {
+  margin-top: 7.6%;
+  margin-right: 12.61%;
+  width: 405px;
+}
+
+.table {
+  display: table;
+  border-collapse: collapse;
+}
+
+.row {
+  display: table-row;
+}
+
+.cell {
+  display: table-cell;
+  padding: 5px 0 45px 0px;
+}
+
+.type-h1,
+.type-h2,
+.type-h3,
+.type-body {
+  text-align: right;
+  padding-right: 30px;
+  color: #c7c7d0;
+}
+
+.type-h1-definition,
+.type-h2-definition,
+.type-h3-definition,
+.type-body-definition {
+  text-align: left;
+}
+
+.type-h3-definition {
+  padding-top: -5;
+}
+
+.type-h1 {
+  font-size: 24px;
+}
+
+.type-h2 {
+  font-size: 19px;
+}
+
+.type-h3 {
+  font-size: 12px;
+}
+
+.type-body {
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=/style.a08d0c2a.css.map */

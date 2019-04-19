@@ -1,10 +1,34 @@
+mixin rectangle-card(colorName, colorCode)
+  .colorDescription
+    .rectangle
+    h2.rectangle_color-name #{colorName}
+    h2.rectangle_color-code #{colorCode}
+
+include .\..\components\logo.pug
+
+
 .container
+    
     .rectangles 
-        .rectangle
-        .rectangle
-        .rectangle
-        .rectangle
-        .rectangle
-        .rectangle
-        .rectangle
-        
+        +rectangle-card("Dark Shade 100%", "#1F2041")
+        +rectangle-card("Dark Shade 75%", "#1F2041")
+        +rectangle-card("Dark Shade 50%", "#1F2041")
+        +rectangle-card("Dark Shade 25%", "#1F2041")
+        +rectangle-card("Dark Shade 5%", "#1F2041")
+        +rectangle-card("Purple", "#BC9CFF")
+        +rectangle-card("Green", "#6FCF97")
+    
+    .container-type
+        .type.table
+            .type-h1.row
+                .type-h1.cell H1 
+                h1.type-h1-definition.cell This one is the sub-section or widget title
+            .type-h2.row
+                .type-h2.cell H2 
+                h2.type-h2-definition.cell Next one is the item title inside widgets
+            .type-h3.row
+                .type-h3.cell H3 
+                h3.type-h3-definition.cell This is a label or CTA text
+            .type-body.row
+                .type-body.cell Body 
+                p.type-body-definition.cell This is the body text which is used for most <br> of the design, like paragraphs, lists, etc.
