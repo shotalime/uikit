@@ -164,4 +164,12 @@ body {
   font-size: 14px;
 }
 
+.text-field {
+  width: 320px;
+  height: 44px;
+  border: 1px solid #c7c7d0;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
 /*# sourceMappingURL=/style.a08d0c2a.css.map */

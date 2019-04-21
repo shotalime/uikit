@@ -1,0 +1,16 @@
+extends layouts/uiKit
+
+block content
+    div
+        h3 Text field 
+        -var textFieldName = "Email"
+        -var textFieldvalue = ""
+        -var textFieldPlaceholder="E-mail"
+        include ../components/input-text-field
+        
+    div
+        h3 Text field 
+        -var textFieldName = "12"
+        -var textFieldvalue = "This is pretty awesome"
+        include ../components/input-text-field
+        
