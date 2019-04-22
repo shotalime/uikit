@@ -1,6 +1,12 @@
-.text-field
+.input-text-field
     width: 320px
     height: 44px
     border: 1px solid nth($colors, 4)
     box-sizing: border-box
     border-radius: 4px
+    +body-text
+
+.input-text-field:focus,
+.input-text-field:hover
+    border: 1px solid nth($colors, 3)
+    color: nth($colors, 1)

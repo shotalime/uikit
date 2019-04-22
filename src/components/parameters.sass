@@ -3,37 +3,50 @@
 
 @function shade($color, $percentage) 
   @return mix(black, $color, $percentage)
+  
 
 $color-1: #1F2041
 $colors: [$color-1, tint($color-1, 25), tint($color-1, 50), tint($color-1, 75), tint($color-1, 95), #BC9CFF, #6FCF97]
 
+@mixin title-text 
+    font-family: Quicksand
+    font-style: normal
+    font-weight: bold
+    font-size: 24px
+    line-height: normal
+    color: nth($colors, 1)
+
+@mixin large-text
+    font-family: Quicksand
+    font-style: normal
+    font-weight: bold
+    font-size: 19px
+    line-height: normal
+    color: nth($colors, 1)
+
+@mixin label-text
+    font-family: Montserrat
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: normal
+    text-transform: uppercase
+    color: nth($colors, 1)
+
+@mixin body-text
+    font-family: Montserrat
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 24px
+    color: nth($colors, 2)
+
 //text 
 h1
-  font-family: Quicksand
-  font-style: normal
-  font-weight: bold
-  font-size: 24px
-  line-height: normal
-  color: $color-1
+  +title-text
 h2 
-  font-family: Quicksand
-  font-style: normal
-  font-weight: bold
-  font-size: 19px
-  line-height: normal
-  color: $color-1
+  +large-text
 h3 
-  font-family: Montserrat
-  font-style: normal
-  font-weight: bold
-  font-size: 12px
-  line-height: normal
-  text-transform: uppercase
-  color: nth($colors, 2)
+  +label-text
 body
-  font-family: Montserrat
-  font-style: normal
-  font-weight: normal
-  font-size: 14px
-  line-height: 24px
-  color: nth($colors, 2)
+  +body-text

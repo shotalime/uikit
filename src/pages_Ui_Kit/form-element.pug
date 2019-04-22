@@ -1,16 +1,29 @@
 extends layouts/uiKit
-
 block content
+
+    //input-text-field
     div
-        h3 Text field 
+        .clearfix
+            .leftstr
+                h3 Text field  
+            .rightstr.clearfix
+                h3 Default
         -var textFieldName = "Email"
         -var textFieldvalue = ""
         -var textFieldPlaceholder="E-mail"
         include ../components/input-text-field
-        
+    //input-text-field    
     div
-        h3 Text field 
-        -var textFieldName = "12"
+        .clearfix
+            .leftstr
+                h3 Text field  
+            .rightstr.clearfix
+                h3 Hover/focus
+        -var textFieldName = "text-field"
         -var textFieldvalue = "This is pretty awesome"
+        -var textFieldPlaceholder=""
         include ../components/input-text-field
+    //dropdown
+    div
+        include ../components/dropdown
         
