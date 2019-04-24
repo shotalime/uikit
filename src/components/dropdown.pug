@@ -1,11 +1,17 @@
 
+mixin dropdown
+    .dropdown
+        .dropdown__dropbtn
+            button.dropdown__btn-minus -
+            input.dropdow__input(type = "text" value="0")
+            button.dropdown__btn-plus +
 
-.dropdown
-    .dropdown__dropbtn
-    .dropdown__content
-        button.dropdown__btn-minus -
-        input.dropdow__input(type = "text" value="0")
-        button.dropdown__btn-plus +
-    
-    p 2
-    p 3
+div
+    input(list="guests")
+    datalist#guests
+        option 
+            +dropdown
+        option
+            +dropdown
+        option
+            +dropdown
