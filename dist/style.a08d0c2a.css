@@ -235,6 +235,11 @@ body {
   border-top: none;
   border-radius: 2px;
   border-collapse: collapse;
+  visibility: hidden;
+}
+
+.dropdown__menu_visible {
+  visibility: visible;
 }
 
 .dropdown__value {
@@ -271,6 +276,11 @@ body {
   border-radius: 30px;
   background: none;
   color: #c7c7d0;
+}
+
+.dropdown__button-minus_inactive {
+  color: #f4f4f6;
+  border: 1px solid #f4f4f6;
 }
 
 .dropdown__option {

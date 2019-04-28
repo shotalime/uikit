@@ -1,15 +1,10 @@
 
-mixin dropdown__button
-    
-    button.dropdown__button-minus.dropdown__button -
-    input.dropdown__input(type = "text" value="0")
-    button.dropdown__button-plus.dropdown__button +
+mixin dropdown__buttons
+    .dropdown__buttons
+        button.dropdown__button-minus.dropdown__button.dropdown__button-minus_inactive -
+        input.dropdown__input(type = "text" value = "0")
+        button.dropdown__button-plus.dropdown__button +
 
-//- div
-//-     p result: 
-//-         span.result 
-//-     +dropdown
-//- button.alert alert
 
 .dropdown
     .dropdown__result
@@ -19,16 +14,13 @@ mixin dropdown__button
     .dropdown__menu
         .dropdown__value.dropdown__bedrooms-value 
             span.dropdown__option Спальни
-            .dropdown__buttons
-                +dropdown__button
+            +dropdown__buttons
         .dropdown__value.dropdown__beds-value 
             span.dropdown__option Кровати
-            .dropdown__buttons
-                +dropdown__button
+            +dropdown__buttons
         .dropdown__value.dropdown__bathrooms-value 
             span.dropdown__option Ванные комнаты
-            .dropdown__buttons
-                +dropdown__button
+            +dropdown__buttons
         
             
     

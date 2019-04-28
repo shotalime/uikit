@@ -23,6 +23,10 @@
     border-top: none
     border-radius: 2px
     border-collapse: collapse
+    visibility: hidden
+
+.dropdown__menu_visible
+    visibility: visible
 
 .dropdown__value
     margin: 4px
@@ -45,6 +49,11 @@
     border-radius: 30px
     background: none
     color: nth($colors, 4)
+
+.dropdown__button-minus_inactive
+    color: nth($colors, 5)
+    border: 1px solid nth($colors, 5)
+
 
 .dropdown__option
     display: table-cell
