@@ -19,11 +19,11 @@
   "homepage": "https://github.com/shotalime/uiKit#readme",
   "devDependencies": {
     "cssnano": "^4.1.10",
+    "jquery": "^3.4.0",
     "pug": "^2.0.3",
     "sass": "^1.18.0"
   },
   "dependencies": {
-    "jquery": "^3.4.0",
     "jquery-ui-dist": "^1.12.1"
   }
 }

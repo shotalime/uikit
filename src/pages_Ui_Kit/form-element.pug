@@ -9,8 +9,8 @@ block content
             .rightstr.clearfix
                 h3 Default
         -var textFieldName = "Email"
-        -var textFieldvalue = ""
-        -var textFieldPlaceholder="E-mail"
+        -var textFieldValue = ""
+        -var textFieldPlaceholder="Email"
         include ../components/input-text-field
     //input-text-field    
     div
@@ -20,10 +20,16 @@ block content
             .rightstr.clearfix
                 h3 Hover/focus
         -var textFieldName = "text-field"
-        -var textFieldvalue = "This is pretty awesome"
+        -var textFieldValue = "This is pretty awesome"
         -var textFieldPlaceholder=""
         include ../components/input-text-field
-        //dropdown
+    //dropdown
     div
+        div
+        .clearfix
+            .leftstr
+                h3 Dropdown  
+            .rightstr.clearfix
+                h3 Default
         include ../components/dropdown
         

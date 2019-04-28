@@ -10919,22 +10919,7 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
-},{"process":"../../../Users/Jaguar/AppData/Roaming/npm/node_modules/parcel-bundler/node_modules/process/browser.js"}],"import-jquery.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _jquery = _interopRequireDefault(require("jquery"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var _default = window.$ = window.jQuery = _jquery.default;
-
-exports.default = _default;
-},{"jquery":"../node_modules/jquery/dist/jquery.js"}],"../node_modules/jquery-ui-dist/jquery-ui.js":[function(require,module,exports) {
+},{"process":"../../../Users/Jaguar/AppData/Roaming/npm/node_modules/parcel-bundler/node_modules/process/browser.js"}],"../node_modules/jquery-ui-dist/jquery-ui.js":[function(require,module,exports) {
 var define;
 /*! jQuery UI - v1.12.1 - 2016-09-14
 * http://jqueryui.com
@@ -29643,20 +29628,16 @@ var widgetsTooltip = $.ui.tooltip;
 
 }));
 },{}],"index.js":[function(require,module,exports) {
-"use strict";
+var jquery = require("jquery");
 
-var _jquery = _interopRequireDefault(require("jquery"));
-
-require("./import-jquery");
+window.$ = window.jQuery = jquery; // notice the definition of global variables here
 
 require("jquery-ui-dist/jquery-ui.js");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-(0, _jquery.default)(function () {
-  (0, _jquery.default)("#datepicker").datepicker();
+$(function () {
+  $("#datepicker").datepicker();
 });
-},{"jquery":"../node_modules/jquery/dist/jquery.js","./import-jquery":"import-jquery.js","jquery-ui-dist/jquery-ui.js":"../node_modules/jquery-ui-dist/jquery-ui.js"}],"../../../Users/Jaguar/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"jquery":"../node_modules/jquery/dist/jquery.js","jquery-ui-dist/jquery-ui.js":"../node_modules/jquery-ui-dist/jquery-ui.js"}],"../../../Users/Jaguar/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -29684,7 +29665,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52617" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57215" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

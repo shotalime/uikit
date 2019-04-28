@@ -1,0 +1,58 @@
+*
+  box-sizing: border-box
+
+.dropdown
+    width: 266px
+    
+    
+
+.dropdown__result
+    height: 44px
+    vertical-align: middle
+    border: 1px solid nth($colors, 4)
+    padding: 9px 0px 0px 14px
+    border-radius: 2px 2px 0px 0px
+    +body-text
+   
+
+.dropdown__menu
+    width: 266px
+    height: 119px
+    display: table
+    border: 1px solid nth($colors, 4)
+    border-top: none
+    border-radius: 2px
+    border-collapse: collapse
+
+.dropdown__value
+    margin: 4px
+    +label-text
+    display: table-row
+
+
+.dropdown__input
+    width: 32px
+    border: none
+    text-align: center
+    margin: 0
+    +label-text
+    color: nth($colors, 1)
+
+.dropdown__button
+    width: 30px
+    height: 30px
+    border: 1px solid nth($colors, 4)
+    border-radius: 30px
+    background: none
+    color: nth($colors, 4)
+
+.dropdown__option
+    display: table-cell
+    padding: 11px 0px 0px 15px
+
+
+.dropdown__buttons
+    display: table-cell
+    text-align: right
+    padding: 0px 7px 0 0
+
