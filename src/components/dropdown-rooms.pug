@@ -1,0 +1,27 @@
+
+mixin dropdown-rooms__buttons
+    .dropdown-rooms__buttons
+        button.dropdown-rooms__button-minus.dropdown-rooms__button.dropdown-rooms__button-minus_inactive -
+        input.dropdown-rooms__input(type = "text" value = "0" disabled)
+        button.dropdown-rooms__button-plus.dropdown-rooms__button +
+
+
+.dropdown-rooms
+    .dropdown-rooms__result
+        |<span class="dropdown-rooms__bedrooms-result">1 спальня</span>
+        |<span class="dropdown-rooms__beds-result">, 1 кровать...</span>
+        //- |<span class="dropdown-rooms__bathrooms-result"></span>
+    .dropdown-rooms__menu
+        .dropdown-rooms__value.dropdown-rooms__bedrooms-value 
+            span.dropdown-rooms__option Спальни
+            +dropdown-rooms__buttons
+        .dropdown-rooms__value.dropdown-rooms__beds-value 
+            span.dropdown-rooms__option Кровати
+            +dropdown-rooms__buttons
+        .dropdown-rooms__value.dropdown-rooms__bathrooms-value 
+            span.dropdown-rooms__option Ванные комнаты
+            +dropdown-rooms__buttons
+        
+            
+
+

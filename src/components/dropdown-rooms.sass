@@ -1,12 +1,12 @@
 *
   box-sizing: border-box
 
-.dropdown
+.dropdown-rooms
     width: 266px
     
     
 
-.dropdown__result
+.dropdown-rooms__result
     height: 44px
     vertical-align: middle
     border: 1px solid nth($colors, 4)
@@ -15,7 +15,7 @@
     +body-text
    
 
-.dropdown__menu
+.dropdown-rooms__menu
     width: 266px
     height: 119px
     display: table
@@ -23,19 +23,19 @@
     border-top: none
     border-radius: 2px
     border-collapse: collapse
-    visibility: hidden
+    display: none
 
 
-.dropdown__menu_visible
-    visibility: visible
+.dropdown-rooms__menu_visible
+    display: block
 
-.dropdown__value
+.dropdown-rooms__value
     margin: 4px
     +label-text
     display: table-row
 
 
-.dropdown__input
+.dropdown-rooms__input
     width: 32px
     border: none
     text-align: center
@@ -43,7 +43,7 @@
     +label-text
     background-color: white
 
-.dropdown__button
+.dropdown-rooms__button
     width: 30px
     height: 30px
     border: 1px solid nth($colors, 4)
@@ -52,17 +52,17 @@
     color: nth($colors, 4)
     
 
-.dropdown__button-minus_inactive
+.dropdown-rooms__button-minus_inactive
     color: nth($colors, 5)
     border: 1px solid nth($colors, 5)
 
 
-.dropdown__option
+.dropdown-rooms__option
     display: table-cell
     padding: 11px 0px 0px 15px
 
 
-.dropdown__buttons
+.dropdown-rooms__buttons
     display: table-cell
     text-align: right
     padding: 0px 7px 0 0

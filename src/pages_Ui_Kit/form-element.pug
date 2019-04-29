@@ -1,8 +1,7 @@
 extends layouts/uiKit
 block content
 
-    //input-text-field
-    div
+    .input-text-field-default
         .clearfix
             .leftstr
                 h3 Text field  
@@ -13,7 +12,7 @@ block content
         -var textFieldPlaceholder="Email"
         include ../components/input-text-field
     //input-text-field    
-    div
+    .input-text-field-focus
         .clearfix
             .leftstr
                 h3 Text field  
@@ -23,13 +22,22 @@ block content
         -var textFieldValue = "This is pretty awesome"
         -var textFieldPlaceholder=""
         include ../components/input-text-field
-    //dropdown
-    div
-        div
+    //dropdown-rooms
+    .dropdown-rooms-default
         .clearfix
             .leftstr
-                h3 Dropdown  
+                h3 dropdown
             .rightstr.clearfix
                 h3 Default
-        include ../components/dropdown
-        
+        include ../components/dropdown-rooms
+
+    .dropdown-rooms-default
+        .clearfix
+            .leftstr
+                h3 dropdown
+            .rightstr.clearfix
+                h3 Default
+        include ../components/dropdown-rooms
+
+    
+    <script src="/components/dropdown-rooms.js"></script>
