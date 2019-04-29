@@ -29632,11 +29632,9 @@ var jquery = require("jquery");
 
 window.$ = window.jQuery = jquery; // notice the definition of global variables here
 
-require("jquery-ui-dist/jquery-ui.js");
-
-$(function () {
-  $("#datepicker").datepicker();
-});
+require("jquery-ui-dist/jquery-ui.js"); // $(function() {
+//   $("#datepicker").datepicker();
+// });
 },{"jquery":"../node_modules/jquery/dist/jquery.js","jquery-ui-dist/jquery-ui.js":"../node_modules/jquery-ui-dist/jquery-ui.js"}],"../../../Users/Jaguar/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -29665,7 +29663,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57215" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63345" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

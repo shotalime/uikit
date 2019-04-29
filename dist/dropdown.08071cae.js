@@ -140,7 +140,8 @@ $(document).ready(function () {
     $input.val(parseInt($input.val()) + 1);
     $input.change();
     return false;
-  });
+  }); //word declension
+
   $('.dropdown__bedrooms-value .dropdown__input').on('change', function () {
     $value = $(this).val();
 
@@ -157,7 +158,8 @@ $(document).ready(function () {
     } else {
       $('.dropdown__bedrooms-result').text($value + " спален");
     }
-  });
+  }); //word declension
+
   $('.dropdown__beds-value .dropdown__input').on('change', function () {
     $value = $(this).val();
 
@@ -174,7 +176,8 @@ $(document).ready(function () {
     } else {
       $('.dropdown__beds-result').text(", " + $value + " кроватей...");
     }
-  });
+  }); // active/inactive minus button
+
   $('.dropdown__bathrooms-value .dropdown__input').on('change', function () {
     $value = $(this).val();
 
@@ -183,15 +186,18 @@ $(document).ready(function () {
     }
 
     ;
-  });
+  }); // click outside block
+
   $(document).mouseup(function (e) {
-    if (!$(".dropdown__menu").is(e.target) && $(".dropdown__menu").has(e.target).length === 0) {
-      $(".dropdown__menu").removeClass("dropdown__menu_visible");
+    var $value = ".dropdown__menu";
+
+    if (!$($value).is(e.target) && $($value).has(e.target).length === 0) {
+      $($value).removeClass("dropdown__menu_visible");
     }
 
     ;
     $(".dropdown__result").on('click', function () {
-      $(".dropdown__menu").toggleClass("dropdown__menu_visible");
+      $($value).toggleClass("dropdown__menu_visible");
     });
   });
 });
@@ -223,7 +229,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57215" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63345" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

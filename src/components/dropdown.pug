@@ -2,14 +2,14 @@
 mixin dropdown__buttons
     .dropdown__buttons
         button.dropdown__button-minus.dropdown__button.dropdown__button-minus_inactive -
-        input.dropdown__input(type = "text" value = "0")
+        input.dropdown__input(type = "text" value = "0" disabled)
         button.dropdown__button-plus.dropdown__button +
 
 
 .dropdown
     .dropdown__result
-        |<span class="dropdown__bedrooms-result"></span>
-        |<span class="dropdown__beds-result"></span>
+        |<span class="dropdown__bedrooms-result">1 спальня</span>
+        |<span class="dropdown__beds-result">, 1 кровать...</span>
         //- |<span class="dropdown__bathrooms-result"></span>
     .dropdown__menu
         .dropdown__value.dropdown__bedrooms-value 
@@ -23,6 +23,6 @@ mixin dropdown__buttons
             +dropdown__buttons
         
             
-    
+
 
 <script src="/components/dropdown.js"></script>
