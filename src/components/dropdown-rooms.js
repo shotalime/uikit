@@ -41,11 +41,11 @@ $(document).ready(function() {
             $('.dropdown-rooms__beds-value .dropdown-rooms__button').removeClass( "dropdown-rooms__button-minus_inactive" );
         };
         if ($value.substr(-1) == 1 && $value != 11) {
-            $('.dropdown-rooms__beds-result').text(", " + $value + " кровать...");   
+            $('.dropdown-rooms__beds-result').text(", " + $value + " кровать");   
         } else if (($value.substr(-1) == 2 || $value.substr(-1) == 3 || $value.substr(-1) == 4) && ($value < 10 || $value > 20 )) {
-            $('.dropdown-rooms__beds-result').text(", " + $value + " кровати...");
+            $('.dropdown-rooms__beds-result').text(", " + $value + " кровати");
         } else {
-            $('.dropdown-rooms__beds-result').text(", " + $value + " кроватей...");
+            $('.dropdown-rooms__beds-result').text(", " + $value + " кроватей");
         }
     });
 // active/inactive minus button
@@ -54,6 +54,13 @@ $(document).ready(function() {
         if($value > 0) {
             $('.dropdown-rooms__bathrooms-value .dropdown-rooms__button').removeClass( "dropdown-rooms__button-minus_inactive" );
         };
+        if ($value.substr(-1) == 1 && $value != 11) {
+            $('.dropdown-rooms__bathrooms-result').text(", " + $value + " ванная");   
+        // } else if (($value.substr(-1) == 2 || $value.substr(-1) == 3 || $value.substr(-1) == 4) && ($value < 10 || $value > 20 )) {
+        //     $('.dropdown-rooms__bathrooms-result').text(", " + $value + " ванных");
+        } else {
+            $('.dropdown-rooms__bathrooms-result').text(", " + $value + " ванных");
+        }
     });
  // click outside block
     $(document).mouseup(function (e) {
@@ -63,8 +70,9 @@ $(document).ready(function() {
         };
 
         $(".dropdown-rooms__result").on('click', function(){
-            $($value).toggleClass( "dropdown-rooms__menu_visible" );
+            $(this).nextAll($value).toggleClass( "dropdown-rooms__menu_visible" );
         });
         
     });
  });
+ 
