@@ -1,10 +1,41 @@
+.dropdown-guests
+    width: 320px
+    
 .dropdown-guests__wrap
-    width: 266px
-    height: 119px
+    width: 100%
+    height: 159px
     border: 1px solid nth($colors, 4)
     border-top: none
-    border-radius: 2px
+    border-radius: 0px 0px 4px 4px
     border-collapse: collapse
-
-.dropdown-guests__wrap-hide
     display: none
+
+.dropdown-guests__wrap-visible
+    display: block
+    border-color: nth($colors, 3)
+
+.dropdown-guests__button
+    height: 44px
+    vertical-align: middle
+    border: 1px solid nth($colors, 4)
+    padding: 9px 0px 0px 14px
+    border-radius: 4px 4px 0px 0px
+    +body-text
+
+.dropdown-guests__button-visible
+    border-color: nth($colors, 3)
+
+.dropdown-guests__buttons
+    display: flex
+    width: 100%
+    justify-content: space-between
+
+.dropdown-guests__input
+    background: none
+    border: none
+    +body-text
+    line-height: 129%
+
+.quantity-buttons
+    display: inline-block
+
