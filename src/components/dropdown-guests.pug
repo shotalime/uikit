@@ -4,11 +4,15 @@ include quantity-buttons
         input.dropdown-guests__input(type = "text" value = "Сколько гостей" disabled)
     .dropdown-guests__wrap
         .dropdown-guests__adults.dropdown-guests__buttons
-            span Взрослые
+            div Взрослые
             +quantity-buttons
         .dropdown-guests__children.dropdown-guests__buttons
-            span Дети
+            div Дети
             +quantity-buttons
         .dropdown-guests__babies.dropdown-guests__buttons
-            span Младенцы
+            div Младенцы
             +quantity-buttons
+        .dropdown-guests__buttons
+            button.dropdown-guests__clear.dropdown-guests__buttons-no-background Очистить   
+            button.dropdown-guests__accept.dropdown-guests__buttons-no-background Применить  
+        
