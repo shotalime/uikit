@@ -9,20 +9,24 @@
     border-radius: 0px 0px 4px 4px
     border-collapse: collapse
     display: none
+    padding-top: 6px
 
 .dropdown-guests__wrap-visible
     display: flex
     border-color: nth($colors, 3)
     flex-direction: column
-    justify-content: space-between
+    justify-content: flex-start
     align-items: center
     
 
 .dropdown-guests__button
+    display: flex
+    justify-content: space-between
+    align-items: center
     height: 44px
-    vertical-align: middle
+    // vertical-align: middle
     border: 1px solid nth($colors, 4)
-    padding: 9px 0px 0px 20px
+    padding: 0px 9px 0px 14px
     border-radius: 4px 4px 0px 0px
     +body-text
 
@@ -31,15 +35,15 @@
 
 .dropdown-guests__buttons
     display: flex
-    align-items: flex-start
-    padding: 6px 6px 0 14px
+    align-items: center
+    padding: 0px 6px 7px 14px
     width: 100%
     justify-content: space-between
     +label-text
 
 
 .dropdown-guests__buttons:last-child
-    padding-bottom: 13px 
+    padding-top: 13px 
     padding-right: 0px
 
 

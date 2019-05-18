@@ -1,9 +1,13 @@
 jQuery(function($) {
-    $(".dropdown-guests").on("click", function() {
+
+   
+    
+    $(".dropdown-guests").ready(function() {
+        
+        var value = 0;
         var adults = 0;
         var children = 0;
         var babies = 0;
-
     
         $(this).find(".dropdown-guests__adults .quantity-buttons__input").on('change', function() {
             adults = $(this).val();
@@ -21,32 +25,58 @@ jQuery(function($) {
         });
     
         $(this).find(".quantity-buttons__button").on('click', function() {
-            var string = "";
-            var value = 0;
+            var aString = "";
+            var bString = "";
+            
 
             adults = parseInt(adults);
             children = parseInt(children);
             babies = parseInt(babies);
             
-            value = adults + children + babies;
+            value = adults + children;
 
             if(value.toString().substr(-1) == 1 && value != 11) {
-                string = " гость";
+                aString = " гость";
             } else if(value > 1 && value < 5) {
-                string = " гостя";
+                aString = " гостя";
             } else {
-                string = " гостей";
+                aString = " гостей";
             };
 
-            $(this).parents('.dropdown-guests').find('.dropdown-guests__input').val(value + string);         
+            if(babies.toString().substr(-1) == 1 && babies != 11) {
+                bString =", " + babies + " младенец";
+            } else if(babies > 1 && babies < 5) {
+                bString =", " + babies + " младенца";
+            } else if(babies == 0) {
+                bString = "";
+            } else {
+                bString =", " + babies + " младенцев";
+            };
+
+            $(this).parents('.dropdown-guests').find('.dropdown-guests__input').val(value + aString + bString); 
+            
+            
+                
         });
-    
         
-    });
+        $(this).find(".dropdown-guests__clear").on('click', function() {
+            
+            $(this).parents('.dropdown-guests').find(".quantity-buttons__input").val(0);
+            $(this).parents('.dropdown-guests').find('.dropdown-guests__input').val("0 гостей");
+            return adults = 0, children = 0, babies = 0;
+        });
+        
+        
         $(".dropdown-guests__button").on('click', function() {
             $(this).nextAll(".dropdown-guests__wrap").toggleClass( "dropdown-guests__wrap-visible" );
             $(this).toggleClass( "dropdown-guests__button-visible" );
+            
         });
-
+    
+        $(".dropdown-guests__accept").on('click', function() {
+            $(this).parents(".dropdown-guests__wrap").removeClass( "dropdown-guests__wrap-visible" );
+            $(this).parents(".dropdown-guests__wrap").prev('.dropdown-guests__button').removeClass( "dropdown-guests__button-visible" );
+        });
+    });
 });
 
