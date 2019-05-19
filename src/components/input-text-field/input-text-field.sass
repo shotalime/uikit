@@ -6,9 +6,12 @@
     box-sizing: border-box
     border-radius: 4px
     +body-text
-    margin-top: -7px
+    
 
 .input-text-field:focus,
 .input-text-field:hover
     border: 1px solid nth($colors, 3)
     color: nth($colors, 1)
+
+.input-text-field::placeholder
+     color: nth($colors, 4)

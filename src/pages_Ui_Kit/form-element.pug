@@ -1,60 +1,54 @@
 extends layouts/uiKit
 block content
-
+    //input-text-field  
     .input-text-field-default
-        .clearfix
-            .leftstr
-                h3 Text field  
-            .rightstr.clearfix
-                h3 Default
+        .form-element__titel
+            .leftstr Text field  
+            .rightstrDefault 
+            
         -var textFieldName = "Email"
         -var textFieldValue = ""
         -var textFieldPlaceholder="Email"
-        include ../components/input-text-field
-    //input-text-field    
+        include ../components/input-text-field/input-text-field
+      
     .input-text-field-focus
-        .clearfix
-            .leftstr
-                h3 Text field  
-            .rightstr.clearfix
-                h3 Hover/focus
+        .form-element__titel
+            .leftstr Text field  
+            .rightstr Hover / focus
+            
         -var textFieldName = "text-field"
         -var textFieldValue = "This is pretty awesome"
         -var textFieldPlaceholder=""
-        include ../components/input-text-field
+        include ../components/input-text-field/input-text-field
+
     //dropdown-rooms
     .dropdown-rooms-default
-        .clearfix
-            .leftstr
-                h3 dropdown
-            .rightstr.clearfix
-                h3 Default
-        include ../components/dropdown-rooms
-
-    .dropdown-rooms-default
-        .clearfix
-            .leftstr
-                h3 dropdown
-            .rightstr.clearfix
-                h3 Default
-        include ../components/dropdown-rooms
-
+        .form-element__titel
+            .leftstr dropdown
+            .rightstr Default
+            
+        include ../components/dropdown-rooms/dropdown-rooms
+        
+    //dropdown-guests
     .dropdown-guests-default
-        .clearfix
-            .leftstr
-                h3 dropdown
-            .rightstr.clearfix
-                
-        include ../components/dropdown-guests
-    
-    .dropdown-guests-expnaded
-        .clearfix
-            .leftstr
-                h3 dropdown
-            .rightstr.clearfix
-                
-        include ../components/dropdown-guests
-    
-    <script src="/components/quantity-buttons.js"></script>
-    <script src="/components/dropdown-rooms.js"></script>
-    <script src="/components/dropdown-guests.js"></script>
+        .form-element__titel
+            .leftstr dropdown
+            .rightstr
+           
+        include ../components/dropdown-guests/dropdown-guests
+
+    //subscription-text-field
+    .subscription-text-field-default
+        .form-element__titel
+            .leftstr subscription text field 
+            .rightstr
+            
+                    
+        -var textFieldName = "Email"
+        -var textFieldValue = ""
+        -var textFieldPlaceholder="Email"
+        include ../components/subscription-text-field/subscription-text-field
+
+    <script src="/components/quantity-buttons/quantity-buttons.js"></script>
+    <script src="/components/dropdown-rooms/dropdown-rooms.js"></script>
+    <script src="/components/dropdown-guests/dropdown-guests.js"></script>

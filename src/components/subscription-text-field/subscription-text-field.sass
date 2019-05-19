@@ -1,0 +1,37 @@
+.subscription-text-field
+    width: 267px
+    height: 44px
+    border: 1px solid nth($colors, 4)
+    padding-left: 15px
+    box-sizing: border-box
+    border-radius: 4px
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.subscription-text-field__input
+    border: none
+    +body-text
+    
+
+.subscription-text-field:focus,
+.subscription-text-field:hover
+    border: 1px solid nth($colors, 3)
+    color: nth($colors, 1)
+
+.subscription-text-field__input:focus,    
+.subscription-text-field__input:hover
+    outline: none
+    border: none
+
+.subscription-text-field  i
+    padding-right: 10px
+
+.subscription-text-field__button
+    border: none
+    background: none
+    +primary-gradient
+    padding-right: 8px
+
+.subscription-text-field__input::placeholder
+     color: nth($colors, 4)

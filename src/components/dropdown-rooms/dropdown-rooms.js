@@ -1,15 +1,34 @@
 jQuery(function($) {
 
-   
+    var bedrooms = 0;
+    var beds = 0;
+    var bathrooms = 0;
     
-    $(".dropdown-rooms").ready(function() {
-        
-       
-        var bedrooms = 0;
-        var beds = 0;
-        var bathrooms = 0;
-       
-    
+    $(".dropdown-rooms").on('click', function() {
+        $(this).find(".dropdown-rooms__wrap").delegate(".quantity-buttons__button", 'click', function() { 
+
+            bedrooms = $(this).parent(".dropdown-rooms").find(".dropdown-rooms__bedrooms .quantity-buttons__input").val();
+            
+            if (bedrooms == undefined) {
+                bedrooms = 0;
+            };
+
+                      
+            beds = $(this).parent(".dropdown-rooms").find(".dropdown-rooms__beds .quantity-buttons__input").val();
+            if (beds == undefined) {
+                beds = 0;
+            };
+            
+            
+            bathrooms = $(this).parent(".dropdown-rooms").find(".dropdown-rooms__bathrooms .quantity-buttons__input").val();
+            if (bathrooms == undefined) {
+                bathrooms = 0;
+            };
+
+            console.log(bedrooms, beds, bathrooms)
+            return bedrooms, beds, bathrooms;
+            
+        });
         $(this).find(".dropdown-rooms__bedrooms .quantity-buttons__input").on('change', function() {
          bedrooms = $(this).val();
             return bedrooms;
@@ -35,13 +54,15 @@ jQuery(function($) {
                                       
         });
                              
-        $(".dropdown-rooms__button").on('click', function() {
-            $(this).nextAll(".dropdown-rooms__wrap").toggleClass( "dropdown-rooms__wrap-visible" );
-            $(this).toggleClass( "dropdown-rooms__button-visible" );
-            
-        });
-    
         
+    
+        //bedrooms = 0, beds = 0, bathrooms = 0;  
+        
+    });
+    $(".dropdown-rooms__button").on('click', function() {
+        $(this).nextAll(".dropdown-rooms__wrap").toggleClass( "dropdown-rooms__wrap-visible" );
+        $(this).toggleClass( "dropdown-rooms__button-visible" );
+        // return bedrooms = 0, beds = 0, bathrooms = 0;
     });
 });
 

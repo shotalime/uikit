@@ -1,18 +1,26 @@
 .leftstr,
 .rightstr
-    float: left
     width:50%
-    
-.rightstr h3
-    color: nth($colors, 3)
-    text-align: right
-    font-weight: normal
-    line-height: 15px
 
-.clearfix::after
-    content: ""
-    display: table
-    clear: both
+.leftstr
+    +label-text
+    
+    
+.rightstr
+    color: nth($colors, 3)
+    +body-text
+    text-transform: uppercase
+    font-size: 12px
+    line-height: 133%
+    letter-spacing: 0.02em 
+    text-align: right
+
+.form-element__titel
+    height: 30px
+    display: flex
+    align-items: center
+    justify-content: space-between
+
 
 .input-text-field-default,
 .input-text-field-focus
@@ -24,6 +32,6 @@
 .dropdown-guests-default
     width: 320px
 
-.dropdown-guests-expnaded  .dropdown-guests__wrap
-    width: 320px
-    
+.subscription-text-field-default
+    width: 350px
+
