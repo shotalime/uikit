@@ -70,7 +70,33 @@ block content
         
         include ../components/expandable-checkbox-list/expandable-checkbox-list
 
+    //checkbox-buttons
+    -
+        var items_array = [
+            {
+                description: 'Можно курить',
+                name: 'expandable-checkbox-list__item',
+                checked: false
+            },
+            {
+                description: 'Можно с питомцами',
+                name: 'expandable-checkbox-list__item',
+                checked: ''
+            },
+            {
+                description: 'Можно пригласить гостей <br>(до 10 человек)',
+                name: 'expandable-checkbox-list__item',
+                checked: ''
+            }]
 
+    .expandable-checkbox-list-default
+        .form-element__titel
+            .leftstr checkbox buttons
+            .rightstr
+        
+        
+        include ../components/checkbox-buttons/checkbox-buttons
+    
 
     <script type="text/javascript" src="/jQuery/jquery.maskedinput.js"></script>
     <script src="/components/quantity-buttons/quantity-buttons.js"></script>

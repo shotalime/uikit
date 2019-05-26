@@ -1,0 +1,40 @@
+
+.checkbox-buttons
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    
+
+.checkbox-button
+    display: flex
+    align-items: center
+    
+
+.checkbox-button__checkbox
+    display: none
+
+.checkbox-button__name
+    width: 350px 
+    color: nth($colors, 3)
+    line-height: 18px
+    display: flex
+    vertical-align: middle
+
+.checkbox-button__name::before
+    box-sizing: border-box
+    content: " "
+    width: 20px
+    height: 20px
+    display: block
+    border: 1px solid nth($colors, 4)
+    border-radius: 4px
+    margin-right: 9px
+    margin-bottom: 10px
+
+
+
+.checkbox-button__checkbox:checked + .checkbox-button__name::before
+    border-color: nth($colors, 6)
+    content:  url("/components/checkbox-buttons/checkbox-buttons__arrow.svg")
+    padding-left: 4px
+    padding-bottom: 0px

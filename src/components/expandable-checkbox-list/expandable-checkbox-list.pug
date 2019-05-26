@@ -4,9 +4,5 @@ include ./expandable-checkbox-list__data
     button.expandable-checkbox-list__button
         span!= title 
         i.expandable-checkbox-list__arrow.material-icons keyboard_arrow_down
-    .expandable-checkbox-list__items
-        -for(var i=0; i<items_array.length; i++)
-            label.expandable-checkbox-list__item
-                input.expandable-checkbox-list__checkbox(type="checkbox" name!= items_array[i].name checked= items_array[i].checked)
-                .expandable-checkbox-list__checkbox-name!= items_array[i].description
+    include ../checkbox-buttons/checkbox-buttons
 
