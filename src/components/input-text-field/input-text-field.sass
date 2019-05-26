@@ -5,13 +5,24 @@
     padding-left: 15px
     box-sizing: border-box
     border-radius: 4px
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.input-text-field__input
+    border: none
     +body-text
     
 
-.input-text-field:focus,
+.input-text-fieldfocus,
 .input-text-field:hover
     border: 1px solid nth($colors, 3)
     color: nth($colors, 1)
 
-.input-text-field::placeholder
+.input-text-field__input:focus,    
+.input-text-field__input:hover
+    outline: none
+    border: none
+
+.input-text-field__input::placeholder
      color: nth($colors, 4)

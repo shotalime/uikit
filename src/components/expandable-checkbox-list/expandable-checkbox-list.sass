@@ -1,0 +1,54 @@
+.expandable-checkbox-list__button
+    width: 262px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    border: none
+    background: none
+    +label-text
+    margin-bottom: 13px
+    padding-left: 0
+
+.expandable-checkbox-list__arrow
+    color: nth($colors, 3)
+
+.expandable-checkbox-list__items
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    
+
+.expandable-checkbox-list__item
+    display: flex
+    align-items: center
+    
+
+.expandable-checkbox-list__checkbox
+    display: none
+
+.expandable-checkbox-list__checkbox-name
+    color: nth($colors, 3)
+    line-height: 18px
+    display: flex
+    vertical-align: middle
+
+.expandable-checkbox-list__checkbox-name::before
+    box-sizing: border-box
+    content: " "
+    width: 20px
+    height: 20px
+    display: block
+    border: 1px solid nth($colors, 4)
+    border-radius: 4px
+    margin-right: 9px
+    margin-bottom: 10px
+
+
+
+.expandable-checkbox-list__checkbox:checked + .expandable-checkbox-list__checkbox-name::before
+    border-color: nth($colors, 6)
+    content:  url("/components/expandable-checkbox-list/expandable-checkbox-list__arrow.svg")
+    // background-image: url("/components/expandable-checkbox-list/expandable-checkbox-list__arrow.svg")
+    // background-repeat: no-repeat
+    padding-left: 4px
+    padding-bottom: 0px

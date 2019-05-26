@@ -6,9 +6,9 @@ block content
             .leftstr Text field  
             .rightstrDefault 
             
-        -var textFieldName = "Email"
-        -var textFieldValue = ""
-        -var textFieldPlaceholder="Email"
+        -var name = "Email"
+        -var value = ""
+        -var placeholder="Email"
         include ../components/input-text-field/input-text-field
       
     .input-text-field-focus
@@ -16,9 +16,9 @@ block content
             .leftstr Text field  
             .rightstr Hover / focus
             
-        -var textFieldName = "text-field"
-        -var textFieldValue = "This is pretty awesome"
-        -var textFieldPlaceholder=""
+        -var name = "text-field"
+        -var value = "This is pretty awesome"
+        -var placeholder=""
         include ../components/input-text-field/input-text-field
 
     //dropdown-rooms
@@ -44,11 +44,38 @@ block content
             .rightstr
             
                     
-        -var textFieldName = "Email"
-        -var textFieldValue = ""
-        -var textFieldPlaceholder="Email"
+        -var name = "Email"
+        -var value = ""
+        -var placeholder="Email"
         include ../components/subscription-text-field/subscription-text-field
 
+    //masked-text-field
+    .masked-text-field-default
+        .form-element__titel
+            .leftstr masked-text-field
+            .rightstr
+            
+        -var id = "#date"            
+        -var name = ""
+        -var value = ""
+        -var placeholder="ДД.ММ.ГГГГ"
+        include ../components/masked-text-field/masked-text-field
+        
+    //expandable-checkbox-list
+    .expandable-checkbox-list-default
+        .form-element__titel
+            .leftstr
+            .rightstr
+        
+        
+        include ../components/expandable-checkbox-list/expandable-checkbox-list
+
+
+
+    <script type="text/javascript" src="/jQuery/jquery.maskedinput.js"></script>
     <script src="/components/quantity-buttons/quantity-buttons.js"></script>
     <script src="/components/dropdown-rooms/dropdown-rooms.js"></script>
     <script src="/components/dropdown-guests/dropdown-guests.js"></script>
+    <script src="/jQuery/jquery.maskedinput.js"></script>
+    <script src="/components/masked-text-field/masked-text-field.js"></script>
+    <script src="/components/expandable-checkbox-list/expandable-checkbox-list.js"></script>
