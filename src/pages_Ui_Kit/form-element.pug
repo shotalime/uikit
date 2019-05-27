@@ -97,6 +97,16 @@ block content
         
         include ../components/checkbox-buttons/checkbox-buttons
     
+    //checkbox-buttons
+    .radio-buttons-default
+        .form-element__titel
+            .leftstr radio buttons
+            .rightstr
+        
+        
+        include ../components/radio-buttons/radio-buttons
+        +radio-button("gender", "men", "checked", "Мужчина")
+        +radio-button("gender", "woman", false, "Женщина")
 
     <script type="text/javascript" src="/jQuery/jquery.maskedinput.js"></script>
     <script src="/components/quantity-buttons/quantity-buttons.js"></script>

@@ -1,0 +1,46 @@
+
+.radio-button
+    display: flex
+
+
+.radio-button__button  
+    display: none
+
+.radio-button label
+    display: inline-block
+    position: relative
+    cursor: pointer
+    padding-left: 30px
+    color: nth($colors, 3)
+
+.radio-button__button + label::before
+    position: absolute
+    left: 0px
+    top: 0px
+    box-sizing: border-box
+    content: " "
+    width: 20px
+    height: 20px
+    display: block
+    border: 1px solid nth($colors, 4)
+    border-radius: 10px
+
+.radio-button__button:checked + label
+    color: nth($colors, 2)
+
+
+.radio-button__button:checked + label::before
+    border-color: nth($colors, 6)
+    text-align: center
+    content:  " "
+
+.radio-button__button:checked + label::after
+    position: absolute
+    left: 4px
+    top: 4px
+    content:  ""
+    width: 12px
+    height: 12px
+    background-color: red
+    +primary-gradient
+    border-radius: 100%

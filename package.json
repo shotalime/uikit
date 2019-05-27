@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "jquery-mask-plugin": "^1.14.15",
-    "jquery-ui-dist": "^1.12.1"
+    "jquery-ui-dist": "^1.12.1",
+    "jquery.maskedinput": "^1.4.1"
   }
 }
