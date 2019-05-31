@@ -1,0 +1,5 @@
+mixin toggle-button(name, id, checked, description)
+    .toggle-button
+        input.toggle-button__button(type="checkbox" name= name id= id checked= checked)
+        label(for !=id)
+            !=description

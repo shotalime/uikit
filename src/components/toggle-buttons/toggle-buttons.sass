@@ -1,0 +1,55 @@
+
+.toggle-button
+    display: flex
+
+
+.toggle-button__button  
+    display: none
+
+.toggle-button label
+    display: inline-block
+    position: relative
+    cursor: pointer
+    padding-left: 50px
+    color: nth($colors, 2)
+
+.toggle-button__button + label::before
+    position: absolute
+    left: 0px
+    top: 2px
+    box-sizing: border-box
+    content: " "
+    width: 40px
+    height: 20px
+    display: block
+    border: 1px solid nth($colors, 4)
+    border-radius: 10px
+
+.toggle-button__button:checked + label
+    color: nth($colors, 2)
+
+
+.toggle-button__button:checked + label::before
+    border-color: nth($colors, 6)
+    text-align: center
+    content:  " "
+
+.toggle-button__button:checked + label::after
+    position: absolute
+    left: 4px
+    top: 6px
+    content:  ""
+    width: 12px
+    height: 12px
+    +primary-gradient
+    border-radius: 100%
+
+.toggle-button__button + label::after
+    position: absolute
+    left: 24px
+    top: 6px
+    content:  ""
+    width: 12px
+    height: 12px
+    background-color: nth($colors, 4)
+    border-radius: 100%

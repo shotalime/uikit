@@ -108,6 +108,26 @@ block content
         +radio-button("gender", "men", "checked", "Мужчина")
         +radio-button("gender", "woman", false, "Женщина")
 
+    .toggle-buttons-default
+        .form-element__titel
+            .leftstr toggle buttons
+            .rightstr
+        
+        
+        include ../components/toggle-buttons/toggle-buttons
+        +toggle-button("special_offer", "yes", "checked", "Получать спецпредложения")
+        +toggle-button("special_offer", "no", false, "Получать спецпредложения")
+    
+    .like-buttons-default
+        .form-element__titel
+            .leftstr like buttons
+            .rightstr
+        
+        
+        include ../components/like-buttons/like-buttons
+        +like-button("like", "like1")
+        +like-button("like", "like2")
+
     <script type="text/javascript" src="/jQuery/jquery.maskedinput.js"></script>
     <script src="/components/quantity-buttons/quantity-buttons.js"></script>
     <script src="/components/dropdown-rooms/dropdown-rooms.js"></script>
@@ -115,3 +135,4 @@ block content
     <script src="/jQuery/jquery.maskedinput.js"></script>
     <script src="/components/masked-text-field/masked-text-field.js"></script>
     <script src="/components/expandable-checkbox-list/expandable-checkbox-list.js"></script>
+    <script src="/components/like-buttons/like-buttons.js"></script>
