@@ -125,8 +125,18 @@ block content
         
         
         include ../components/like-buttons/like-buttons
-        +like-button("like", "like1")
-        +like-button("like", "like2")
+        +like-button("like")
+        +like-button("like")
+
+    .rate-buttons-default
+        .form-element__titel
+            .leftstr rate buttons
+            .rightstr
+    
+    
+        include ../components/rate-buttons/rate-buttons
+        +rate-button("like")
+        +rate-button("like", "", 5)
 
     <script type="text/javascript" src="/jQuery/jquery.maskedinput.js"></script>
     <script src="/components/quantity-buttons/quantity-buttons.js"></script>
@@ -135,4 +145,5 @@ block content
     <script src="/jQuery/jquery.maskedinput.js"></script>
     <script src="/components/masked-text-field/masked-text-field.js"></script>
     <script src="/components/expandable-checkbox-list/expandable-checkbox-list.js"></script>
+    <script src="/components/rate-buttons/rate-buttons.js"></script>
     <script src="/components/like-buttons/like-buttons.js"></script>
