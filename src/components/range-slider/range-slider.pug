@@ -1,1 +1,14 @@
-div#slider
+//- link(rel="stylesheet", href="/components/range-slider/range-slider.sass")
+
+
+mixin range-slider(name, value_min, value_max, currency)
+    .range-slider( data-currency= currency)
+        .range-slider__inputs
+            span.range-slider__name!= name
+            span.range-slider__value
+            input.range-slider__input.range-slider__min-value(type="text" value=value_min) 
+            input.range-slider__input.range-slider__max-value(type="text" value=value_max)
+            
+        .range-slider__slider
+    
+

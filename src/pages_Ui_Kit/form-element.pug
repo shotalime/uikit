@@ -135,19 +135,22 @@ block content
     
     
         include ../components/rate-buttons/rate-buttons
-        +rate-button("like")
-        +rate-button("like")
-    .range-slider
-            .form-element__titel
-                .leftstr range slider
-                .rightstr
-        
-        
-            include ../components/range-slider/range-slider
-              
-        
-    <script type="text/javascript" src="/jQuery/jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.js"></script>
-    <script type="text/javascript" src="/jQuery/jquery.maskedinput.js"></script>
+        +rate-button("rate")
+        +rate-button("rate")
+    .range-slider-default
+        .form-element__titel
+            .leftstr 
+            .rightstr
+    
+    
+        include ../components/range-slider/range-slider
+        +range-slider("range slider", "0", "20000", "&#8381")
+
+
+      
+    <script type="text/javascript" src="/index.js"></script>    
+    <script type="text/javascript" src="/jQuery/jquery-3.4.0.js"></script>   
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="/components/quantity-buttons/quantity-buttons.js"></script>
     <script type="text/javascript" src="/components/dropdown-rooms/dropdown-rooms.js"></script>
     <script type="text/javascript" src="/components/dropdown-guests/dropdown-guests.js"></script>

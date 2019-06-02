@@ -1,0 +1,48 @@
+
+.range-slider
+	width: 266px
+	position: relative
+	display: flex
+	flex-direction: column
+
+.range-slider .ui-slider-handle
+	// position: relative
+	top: -6px
+	vertical-align: center
+	width: 16px
+	height: 16px
+	border-radius: 100%
+	+second-gradient
+	border: 2px solid white
+	cursor: pointer
+
+.range-slider .ui-slider-handle:focus
+	outline: none
+    
+.range-slider .ui-slider-horizontal
+	
+	height: 6px
+	border: 1px solid nth($colors, 4)
+	border-radius: 3px
+
+.range-slider .ui-widget-header
+	position: relative
+	top: -1px
+	height: 6px
+	+second-gradient
+	border: none
+
+.range-slider__inputs
+	display: flex
+	justify-content: space-between
+	padding-bottom: 20px
+
+.range-slider__input
+	display: none
+
+.range-slider__name
+	+label-text
+
+.range-slider__value
+	font-size: 12px
+	line-height: 16px

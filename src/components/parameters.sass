@@ -11,7 +11,10 @@ $colors: [$color-1, tint($color-1, 25), tint($color-1, 50), tint($color-1, 75), 
 @mixin primary-gradient
     background: linear-gradient(to top, nth($colors, 8) 0%, nth($colors, 6) 100%)
     -webkit-text-fill-color: transparent
-  
+
+@mixin second-gradient
+    background: linear-gradient(to top, #66D2EA 0%, #6FCF97 100%)
+    -webkit-text-fill-color: transparent
 
 @mixin title-text 
     font-family: quicksandbold, sans-serif
