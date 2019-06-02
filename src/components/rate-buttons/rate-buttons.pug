@@ -1,8 +1,16 @@
-mixin rate-button(name, id)
+mixin rate-button(name, stars)
     .rate-button
-        .rate-button__item.material-icons star_border
-        .rate-button__item.material-icons star_border
-        .rate-button__item.material-icons star_border
-        .rate-button__item.material-icons star_border
-        .rate-button__item.material-icons star_border
-        
+        //- .rate-button__item.material-icons star_border
+        //- .rate-button__item.material-icons star_border
+        //- .rate-button__item.material-icons star_border
+        //- .rate-button__item.material-icons star_border
+        //- .rate-button__item.material-icons star_border
+        -var n = 1
+        -var m = 5 - stars
+        while n <= stars
+            .rate-button__item.material-icons star
+            -n++
+        -n = 1
+        while n <= 5-stars
+            .rate-button__item.material-icons star_border
+            -n++
