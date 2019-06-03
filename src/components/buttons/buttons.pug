@@ -1,0 +1,11 @@
+mixin button(name, text, style)
+    button.button(name= name class=style)
+        span.button__text!= text
+        span.button__arrow.material-icons
+
+//- style:
+        button_style_solid
+        button_style_framed
+        button_style_noframe
+        button_style_link
+ 
