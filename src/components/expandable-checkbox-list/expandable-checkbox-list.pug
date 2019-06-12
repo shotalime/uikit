@@ -1,8 +1,9 @@
-include ./expandable-checkbox-list__data
+include ../checkbox-buttons/checkbox-buttons
 
-.expandable-checkbox-list
-    button.expandable-checkbox-list__button
-        span!= title 
-        i.expandable-checkbox-list__arrow.material-icons keyboard_arrow_down
-    include ../checkbox-buttons/checkbox-buttons
+mixin expandable-checkbox-list(title, items_array)
+    .expandable-checkbox-list
+        button.expandable-checkbox-list__button
+            span!= title 
+            i.expandable-checkbox-list__arrow.material-icons keyboard_arrow_down
+        +checkbox-buttons(items_array)
 

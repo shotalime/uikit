@@ -1,7 +1,7 @@
-
-.checkbox-buttons
-    -for(var i=0; i<items_array.length; i++)
-        label.checkbox-button
-            input.checkbox-button__checkbox(type="checkbox" name!= items_array[i].name checked= items_array[i].checked)
-            .checkbox-button__name!= items_array[i].description
+mixin checkbox-buttons(items_array)
+    .checkbox-buttons
+        -for(var i=0; i<items_array.length; i++)
+            label.checkbox-button
+                input.checkbox-button__checkbox(type="checkbox" name!= items_array[i].name checked= items_array[i].checked)
+                .checkbox-button__name!= items_array[i].description
 
