@@ -1,29 +1,33 @@
 
-.checkbox-buttons
+.checkbox-buttons-rich
+    width: 300px 
     display: flex
     flex-direction: column
     align-items: flex-start
     flex-wrap: wrap
-    
-    
 
-.checkbox-button
-    display: flex
+.checkbox-button-rich
     align-items: center
     cursor: pointer
-    
+    margin-bottom: 9px
 
-.checkbox-button__checkbox
+.checkbox-button-rich__checkbox
     display: none
 
-.checkbox-button__name
-    width: 400px 
-    color: nth($colors, 3)
+.checkbox-button-rich__title
+    color: nth($colors, 2)
     line-height: 18px
     display: flex
     vertical-align: middle
+    font-weight: bold
 
-.checkbox-button__name::before
+.checkbox-button-rich__description
+    padding-left: 29px
+    font-size: 12px
+    line-height: 14px
+    color: nth($colors, 3)
+
+.checkbox-button-rich__title::before
     box-sizing: border-box
     content: " "
     width: 20px
@@ -32,12 +36,10 @@
     display: block
     border: 1px solid nth($colors, 4)
     border-radius: 4px
-    margin-right: 9px
-    margin-bottom: 10px
+    margin-right: 10px
+    margin-bottom: 5px
 
-
-
-.checkbox-button__checkbox:checked + .checkbox-button__name::before
+.checkbox-button-rich__checkbox:checked + .checkbox-button__title::before
     border-color: nth($colors, 6)
     content:  url("/components/checkbox-buttons/checkbox-buttons__arrow.svg")
     padding-left: 4px

@@ -1,0 +1,7 @@
+mixin checkbox-buttons-rich(items_array)
+    .checkbox-buttons-rich
+        -for(var i=0; i<items_array.length; i++)
+            label.checkbox-button-rich
+                input.checkbox-button-rich__checkbox(type="checkbox" name!= items_array[i].name checked= items_array[i].checked)
+                .checkbox-button-rich__title!= items_array[i].title
+                .checkbox-button-rich__description!= items_array[i].description

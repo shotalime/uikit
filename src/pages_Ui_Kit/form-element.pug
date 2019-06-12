@@ -1,6 +1,6 @@
 extends layouts/uiKit
 block content
-    //input-text-field  
+    
     .input-text-field-default.form-element
         .form-element__titel
             .leftstr Text field  
@@ -10,6 +10,8 @@ block content
         -var value = ""
         -var placeholder="Email"
         include ../components/input-text-field/input-text-field
+
+
       
     .input-text-field-focus.form-element
         .form-element__titel
@@ -21,7 +23,8 @@ block content
         -var placeholder=""
         include ../components/input-text-field/input-text-field
 
-    //dropdown-rooms
+    
+    
     .dropdown-rooms-default.form-element
         .form-element__titel
             .leftstr dropdown
@@ -29,7 +32,8 @@ block content
             
         include ../components/dropdown-rooms/dropdown-rooms
         
-    //dropdown-guests
+    
+    
     .dropdown-guests-default.form-element
         .form-element__titel
             .leftstr dropdown
@@ -37,19 +41,20 @@ block content
            
         include ../components/dropdown-guests/dropdown-guests
 
-    //subscription-text-field
+    
+    
     .subscription-text-field-default.form-element
         .form-element__titel
             .leftstr subscription text field 
             .rightstr
-            
-                    
+                                
         -var name = "Email"
         -var value = ""
         -var placeholder="Email"
         include ../components/subscription-text-field/subscription-text-field
 
-    //masked-text-field
+    
+    
     .masked-text-field-default.form-element
         .form-element__titel
             .leftstr masked-text-field
@@ -61,134 +66,137 @@ block content
         -var placeholder="ДД.ММ.ГГГГ"
         include ../components/masked-text-field/masked-text-field
         
-    //expandable-checkbox-list
+
+    
     .expandable-checkbox-list-default.form-element
         .form-element__titel
             .leftstr
             .rightstr
-        
-        
+                
         include ../components/expandable-checkbox-list/expandable-checkbox-list
         +expandable-checkbox-list("expandable checkbox list", [
-        {
-            description: 'Завтрак',
-            name: 'expandable-checkbox-list__item',
-            checked: false
-        },
-        {
-            description: 'Письменный стол',
-            name: 'expandable-checkbox-list__item',
-            checked: false
-        },
-        {
-            description: 'Стул для кормления',
-            name: 'expandable-checkbox-list__item',
-            checked: ''
-        },
-        {
-            description: 'Кроватка',
-            name: 'expandable-checkbox-list__item',
-            checked: ''
-        },
-        {
-            description: 'Телевизор',
-            name: 'expandable-checkbox-list__item',
-            checked: ''
-        },
-        {
-            description: 'Шампунь',
-            name: 'expandable-checkbox-list__item',
-            checked: false
-        },
-        {
-            description: 'Телевизор',
-            name: 'expandable-checkbox-list__item',
-            checked: false
-        }])
+            {
+                description: 'Завтрак',
+                name: 'expandable-checkbox-list__item',
+                checked: false
+            },
+            {
+                description: 'Письменный стол',
+                name: 'expandable-checkbox-list__item',
+                checked: false
+            },
+            {
+                description: 'Стул для кормления',
+                name: 'expandable-checkbox-list__item',
+                checked: ''
+            },
+            {
+                description: 'Кроватка',
+                name: 'expandable-checkbox-list__item',
+                checked: ''
+            },
+            {
+                description: 'Телевизор',
+                name: 'expandable-checkbox-list__item',
+                checked: ''
+            },
+            {
+                description: 'Шампунь',
+                name: 'expandable-checkbox-list__item',
+                checked: false
+            },
+            {
+                description: 'Телевизор',
+                name: 'expandable-checkbox-list__item',
+                checked: false
+            }])
 
-    //checkbox-buttons
+    
     
     .checkbox-buttons-default.form-element
         .form-element__titel
             .leftstr checkbox buttons
             .rightstr
-        
-        
+                
         include ../components/checkbox-buttons/checkbox-buttons
         +checkbox-buttons([
-                {
-                    description: 'Можно курить',
-                    name: 'expandable-checkbox-list__item',
-                    checked: false
-                },
-                {
-                    description: 'Можно с питомцами',
-                    name: 'expandable-checkbox-list__item',
-                    checked: ''
-                },
-                {
-                    description: 'Можно пригласить гостей <br>(до 10 человек)',
-                    name: 'expandable-checkbox-list__item',
-                    checked: ''
-                }])
+            {
+                description: 'Можно курить',
+                name: 'expandable-checkbox-list__item',
+                checked: false
+            },
+            {
+                description: 'Можно с питомцами',
+                name: 'expandable-checkbox-list__item',
+                checked: ''
+            },
+            {
+                description: 'Можно пригласить гостей <br>(до 10 человек)',
+                name: 'expandable-checkbox-list__item',
+                checked: ''
+            }])
     
-    //checkbox-buttons
+
+    
     .radio-buttons-default.form-element
         .form-element__titel
             .leftstr radio buttons
             .rightstr
-        
-        
+                
         include ../components/radio-buttons/radio-buttons
         +radio-button("gender", "men", "checked", "Мужчина")
         +radio-button("gender", "woman", false, "Женщина")
+
+
 
     .toggle-buttons-default.form-element
         .form-element__titel
             .leftstr toggle buttons
             .rightstr
-        
-        
+                
         include ../components/toggle-buttons/toggle-buttons
         +toggle-button("special_offer", "yes", "checked", "Получать спецпредложения")
         +toggle-button("special_offer", "no", false, "Получать спецпредложения")
     
+
+
     .like-buttons-default.form-element
         .form-element__titel
             .leftstr like buttons
             .rightstr
-        
-        
+                
         include ../components/like-buttons/like-buttons
         +like-button("like", "", "2")
         +like-button("like", "", "11")
+
+
 
     .rate-buttons-default.form-element
         .form-element__titel
             .leftstr rate buttons
             .rightstr
-    
-    
+        
         include ../components/rate-buttons/rate-buttons
         +rate-button("rate", "4")
         +rate-button("rate", "5")
+
 
 
     .range-slider-default.form-element
         .form-element__titel
             .leftstr 
             .rightstr
-    
-    
+        
         include ../components/range-slider/range-slider
         +range-slider("range slider", "0", "20000", "&#8381")
     
+
+
     .button-default.form-element
         .form-element__titel
             .leftstr 
             .rightstr
-    
-    
+        
         include ../components/buttons/buttons
         +button("solid", "Click me", "button_style_solid")
         +button("solid", "Click me", "button_style_solid")
@@ -198,21 +206,44 @@ block content
         +button("solid", "Click me", "button_style_noframe")
         +button("solid", "Перейти к оплате", "button_style_link")
 
-    .pagination-default.form-element
-        .form-element__titel
-            .leftstr Pagination
-            .rightstr
-    
-    
-        include ../components/pagination/pagination
-        +pagination("15")
+
 
     .pagination-default.form-element
         .form-element__titel
             .leftstr Pagination
             .rightstr
-    
-      
+        
+        include ../components/pagination/pagination
+        +pagination("15")
+
+
+
+    .checkbox-buttons_rich.form-element
+        .form-element__titel
+            .leftstr Rich checkbox buttons 
+            .rightstr
+
+        include ../components/checkbox-buttons-rich/checkbox-buttons-rich
+        +checkbox-buttons-rich([
+            {
+                title: "Широкий коридор",
+                description: 'Ширина коридоров в номере<br> не менее 91 см.',
+                name: ' ',
+                checked: false
+            },
+            {   
+                title: "Помощник для инвалидов",
+                description: 'На 1 этаже вас встретит специалист<br> и проводит до номера.',
+                name: ' ',
+                checked: ''
+            }
+            ])
+
+
+
+
+
+
     <script type="text/javascript" src="/index.js"></script>    
     <script type="text/javascript" src="/jQuery/jquery-3.4.0.js"></script>   
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
