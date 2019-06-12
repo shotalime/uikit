@@ -5,6 +5,7 @@
 
 .radio-button__button  
     display: none
+    font-weight: normal
 
 .radio-button label
     display: inline-block
@@ -16,7 +17,7 @@
 .radio-button__button + label::before
     position: absolute
     left: 0px
-    top: 0px
+    top: 4px
     box-sizing: border-box
     content: " "
     width: 20px
@@ -37,7 +38,7 @@
 .radio-button__button:checked + label::after
     position: absolute
     left: 4px
-    top: 4px
+    top: 8px
     content:  ""
     width: 12px
     height: 12px

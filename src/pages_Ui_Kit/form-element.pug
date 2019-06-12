@@ -1,7 +1,7 @@
 extends layouts/uiKit
 block content
     //input-text-field  
-    .input-text-field-default
+    .input-text-field-default.form-element
         .form-element__titel
             .leftstr Text field  
             .rightstrDefault 
@@ -11,7 +11,7 @@ block content
         -var placeholder="Email"
         include ../components/input-text-field/input-text-field
       
-    .input-text-field-focus
+    .input-text-field-focus.form-element
         .form-element__titel
             .leftstr Text field  
             .rightstr Hover / focus
@@ -22,7 +22,7 @@ block content
         include ../components/input-text-field/input-text-field
 
     //dropdown-rooms
-    .dropdown-rooms-default
+    .dropdown-rooms-default.form-element
         .form-element__titel
             .leftstr dropdown
             .rightstr Default
@@ -30,7 +30,7 @@ block content
         include ../components/dropdown-rooms/dropdown-rooms
         
     //dropdown-guests
-    .dropdown-guests-default
+    .dropdown-guests-default.form-element
         .form-element__titel
             .leftstr dropdown
             .rightstr
@@ -38,7 +38,7 @@ block content
         include ../components/dropdown-guests/dropdown-guests
 
     //subscription-text-field
-    .subscription-text-field-default
+    .subscription-text-field-default.form-element
         .form-element__titel
             .leftstr subscription text field 
             .rightstr
@@ -50,7 +50,7 @@ block content
         include ../components/subscription-text-field/subscription-text-field
 
     //masked-text-field
-    .masked-text-field-default
+    .masked-text-field-default.form-element
         .form-element__titel
             .leftstr masked-text-field
             .rightstr
@@ -62,7 +62,7 @@ block content
         include ../components/masked-text-field/masked-text-field
         
     //expandable-checkbox-list
-    .expandable-checkbox-list-default
+    .expandable-checkbox-list-default.form-element
         .form-element__titel
             .leftstr
             .rightstr
@@ -89,7 +89,7 @@ block content
                 checked: ''
             }]
 
-    .expandable-checkbox-list-default
+    .expandable-checkbox-list-default.form-element
         .form-element__titel
             .leftstr checkbox buttons
             .rightstr
@@ -98,7 +98,7 @@ block content
         include ../components/checkbox-buttons/checkbox-buttons
     
     //checkbox-buttons
-    .radio-buttons-default
+    .radio-buttons-default.form-element
         .form-element__titel
             .leftstr radio buttons
             .rightstr
@@ -108,7 +108,7 @@ block content
         +radio-button("gender", "men", "checked", "Мужчина")
         +radio-button("gender", "woman", false, "Женщина")
 
-    .toggle-buttons-default
+    .toggle-buttons-default.form-element
         .form-element__titel
             .leftstr toggle buttons
             .rightstr
@@ -118,17 +118,17 @@ block content
         +toggle-button("special_offer", "yes", "checked", "Получать спецпредложения")
         +toggle-button("special_offer", "no", false, "Получать спецпредложения")
     
-    .like-buttons-default
+    .like-buttons-default.form-element
         .form-element__titel
             .leftstr like buttons
             .rightstr
         
         
         include ../components/like-buttons/like-buttons
-        +like-button("like")
-        +like-button("like")
+        +like-button("like", "", "2")
+        +like-button("like", "", "11")
 
-    .rate-buttons-default
+    .rate-buttons-default.form-element
         .form-element__titel
             .leftstr rate buttons
             .rightstr
@@ -139,7 +139,7 @@ block content
         +rate-button("rate", "5")
 
 
-    .range-slider-default
+    .range-slider-default.form-element
         .form-element__titel
             .leftstr 
             .rightstr
@@ -148,7 +148,7 @@ block content
         include ../components/range-slider/range-slider
         +range-slider("range slider", "0", "20000", "&#8381")
     
-    .button-default
+    .button-default.form-element
         .form-element__titel
             .leftstr 
             .rightstr
@@ -163,7 +163,20 @@ block content
         +button("solid", "Click me", "button_style_noframe")
         +button("solid", "Перейти к оплате", "button_style_link")
 
+    .pagination-default.form-element
+        .form-element__titel
+            .leftstr Pagination
+            .rightstr
+    
+    
+        include ../components/pagination/pagination
+        +pagination("15")
 
+    .pagination-default.form-element
+        .form-element__titel
+            .leftstr Pagination
+            .rightstr
+    
       
     <script type="text/javascript" src="/index.js"></script>    
     <script type="text/javascript" src="/jQuery/jquery-3.4.0.js"></script>   
