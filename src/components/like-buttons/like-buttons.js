@@ -2,7 +2,6 @@ $(document).ready(function() {
     $('.like-button__button').click(function () {
         if($(this).find(".material-icons").html() != "favorite") {
             var $input = $(this).find('.like-button__count');
-            console.log($input.text())
             var count = parseInt($input.text()) + 1;
             count = count < 0 ? 0 : count;
             $input.text(count);

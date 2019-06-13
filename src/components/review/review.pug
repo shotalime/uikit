@@ -1,0 +1,22 @@
+mixin review(review_object)
+    .review
+        
+        .review-author
+            img.review-author__image(src= review_object.image_url)
+            .review-author__data
+                .review-author__name= review_object.name
+                .review-author__date= review_object.date
+        +like-buttons({
+            name: "like",
+            count: "11"
+        })
+        .review__text= review_object.text
+
+
+//- review_object{
+//-     name: author
+//-     image_url: url
+//-     date: 01.01.2019
+//-     text: review
+//-     likes: 12
+//- }

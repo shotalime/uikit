@@ -1,6 +1,6 @@
-mixin like-button(name, id, count)
-    .like-button
-        button.like-button__button(name= name id= id)
+mixin like-buttons(like_object)
+    .like-buttons
+        button.like-button__button(name= like_object.name id= like_object.id)
             .material-icons favorite_border
             span.like-button__count 
-                !=count
+                !=like_object.count
