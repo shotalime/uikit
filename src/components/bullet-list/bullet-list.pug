@@ -1,0 +1,5 @@
+mixin bullet-list(items_array)
+    ul.bullet-list
+        -for(var i=0; i<items_array.length; i++)
+            li.bullet-list__item!=items_array[i]
+                

@@ -235,11 +235,17 @@ block content
                 title: "Помощник для инвалидов",
                 description: 'На 1 этаже вас встретит специалист<br> и проводит до номера.',
                 name: ' ',
-                checked: ''
+                checked: 'checked'
             }
             ])
 
+    .bullet-list-default.form-element
+            .form-element__titel
+                .leftstr bullet list
+                .rightstr
 
+            include ../components/bullet-list/bullet-list
+            +bullet-list(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00,<br> а выезд до 12:00"])
 
 
 
