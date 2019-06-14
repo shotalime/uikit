@@ -13,16 +13,21 @@ block content
     include ../components/buttons/buttons
     include ../components/range-slider/range-slider
     include ../components/bullet-list/bullet-list
+    include ../components/input-text-field/input-text-field
+    include ../components/subscription-text-field/subscription-text-field
+    include ../components/masked-text-field/masked-text-field
+    include ../components/date-dropdown/date-dropdown
 
     .input-text-field-default.form-element
         .form-element__titel
             .leftstr Text field  
             .rightstrDefault 
             
-        -var name = "Email"
-        -var value = ""
-        -var placeholder="Email"
-        include ../components/input-text-field/input-text-field
+        +input-text-field({
+                name: "Email",
+                value: "",
+                placeholder: "Email"
+            })                
 
 
       
@@ -31,10 +36,11 @@ block content
             .leftstr Text field  
             .rightstr Hover / focus
             
-        -var name = "text-field"
-        -var value = "This is pretty awesome"
-        -var placeholder=""
-        include ../components/input-text-field/input-text-field
+        +input-text-field({
+                name: "text-field",
+                value: "This is pretty awesome",
+                placeholder: ""
+            })                
 
     
     
@@ -60,11 +66,12 @@ block content
         .form-element__titel
             .leftstr subscription text field 
             .rightstr
-                                
-        -var name = "Email"
-        -var value = ""
-        -var placeholder="Email"
-        include ../components/subscription-text-field/subscription-text-field
+            
+        +input-text-field({
+                name: "Email",
+                value: "",
+                placeholder: "Email"
+            })       
 
     
     
@@ -73,11 +80,13 @@ block content
             .leftstr masked-text-field
             .rightstr
             
-        -var id = "#date"            
-        -var name = ""
-        -var value = ""
-        -var placeholder="ДД.ММ.ГГГГ"
-        include ../components/masked-text-field/masked-text-field
+        +masked-text-field({
+                id: "#date",
+                name: "",
+                value: "",
+                placeholder: "ДД.ММ.ГГГГ"
+            }) 
+        
         
 
     
@@ -86,8 +95,7 @@ block content
             .leftstr
             .rightstr                
         
-        +expandable-checkbox-list("expandable checkbox list", [
-            {
+        +expandable-checkbox-list("expandable checkbox list", [{
                 description: 'Завтрак',
                 name: 'expandable-checkbox-list__item',
                 checked: false
@@ -130,8 +138,7 @@ block content
             .leftstr checkbox buttons
             .rightstr
                         
-        +checkbox-buttons([
-            {
+        +checkbox-buttons([{
                 description: 'Можно курить',
                 name: 'expandable-checkbox-list__item',
                 checked: false
@@ -224,7 +231,6 @@ block content
             .leftstr Pagination
             .rightstr
         
-        
         +pagination("15")
 
 
@@ -234,8 +240,7 @@ block content
             .leftstr Rich checkbox buttons 
             .rightstr
         
-        +checkbox-buttons-rich([
-            {
+        +checkbox-buttons-rich([{
                 title: "Широкий коридор",
                 description: 'Ширина коридоров в номере<br> не менее 91 см.',
                 name: ' ',
@@ -246,8 +251,7 @@ block content
                 description: 'На 1 этаже вас встретит специалист<br> и проводит до номера.',
                 name: ' ',
                 checked: 'checked'
-            }
-            ])
+            }])
 
 
 
@@ -275,6 +279,8 @@ block content
                 likes: "12"
                 })
 
+
+
     .icon-text-list-default.form-element
             .form-element__titel
                 .leftstr icon text list
@@ -293,15 +299,11 @@ block content
 
 
 
-    <script type="text/javascript" src="/index.js"></script>    
-    <script type="text/javascript" src="/jQuery/jquery-3.4.0.js"></script>   
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="/components/quantity-buttons/quantity-buttons.js"></script>
-    <script type="text/javascript" src="/components/dropdown-rooms/dropdown-rooms.js"></script>
-    <script type="text/javascript" src="/components/dropdown-guests/dropdown-guests.js"></script>
-    <script type="text/javascript" src="/jQuery/jquery.maskedinput.js"></script>
-    <script type="text/javascript" src="/components/masked-text-field/masked-text-field.js"></script>
-    <script type="text/javascript" src="/components/expandable-checkbox-list/expandable-checkbox-list.js"></script>
-    //- <script type="text/javascript" src="/components/rate-buttons/rate-buttons.js"></script>
-    <script type="text/javascript" src="/components/like-buttons/like-buttons.js"></script>
-    <script type="text/javascript" src="/components/range-slider/range-slider.js"></script>
+    .icon-text-list-default.form-element
+            .form-element__titel
+                .leftstr date dropdown
+                .rightstr
+
+            +date-dropdown
+
+

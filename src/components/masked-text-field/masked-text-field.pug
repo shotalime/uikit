@@ -1,2 +1,4 @@
-.masked-text-field
-    include ../input-text-field/input-text-field 
+mixin masked-text-field(object)
+    .masked-text-field
+        include ../input-text-field/input-text-field
+        +input-text-field(object)
