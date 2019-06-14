@@ -1,0 +1,13 @@
+mixin icon-text-list(object)
+    .icon-text-list
+        img(src= object.image_url, alt=object.image_url.alt).icon-text-list__img
+        .icon-text-list__items
+            .icon-text-list__title= object.title
+            .icon-text-list__description= object.description
+        hr.icon-text-list__line
+
+//- {
+//- image_url: "/img/comfort.svg",
+//- title: "Комфорт",
+//- description: "Шумопоглащающие стены"
+//- }

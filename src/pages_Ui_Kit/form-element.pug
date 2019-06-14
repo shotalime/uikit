@@ -1,6 +1,19 @@
 extends layouts/uiKit
 block content
-    
+    include ../components/icon-text-list/icon-text-list
+    include ../components/expandable-checkbox-list/expandable-checkbox-list
+    include ../components/checkbox-buttons/checkbox-buttons
+    include ../components/radio-buttons/radio-buttons
+    include ../components/toggle-buttons/toggle-buttons
+    include ../components/like-buttons/like-buttons
+    include ../components/rate-buttons/rate-buttons
+    include ../components/pagination/pagination
+    include ../components/review/review
+    include ../components/checkbox-buttons-rich/checkbox-buttons-rich
+    include ../components/buttons/buttons
+    include ../components/range-slider/range-slider
+    include ../components/bullet-list/bullet-list
+
     .input-text-field-default.form-element
         .form-element__titel
             .leftstr Text field  
@@ -71,9 +84,8 @@ block content
     .expandable-checkbox-list-default.form-element
         .form-element__titel
             .leftstr
-            .rightstr
-                
-        include ../components/expandable-checkbox-list/expandable-checkbox-list
+            .rightstr                
+        
         +expandable-checkbox-list("expandable checkbox list", [
             {
                 description: 'Завтрак',
@@ -117,8 +129,7 @@ block content
         .form-element__titel
             .leftstr checkbox buttons
             .rightstr
-                
-        include ../components/checkbox-buttons/checkbox-buttons
+                        
         +checkbox-buttons([
             {
                 description: 'Можно курить',
@@ -141,9 +152,8 @@ block content
     .radio-buttons-default.form-element
         .form-element__titel
             .leftstr radio buttons
-            .rightstr
-                
-        include ../components/radio-buttons/radio-buttons
+            .rightstr                
+        
         +radio-button("gender", "men", "checked", "Мужчина")
         +radio-button("gender", "woman", false, "Женщина")
 
@@ -153,8 +163,7 @@ block content
         .form-element__titel
             .leftstr toggle buttons
             .rightstr
-                
-        include ../components/toggle-buttons/toggle-buttons
+                        
         +toggle-button("special_offer", "yes", "checked", "Получать спецпредложения")
         +toggle-button("special_offer", "no", false, "Получать спецпредложения")
     
@@ -164,8 +173,7 @@ block content
         .form-element__titel
             .leftstr like buttons
             .rightstr
-                
-        include ../components/like-buttons/like-buttons
+                        
         +like-buttons({
             name: "like",
             count: "2"
@@ -181,8 +189,7 @@ block content
         .form-element__titel
             .leftstr rate buttons
             .rightstr
-        
-        include ../components/rate-buttons/rate-buttons
+                
         +rate-button("rate", "4")
         +rate-button("rate", "5")
 
@@ -192,8 +199,7 @@ block content
         .form-element__titel
             .leftstr 
             .rightstr
-        
-        include ../components/range-slider/range-slider
+                
         +range-slider("range slider", "0", "20000", "&#8381")
     
 
@@ -202,8 +208,7 @@ block content
         .form-element__titel
             .leftstr 
             .rightstr
-        
-        include ../components/buttons/buttons
+                
         +button("solid", "Click me", "button_style_solid")
         +button("solid", "Click me", "button_style_solid")
         +button("solid", "Click me", "button_style_framed")
@@ -219,7 +224,7 @@ block content
             .leftstr Pagination
             .rightstr
         
-        include ../components/pagination/pagination
+        
         +pagination("15")
 
 
@@ -228,8 +233,7 @@ block content
         .form-element__titel
             .leftstr Rich checkbox buttons 
             .rightstr
-
-        include ../components/checkbox-buttons-rich/checkbox-buttons-rich
+        
         +checkbox-buttons-rich([
             {
                 title: "Широкий коридор",
@@ -251,8 +255,7 @@ block content
             .form-element__titel
                 .leftstr bullet list
                 .rightstr
-
-            include ../components/bullet-list/bullet-list
+            
             +bullet-list(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00,<br> а выезд до 12:00"])
 
 
@@ -261,8 +264,7 @@ block content
             .form-element__titel
                 .leftstr review
                 .rightstr
-
-            include ../components/review/review
+            
             +review({
                 name: "Мурад Сарафанов",
                 image_url: "/img/murad.png",
@@ -271,6 +273,22 @@ block content
                     А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие.\
                     Выкрикивал комплименты повару — никто не жаловался из соседей.",
                 likes: "12"
+                })
+
+    .icon-text-list-default.form-element
+            .form-element__titel
+                .leftstr icon text list
+                .rightstr
+            
+            +icon-text-list({
+                image_url: "/img/comfort.svg",
+                title: "Комфорт",
+                description: "Шумопоглащающие стены"
+                })
+            +icon-text-list({
+                image_url: "/img/location-city.svg",
+                title: "Удобство",
+                description: "Окно в каждой из спален"
                 })
 
 
