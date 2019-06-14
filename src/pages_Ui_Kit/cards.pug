@@ -1,7 +1,17 @@
 extends layouts/uiKit
 block content
 
-    .input-text-field-default.card
-    .form-element__titel
-        .leftstr Text field  
-        .rightstrDefault 
+    include ../components/room-selection/room-selection
+    include ../components/datepicker/datepicker
+
+
+    .cards
+        .card-room-selection
+
+            +room-selection
+
+
+
+        .card-datepicker
+
+            +datepicker

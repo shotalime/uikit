@@ -1,0 +1,20 @@
+include ../buttons/buttons
+include ../date-dropdown/date-dropdown
+include ../datepicker/datepicker
+
+mixin room-selection
+    .room-selection
+        h1.room-selection__title Найдём номера под ваши пожелания
+        .room-selection__inputs
+            .room-selection__date
+                h3 Прибытие
+                +date-dropdown
+            .room-selection__date
+                h3 Выезд
+                +date-dropdown
+            //- +datepicker
+            .room-selection__guests
+                h3 Гости
+                include ../dropdown-guests/dropdown-guests
+        +button("solid", "Подобрать номер", "button_style_link")
+

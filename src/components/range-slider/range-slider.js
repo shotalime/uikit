@@ -29,32 +29,6 @@ jQuery(function($) {
             $(".range-slider__value").html(a + currency + " - " + b + currency)
         }
     });
-    // $(".range-slider__min-value").change(function(){
-    //     var value1=$(".range-slider__min-value").val();
-    //     var value2=$(".range-slider__max-value").val();
-    
-    //     if(parseInt(value1) > parseInt(value2)){
-    //         value1 = value2;
-    //         $(".range-slider__min-value").val(value1);
-    //     }
-    //     $(".range-slider__slider").slider("values",0,value1);	
-    // });
-    
-        
-    // $(".range-slider__max-value").change(function(){
-    //     var value1=$(".range-slider__min-value").val();
-    //     var value2=$(".range-slider__max-value").val();
-        
-    //     if (value2 > 1000) { value2 = 1000; $(".range-slider__max-value").val(1000)}
-    
-    //     if(parseInt(value1) > parseInt(value2)){
-    //         value2 = value1;
-    //         $(".range-slider__max-value").val(value2);
-    //     }
-    //     $(".range-slider__slider").slider("values",1,value2);
-        
-    // });
-    
 
  });
 
