@@ -1,33 +1,230 @@
 .datepicker__wrap
     height: 369px
+    width: 320px
     background-color: #FFFFFF
     border: 1px solid rgba(31, 32, 65, 0.25)
     box-sizing: border-box
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05)
     border-radius: 4px
-
-.datepicker .ui-datepicker
-    width: 320px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
     
-.datepicker .ui-datepicker-year,
-.datepicker .ui-datepicker-month
-    +large-text
-    letter-spacing: -0.1pt
+.datepicker__wrap .button[name="clear"]
+    margin-top: -4px
+    margin-left: 5px
+
+.datepicker__wrap .button[name="accept"]
+    margin-top: -4px
+    margin-right: 12px
+    // margin-left: 103px
 
     
+.datepicker__wrap-hide
+    display: none
+
+
+//header
+
+
+.ui-datepicker-header 
+    position: relative
+    background-color: #ffffff
+    border: none
+
 .datepicker .ui-datepicker-inline
-    margin-top: 11px
+    margin-top: 13px
+
+.ui-datepicker-title 
+    text-align: center
+
+.ui-datepicker-year,
+.ui-datepicker-month
+    +large-text
+    letter-spacing: -0.15pt
+
+
+//стрелки навигации
+.ui-datepicker-header .ui-corner-all 
+    position: absolute
+    top: 2px
+
+.ui-datepicker-prev span 
+    background-image: url("/img/arrowback.svg") !important
+    background-position: 0px -1px !important
+
+
+.ui-datepicker-next span 
+    background-image: url("/img/arrowforward.svg") !important
+    background-position: 0px -1px !important
+
+.ui-datepicker-header .ui-corner-all .ui-icon 
+
+.ui-datepicker-header .ui-datepicker-prev 
+    left: 16px
+
+.ui-datepicker-header .ui-datepicker-next
+    right: 18px
+
+.ui-datepicker-header .ui-corner-all.ui-state-hover
+    border: none
+    background-color: #ffffff
+    opacity: 0.5
+
+
+// непосредственно календарь
+.ui-datepicker 
+    display: inline-block
+    border: none
+    width: 318px
+
+
+.ui-datepicker-calendar
+    margin-top: 24px !important
+    margin-left: auto !important
+    margin-right: auto !important
+    width: 90% !important
+    border-collapse: collapse
+    background-color: #ffffff
+    border-radius: 100% !important
 
 
 
 
-.ui-datepicker-prev, .ui-datepicker-next 
-    display: inline-block !important
-    width: 30px !important
-    height: 30px !important
-    text-align: center !important
-    cursor: pointer !important
-    background-image: url('/img/murad.png') !important
-    background-repeat: no-repeat !important
-    line-height: 600% !important
-    overflow: hidden 
+//Дни недели
+
+.ui-datepicker-calendar th 
+    border: none
+
+.ui-datepicker-calendar th span
+    font-family: montserrat
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    color: nth($colors, 6)
+    
+
+// Выходные дни
+
+.ui-datepicker-calendar th.ui-datepicker-week-end
+
+// 
+// Календарная сетка
+// 
+
+.ui-datepicker-calendar td
+    padding: 0 !important
+    height: 40px
+    
+
+
+.ui-datepicker-calendar td a
+    display: block
+
+.ui-datepicker-calendar td a.ui-state-default 
+    background-color: transparent
+    color: nth($colors, 3)
+    font-family: montserrat
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 15px
+    text-align: center
+    border: none
+
+.ui-datepicker-calendar td a.ui-state-hover 
+
+
+//  день из другого месяца
+
+
+.ui-datepicker-calendar .ui-datepicker-other-month 
+    
+    color: nth($colors, 4)
+
+
+// Сегодняшний день
+
+
+.ui-datepicker-calendar .ui-datepicker-today 
+    border-radius: 100% 
+    +second-gradient
+    
+    
+
+.ui-datepicker-calendar .ui-datepicker-today a
+    font-weight: bold !important
+    color: #ffffff !important
+    
+.ui-datepicker-calendar .ui-datepicker-today .ui-state-active 
+
+// Выбранный день
+
+
+.ui-datepicker-calendar .selected
+    background: linear-gradient(to top, #e2e8fe 0%, #eee6fe 100%)
+    border-radius: 0px 
+    
+
+.ui-datepicker-calendar .selected-end::after
+    position: absolute
+    top: 0
+    content: " "
+    width: 40px
+    height: 40px
+    +primary-gradient
+    z-index: -1
+    border-radius: 100%
+
+.ui-datepicker-calendar .selected-start::after
+    position: absolute
+    top: 0
+    content: " "
+    width: 40px
+    height: 40px
+    +primary-gradient
+    z-index: -1
+    border-radius: 100%
+
+.ui-datepicker-calendar .selected-end
+    position: relative
+    z-index: 1
+    border-top-right-radius: 100%
+    border-bottom-right-radius: 100%
+
+.ui-datepicker-calendar .selected-start
+    position: relative
+    z-index: 1
+    border-top-left-radius: 100%
+    border-bottom-left-radius: 100%
+
+.ui-datepicker-calendar .selected-end a,
+.ui-datepicker-calendar .selected-start a
+    font-weight: bold !important
+    color: #ffffff !important   
+    
+.ui-datepicker-calendar .ui-datepicker-current-day .ui-state-highlight 
+
+
+// Панель с кнопками
+
+.ui-datepicker-buttonpane 
+
+.ui-datepicker-buttonpane button
+    float: right
+
+
+.ui-datepicker-buttonpane .ui-datepicker-current 
+    float: left
+
+
+.ui-datepicker-buttonpane .ui-datepicker-close 
+    float: right
+
+
+.ui-datepicker-buttonpane .ui-priority-secondary 
+
+.ui-datepicker-buttonpane .ui-priority-primary 
+
+

@@ -1,5 +1,5 @@
-mixin date-dropdown
+mixin date-dropdown(name)
     .date-dropdown
         button.date-dropdown__button
-            input.date-dropdown__input(type = "text" value = "ДД.ММ.ГГГГ" disabled)
+            input.date-dropdown__input(type = "text" value = "ДД.ММ.ГГГГ" name= name disabled)
             i.date-dropdown__arrow.material-icons keyboard_arrow_down

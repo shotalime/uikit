@@ -8,10 +8,10 @@ mixin room-selection
         .room-selection__inputs
             .room-selection__date
                 h3 Прибытие
-                +date-dropdown
+                +date-dropdown("startDate")
             .room-selection__date
                 h3 Выезд
-                +date-dropdown
+                +date-dropdown("endDate")
             //- +datepicker
             .room-selection__guests
                 h3 Гости
