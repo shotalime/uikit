@@ -2,7 +2,7 @@
     display: flex
     flex-direction: column
     align-items: center
-
+    position: relative
     box-sizing: border-box
     width: 380px
     height: 374px
@@ -17,6 +17,9 @@
     height: 60px
     margin-top: 39.4px
     margin-bottom: 0
+
+    letter-spacing: -0.5px
+    word-spacing: 1px
 
 .room-selection__inputs
     display: flex
@@ -37,3 +40,7 @@
 .room-selection .button
     margin-top: 31px
 
+.room-selection .datepicker__wrap
+    position: absolute
+    z-index: 1
+    top: 190px

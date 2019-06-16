@@ -78,5 +78,12 @@ jQuery(function($) {
             $(this).parents(".dropdown-guests__wrap").prev('.dropdown-guests__button').removeClass( "dropdown-guests__button-visible" );
         });
     });
+
+    $(document).click(function(event) {
+        if ($(event.target).closest(".dropdown-guests").length) return;
+        $(".dropdown-guests__button").removeClass('dropdown-guests__button-visible')
+        $(".dropdown-guests__wrap").removeClass('dropdown-guests__wrap-visible')
+        event.stopPropagation();
+      });
 });
 

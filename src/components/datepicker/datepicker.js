@@ -1,6 +1,6 @@
 jQuery(function($) {
 
-    $('#date_range').datepicker({
+    $('.datepicker').datepicker({
         monthNames: [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ],
         firstDay: 1,
         dayNames: [ "Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота" ],
@@ -21,7 +21,7 @@ jQuery(function($) {
       
       
       
-      $('#date_range').datepicker('setDate', ['+4d', '+8d']);
+      $('.datepicker').datepicker('setDate', ['+4d', '+8d']);
     
       $('[name=accept]').on('click', function(){
 
@@ -31,13 +31,13 @@ jQuery(function($) {
 
       $('[name=clear]').on('click', function(){
 
-        $( '#date_range' ).datepicker('setDate', [null, null]);
+        $( '.datepicker' ).datepicker('setDate', [null, null]);
         $('[name=startDate]').val("ДД.ММ.ГГ");
         $('[name=endDate]').val("ДД.ММ.ГГ");
         
       });
 
-      var extensionRange = $('#date_range').datepicker('widget').data('datepickerExtensionRange');
+      var extensionRange = $('.datepicker').datepicker('widget').data('datepickerExtensionRange');
       if(extensionRange.startDateText) $('[name=startDate]').val(extensionRange.startDateText);
       if(extensionRange.endDateText) $('[name=endDate]').val(extensionRange.endDateText);
 
