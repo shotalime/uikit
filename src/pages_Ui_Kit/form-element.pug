@@ -3,14 +3,14 @@ block content
     include ../components/icon-text-list/icon-text-list
     include ../components/expandable-checkbox-list/expandable-checkbox-list
     include ../components/checkbox-buttons/checkbox-buttons
-    include ../components/radio-buttons/radio-buttons
-    include ../components/toggle-buttons/toggle-buttons
+    include ../components/radio-button/radio-button
+    include ../components/toggle-button/toggle-button
     include ../components/like-buttons/like-buttons
     include ../components/rate-buttons/rate-buttons
     include ../components/pagination/pagination
     include ../components/review/review
     include ../components/checkbox-buttons-rich/checkbox-buttons-rich
-    include ../components/buttons/buttons
+    include ../components/button/button
     include ../components/range-slider/range-slider
     include ../components/bullet-list/bullet-list
     include ../components/input-text-field/input-text-field
@@ -68,6 +68,7 @@ block content
             .rightstr
             
         +input-text-field({
+                type: "text",
                 name: "Email",
                 value: "",
                 placeholder: "Email"
@@ -218,8 +219,8 @@ block content
                 
         +button("solid", "Click me", "button_style_solid")
         +button("solid", "Click me", "button_style_solid")
-        +button("solid", "Click me", "button_style_framed")
-        +button("solid", "Click me", "button_style_framed")
+        +button("solid", "Click me", "button_style_framed", "button-wrap")
+        +button("solid", "Click me", "button_style_framed", "button-wrap")
         +button("solid", "Click me", "button_style_noframe")
         +button("solid", "Click me", "button_style_noframe-gray")
         +button("solid", "Перейти к оплате", "button_style_link")

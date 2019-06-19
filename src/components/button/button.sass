@@ -7,45 +7,53 @@
 
 
 
+
 .button_style_solid
     border: none
     color: #ffffff
     +primary-gradient
     -webkit-text-fill-color: inherit
     line-height: 15px
+ 
 
 .button_style_solid:hover
     opacity: 0.5
 
 
 
+// .button_style_framed
+//     color: nth($colors, 6)
+//     position: relative
+//     $border: 2px
+//     background-color: #ffffff
+//     background-clip: padding-box
+//     border: solid $border transparent
+
+//     &:before 
+//         content: ''
+//         width: 99px
+//         height: 44px
+//         position: absolute
+//         top: -2px
+//         left: -2px
+//         z-index: -1
+//         border-radius: inherit
+//         +primary-gradient
+//         -webkit-text-fill-color: inherit
 .button_style_framed
     color: nth($colors, 6)
     position: relative
-    $border: 2px
     background-color: #ffffff
     background-clip: padding-box
-    border: solid $border transparent
-    &:before 
-        content: ''
-        width: 99px
-        height: 44px
-        position: absolute
-        top: 0 
-        right: 0 
-        bottom: 0
-        left: 0
-        z-index: -1
-        margin: -$border
-        border-radius: inherit
-        +primary-gradient
-        -webkit-text-fill-color: inherit
+    border-color: transparent
 
+.button-wrap
+    max-width: 99px
+    // padding: 1rem
+    position: relative
+    background: linear-gradient(to top, nth($colors, 8) 0%, nth($colors, 6) 100%)
+    border-radius: 24px
 
-.button_style_framed:hover
-    $border: 2px
-    &:before 
-        opacity: 0.5
 
 
 

@@ -1,0 +1,61 @@
+include ../input-text-field/input-text-field
+include ../radio-button/radio-button
+include ../toggle-button/toggle-button
+
+
+mixin registration-card
+    .registration-card
+
+        .registration-card__title
+        
+        +input-text-field({
+                type: "text",
+                name: "firstname",
+                value: "",
+                placeholder: "Имя"
+            })
+
+        +input-text-field({
+                type: "text",
+                name: "secondname",
+                value: "",
+                placeholder: "Фамилия"
+            })                
+
+        .registration-card__radio-buttons       
+            +radio-button("gender", "men", "checked", "Мужчина")
+            +radio-button("gender", "woman", false, "Женщина")
+
+        .registration-card__bday
+            h3 Дата рождения
+            +masked-text-field({
+                type: "text",
+                id: "#bday",
+                name: "bday",
+                value: "",
+                placeholder: "ДД.ММ.ГГГГ"
+            }) 
+
+        .registration-card__registration-data
+            h3 Данные для входа в сервис
+            +input-text-field({
+                type: "email",
+                name: "email",
+                value: "",
+                placeholder: "Email"
+            }) 
+            +input-text-field({
+                type: "password",
+                name: "password",
+                value: "",
+                placeholder: "Пароль"
+            }) 
+
+        +toggle-button("special_offer", "no", false, "Получать спецпредложения")
+
+        +button("button-registration-card-registration", "перейти к оплате", "button_style_link")
+
+        .registration-card__login-link
+
+            .registration-card__login-link-text
+            +button("button-registration-card", "Войти", "button_style_framed", "button-wrap")

@@ -1,4 +1,4 @@
-include ../buttons/buttons
+include ../button/button
 include ../date-dropdown/date-dropdown
 include ../datepicker/datepicker
 
@@ -13,7 +13,7 @@ mixin room-selection
                 h3 Выезд
                 +date-dropdown("endDate")
             +datepicker
-            .room-selection__guests
+        .room-selection__guests
                 h3 Гости
                 include ../dropdown-guests/dropdown-guests
         +button("button-room-selection", "Подобрать номер", "button_style_link")
