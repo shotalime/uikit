@@ -42,9 +42,7 @@
 .ui-datepicker-year,
 .ui-datepicker-month
     +large-text
-    letter-spacing: -0.5px
-    word-spacing: 1px
-
+    
 
 //стрелки навигации
 .ui-datepicker-header .ui-corner-all 
@@ -88,7 +86,6 @@
     width: 90% !important
     border-collapse: collapse
     background-color: #ffffff
-    border-radius: 100% !important
 
 
 
@@ -117,6 +114,7 @@
 
 .ui-datepicker-calendar td
     padding: 0 !important
+    width: 40px !important
     height: 40px
     
 
@@ -152,7 +150,11 @@
 .ui-datepicker-calendar .ui-datepicker-today 
     border-radius: 100% 
     +second-gradient
-    
+
+.ui-datepicker-calendar td a
+    padding-left: 0px !important
+    padding-right: 0px !important
+    width: 40px
     
 
 .ui-datepicker-calendar .ui-datepicker-today a
@@ -171,6 +173,7 @@
 
 .ui-datepicker-calendar .selected-end::after
     position: absolute
+    
     top: 0
     content: " "
     width: 40px
