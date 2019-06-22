@@ -1,0 +1,28 @@
+include ../input-text-field/input-text-field
+include ../button/button
+
+mixin  login-card
+    .login-card
+        .login-card__wrap
+
+            .login-card__title Войти
+
+            .login-card__login-data
+                +input-text-field({
+                    type: "email",
+                    name: "email",
+                    value: "",
+                    placeholder: "Email"
+                }) 
+                +input-text-field({
+                    type: "password",
+                    name: "password",
+                    value: "",
+                    placeholder: "Пароль"
+                }) 
+
+            +button("button-login-card-login", "Войти", "button_style_link")
+
+            .login-card__login-link
+                .login-card__login-link-text Нет аккаунта на Toxin?
+                +button("button-login-card", "Создать", "button_style_framed", "button-wrap")

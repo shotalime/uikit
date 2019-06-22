@@ -1,6 +1,7 @@
 include ../input-text-field/input-text-field
 include ../radio-button/radio-button
 include ../toggle-button/toggle-button
+include ../button/button
 
 
 mixin registration-card
@@ -56,6 +57,5 @@ mixin registration-card
             +button("button-registration-card-registration", "перейти к оплате", "button_style_link")
 
             .registration-card__login-link
-
                 .registration-card__login-link-text Уже есть аккаунт на Toxin
                 +button("button-registration-card", "Войти", "button_style_framed", "button-wrap")
