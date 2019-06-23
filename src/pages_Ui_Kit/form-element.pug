@@ -5,8 +5,8 @@ block content
     include ../components/checkbox-buttons/checkbox-buttons
     include ../components/radio-button/radio-button
     include ../components/toggle-button/toggle-button
-    include ../components/like-buttons/like-buttons
-    include ../components/rate-buttons/rate-buttons
+    include ../components/like-button/like-button
+    include ../components/rate-button/rate-button
     include ../components/pagination/pagination
     include ../components/review/review
     include ../components/checkbox-buttons-rich/checkbox-buttons-rich
@@ -182,11 +182,11 @@ block content
             .leftstr like buttons
             .rightstr
                         
-        +like-buttons({
+        +like-button({
             name: "like",
             count: "2"
         })
-        +like-buttons({
+        +like-button({
             name: "like",
             count: "11"
         })
@@ -198,8 +198,8 @@ block content
             .leftstr rate buttons
             .rightstr
                 
-        +rate-button("rate", "4")
-        +rate-button("rate", "5")
+        +rate-button("4")
+        +rate-button("5")
 
 
 
