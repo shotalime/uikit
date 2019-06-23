@@ -1,0 +1,26 @@
+include ../image-slider/image-slider
+include ../rate-button/rate-button
+
+mixin hotel-selection-card(image, room, stars, val)
+    .hotel-selection-card
+        +image-slider(image)
+        .hotel-selection-card__description
+            .hotel-selection-card__room
+                .hotel-selection-card__room-item
+                    span.hotel-selection-card__number-sym № 
+                    span.hotel-selection-card__number
+                        !=room.number
+                    span.hotel-selection-card__number-type
+                        !=room.type
+                .hotel-selection-card__room-item-cost
+                    span.hotel-selection-card__number-cost 
+                        !=room.cost
+                    span.hotel-selection-card__number-perday  в сутки
+            hr.hotel-selection-card__line
+            .hotel-selection-card__review-wrap
+                +rate-button(stars)
+                .hotel-selection-card__review
+                    span.hotel-selection-card__val 
+                        !=val
+                    span.hotel-selection-card__text
+            

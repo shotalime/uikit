@@ -6,8 +6,8 @@ block content
     include ../components/checkbox-buttons/checkbox-buttons
     include ../components/radio-button/radio-button
     include ../components/toggle-button/toggle-button
-    include ../components/like-buttons/like-buttons
-    include ../components/rate-buttons/rate-buttons
+    include ../components/like-button/like-button
+    include ../components/rate-button/rate-button
     include ../components/pagination/pagination
     include ../components/review/review
     include ../components/checkbox-buttons-rich/checkbox-buttons-rich
@@ -24,6 +24,8 @@ block content
     include ../components/room-reservation/room-reservation
     include ../components/registration-card/registration-card
     include ../components/login-card/login-card
+    include ../components/image-slider/image-slider
+    include ../components/hotel-selection-card/hotel-selection-card
 
     .cards
         .card-room-selection
@@ -43,3 +45,39 @@ block content
 
         .card-login-card
             +login-card
+
+        .card-hotel-selection-card
+            +hotel-selection-card([{
+                src: '/img/hotelroom/hotelroom-1.png',
+                alt: 'First img'
+            },
+            {
+                src: '/img/hotelroom/hotelroom-2.png',
+                alt: 'Second img'
+            },   
+            {
+                src: '/img/hotelroom/hotelroom-1.png',
+                alt: 'Third img'
+            },   
+            {
+                src: '/img/hotelroom/hotelroom-2.png',
+                alt: 'Fourth img'
+            }],{
+                number: '888',
+                type: 'Люкс',
+                cost: '9 990₽'
+            },'5', '145')
+            
+        .card-hotel-selection-card-second
+            +hotel-selection-card([{
+                src: '/img/hotelroom/hotelroom-2.png',
+                alt: 'Third img'
+            },   
+            {
+                src: '/img/hotelroom/hotelroom-1.png',
+                alt: 'Fourth img'
+            }],{
+                number: '840',
+                type: 'Люкс',
+                cost: '9 900₽'
+            },'4', '65')

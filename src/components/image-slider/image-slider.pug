@@ -1,0 +1,23 @@
+mixin image-slider(items_array)
+    .image-slider
+        - for (var i=0; i<items_array.length; i++)
+            .image-slider__item.image-slider__hide
+                img(src=items_array[i].src alt=items_array[i].alt style="width:100%")
+
+        
+        a.image-slider__prev.image-slider__arrow.material-icons chevron_left
+        a.image-slider__next.image-slider__arrow.material-icons chevron_right
+        
+        .image-slider__dots
+            - for (var i=0; i<items_array.length; i++)
+                span.image-slider__dot
+                        
+
+
+//- array[
+//-     {
+//-         img: "url",
+//-         alt: "text"
+//-     },
+//-     {}
+//- ]

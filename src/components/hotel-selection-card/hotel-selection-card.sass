@@ -1,0 +1,63 @@
+.hotel-selection-card
+    width: 270px
+    height: 257px
+    
+    background: #FFFFFF
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05)
+    border-radius: 4px
+
+.hotel-selection-card__description
+    display: grid
+    grid-template-rows: 27px 19px 15px
+    margin: auto
+    padding-top: 12.5px
+    width: 230px
+
+.hotel-selection-card__room  
+    display: flex
+    flex-wrap: nowrap
+    justify-content: space-between  
+    width: 232px
+
+.hotel-selection-card__number-sym
+    +large-text
+    font-size: 14px
+    font-weight: bold
+    color: nth($colors, 1)   
+
+.hotel-selection-card__number
+    +large-text
+
+.hotel-selection-card__number-type
+    +label-text
+    color: nth($colors, 6)
+    padding-left: 5px
+
+.hotel-selection-card__number-cost
+    +label-text
+    font-size: 14px
+    color: nth($colors, 3)
+
+
+
+.hotel-selection-card__number-perday
+    color: nth($colors, 3)
+    font-size: 12px
+
+.hotel-selection-card__val
+    +label-text
+    font-size: 14px
+    color: nth($colors, 3)
+
+.hotel-selection-card__line
+    // margin: 4px 0 0 0
+    width: 100%
+    border: none
+    border-top: 1px solid rgba(31, 32, 65, 0.1)
+
+.hotel-selection-card .rate-button 
+    display: inline-block
+    
+.hotel-selection-card__review-wrap
+    display: flex
+    justify-content: space-between
