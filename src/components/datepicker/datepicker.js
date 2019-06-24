@@ -21,7 +21,7 @@ jQuery(function($) {
       
       
       
-      $('.datepicker').datepicker('setDate', ['+4d', '+8d']);
+      $('.datepicker').datepicker('setDate', ['+3d', '+7d']);
     
       $('[name=accept]').on('click', function(){
 
