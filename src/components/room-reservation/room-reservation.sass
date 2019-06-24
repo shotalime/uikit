@@ -1,8 +1,6 @@
 .room-reservation
     display: grid
-    grid-template-rows: 32px 102px 83px 37px 34px 33px 76px
-    align-items: top
-    // position: relative
+    grid-template-rows: 32px 102px 83px 34px 37px 33px 76px
     padding: 39px 31px 30px 29px
     box-sizing: border-box
     width: 380px
@@ -14,8 +12,6 @@
 
 .room-reservation__item-wrap
     width: 320px
-
-.room-reservation__header
 
 .room-reservation__number-sym
     +large-text
@@ -35,7 +31,7 @@
     +label-text
     font-size: 14px
     color: nth($colors, 3)
-    padding-left: 111px    
+    padding-left: 108px    
 
 .room-reservation__number-perday
     color: nth($colors, 3)
@@ -47,37 +43,29 @@
     justify-content: space-between
     margin-top: 18px
 
-.room-reservation__input-guests
-    //  margin-top: 5px
-
 .room-reservation__date h3
     margin: 0 0 5px 0
 
-.room-reservation__guests
-    // margin-top: 16px
 
 .room-reservation__guests h3
     margin: 0 0 5px 0
 
 .room-reservation__cost
-    // margin-top: 17px
     display: flex
     justify-content: space-between
 
 
 .room-reservation__service
-    // margin-top: 13px
     display: flex
     justify-content: space-between
+    align-items: baseline
 
 .room-reservation__service-charge
-    width: 214px
+    width: 167px
     line-height: 18px
 
 .room-reservation__info-icon
-    display: block
-    
-    
+    display: block    
     text-align: center
     vertical-align: middle
     +label-text
@@ -130,3 +118,4 @@
     position: absolute
     z-index: 1
     top: 190px
+

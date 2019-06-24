@@ -3,14 +3,17 @@ include ../date-dropdown/date-dropdown
 include ../datepicker/datepicker
 
 
-mixin room-reservation
+mixin room-reservation(room)
     form.room-reservation
         .room-reservation__item-wrap.room-reservation__header
             span.room-reservation__number-sym № 
-            span.room-reservation__number 888
-            span.room-reservation__number-type Люкс
-            span.room-reservation__number-cost 9 990₽ 
-            span.room-reservation__number-perday в сутки
+            span.room-reservation__number 
+                !=room.number
+            span.room-reservation__number-type 
+                !=room.type
+            span.room-reservation__number-cost
+                !=room.cost + "₽"
+            span.room-reservation__number-perday  в сутки
         .room-reservation__item-wrap.room-reservation__input-date
             .room-reservation__date
                 h3 Прибытие
@@ -24,19 +27,23 @@ mixin room-reservation
                 h3 Гости
                 include ../dropdown-guests/dropdown-guests
         .room-reservation__item-wrap.room-reservation__cost
-            span.room-reservation__cost-item 9 990₽ х 4 суток
-            span.room-reservation__cost-total 39 960₽
+            span.room-reservation__cost-item
+            span.room-reservation__cost-total
         .room-reservation__item-wrap.room-reservation__service
-            .room-reservation__service-charge Сбор за услуги: скидка 2 179₽
+            span.room-reservation__service-charge Сбор за услуги: скидка 
+            span.room-reservation__service-charge-discount
+                !=room.discount
             .room-reservation__info-icon i
-            .room-reservation__service-charge-val 0₽
+            .room-reservation__service-charge-val
+                !=room.serviceCharge + "₽"
         .room-reservation__item-wrap.room-reservation__ad-service
             .room-reservation__ad-service-charge Сбор за дополнительные услуги
             .room-reservation__info-icon i
-            .room-reservation__ad-service-charge-val 300₽
+            .room-reservation__ad-service-charge-val
+                !=room.adServiceCharge + "₽"
         .room-reservation__item-wrap.room-reservation__in-total-text
             .room-reservation__in-total Итого
             hr.room-reservation__in-total-line
-            .room-reservation__in-total-val 38 081₽
+            .room-reservation__in-total-val
         .room-reservation__button
-            +button("button-room-reservation", "Забронировать", "button_style_link")
+            +button("button-room-reservation", "Забронировать", "button_style_link","button__nowrap", "submit")
