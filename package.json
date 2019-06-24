@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shotalime/uiKit.git"
+    "url": "git+https://github.com/shotalime/uikit.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/shotalime/uiKit/issues"
+    "url": "https://github.com/shotalime/uikit/issues"
   },
-  "homepage": "https://github.com/shotalime/uiKit#readme",
+  "homepage": "https://github.com/shotalime/uikit#readme",
   "devDependencies": {
     "cssnano": "^4.1.10",
     "jquery": "^3.4.0",
