@@ -1,0 +1,27 @@
+include ../logo-color/logo-color
+include ../button/button
+
+mixin header(header_array, is_registered, user)
+    .header
+        .header__wrap
+            .header__logo
+                +logo-color
+            nav.header__nav
+                - for(var i=0; i<header_array.length; i++)
+                    a.header__nav-item(href='#') 
+                        span.header__nav-item-text
+                            !=header_array[i].text
+                        span.header__nav-item-icon.material-icons
+                            !=header_array[i].icon
+            if(is_registered.is_registered)        
+                .header__registered
+                    .header__registered-line
+                    .header__registered-nickname
+                        !=user.nickname  
+            else
+                .header__buttons
+                    +button("login", "LOGIN", "button_style_framed","button-wrap", "button")
+                    +button("register", "REGISTER", "button_style_solid","button-nowrap", "button")
+                
+
+

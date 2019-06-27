@@ -1,3 +1,65 @@
 extends layouts/uikit
 block content  
-    .start das
+
+    
+    include ../components/header/header
+    .header-footer
+        .header-standart
+            +header([
+                {
+                    text: 'Home',
+                    icon: ''
+                },
+                {
+                    text: 'About Us',
+                    icon: ''
+                },
+                {
+                    text: 'Services',
+                    icon: 'expand_more'
+                },
+                {
+                    text: 'Careers',
+                    icon: ''
+                },
+                {
+                    text: 'News',
+                    icon: ''
+                },
+                {
+                    text: 'Documentation',
+                    icon: ''
+                }],{
+                    is_registered: false
+                })
+
+    .header-registered
+        +header([
+            {
+                text: 'Home',
+                icon: ''
+            },
+            {
+                text: 'About Us',
+                icon: ''
+            },
+            {
+                text: 'Services',
+                icon: 'expand_more'
+            },
+            {
+                text: 'Careers',
+                icon: ''
+            },
+            {
+                text: 'News',
+                icon: ''
+            },
+            {
+                text: 'Documentation',
+                icon: ''
+            }],{
+                is_registered: true
+            },{
+                nickname: 'Cosmin Negoita'
+            })
