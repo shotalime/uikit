@@ -1,0 +1,32 @@
+include ../logo-color/logo-color
+include ../subscription-text-field/subscription-text-field
+mixin nav(nav_array)
+    - for(var i=0; i<nav_array.length; i++)
+                    a.footer__nav-item(href='#') 
+                            !=nav_array[i].text
+
+mixin footer(description, navigation, aboutus, support, subscription, subscriptionInput)
+    footer.footer
+        .footer__wrap
+            .footer__container.footer__description
+                .footer__logo
+                    +logo-color
+                    .footer__description-text=description
+                        
+            .footer__container.footer
+                .footer__container-title=navigation[0].title
+                +nav(navigation)
+
+            .footer__container
+                .footer__container-title=aboutus[0].title
+                +nav(aboutus)
+            .footer__container
+                .footer__container-title=support[0].title
+                +nav(support)
+            .footer__container.footer__subscription
+                .footer__container-title=subscription.title
+                .footer__container-description.footer__description-text=subscription.description
+                +subscription-text-field(subscriptionInput)     
+
+
+                        
