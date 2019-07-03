@@ -1,7 +1,7 @@
 include ../logo-color/logo-color
 include ../button/button
 
-mixin header(header_array, is_registered, user)
+mixin header(header_array, is_registered, user, button)
     header.header
         .header__wrap
             .header__logo
@@ -20,36 +20,48 @@ mixin header(header_array, is_registered, user)
                         !=user.nickname  
             else
                 .header__buttons
-                    +button("login", "LOGIN", "button_style_framed","button-wrap", "button")
-                    +button("register", "REGISTER", "button_style_solid","button-nowrap", "button")
-                
+                    +button(button[0].name, button[0].text, button[0].style, button[0].wrap, button[0].view)
+                    +button(button[1].name, button[1].text, button[1].style, button[1].wrap, button[1].view)
+                    
 
 //- +header([
-//-             {
-//-                 text: 'Home',
-//-                 icon: ''
-//-             },
-//-             {
-//-                 text: 'About Us',
-//-                 icon: ''
-//-             },
-//-             {
-//-                 text: 'Services',
-//-                 icon: 'expand_more'
-//-             },
-//-             {
-//-                 text: 'Careers',
-//-                 icon: ''
-//-             },
-//-             {
-//-                 text: 'News',
-//-                 icon: ''
-//-             },
-//-             {
-//-                 text: 'Documentation',
-//-                 icon: ''
-//-             }],{
-//-                 is_registered: true
-//-             },{
-//-                 nickname: 'Cosmin Negoita'
-//-             })
+//-                 {
+//-                     text: 'Home',
+//-                     icon: ''
+//-                 },
+//-                 {
+//-                     text: 'About Us',
+//-                     icon: ''
+//-                 },
+//-                 {
+//-                     text: 'Services',
+//-                     icon: 'expand_more'
+//-                 },
+//-                 {
+//-                     text: 'Careers',
+//-                     icon: ''
+//-                 },
+//-                 {
+//-                     text: 'News',
+//-                     icon: ''
+//-                 },
+//-                 {
+//-                     text: 'Documentation',
+//-                     icon: ''
+//-                 }],{
+//-                     is_registered: false
+//-                 },{
+//-                     nickname: ''
+//-                 },[{
+//-                     name: "login", 
+//-                     text: "LOGIN", 
+//-                     style: "button_style_framed", 
+//-                     wrap: "button-wrap", 
+//-                     view: "button"
+//-                 },{
+//-                     name: "register", 
+//-                     text: "REGISTER", 
+//-                     style: "button_style_framed", 
+//-                     wrap: "button-wrap", 
+//-                     view: "button"
+//-                 }])
