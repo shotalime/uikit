@@ -2,7 +2,7 @@ include ../logo-color/logo-color
 include ../button/button
 
 mixin header(header_array, is_registered, user)
-    footer.header
+    header.header
         .header__wrap
             .header__logo
                 +logo-color
@@ -14,7 +14,7 @@ mixin header(header_array, is_registered, user)
                         span.header__nav-item-icon.material-icons
                             !=header_array[i].icon
             if(is_registered.is_registered)        
-                .header__registered
+                .header__registered.header__container
                     .header__registered-line
                     .header__registered-nickname
                         !=user.nickname  
