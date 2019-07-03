@@ -1,1 +1,1 @@
-# uiKit https://github.com/shotalime/uiKit
+https://shotalime.github.io/dist/
