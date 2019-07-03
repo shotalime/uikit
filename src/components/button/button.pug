@@ -1,6 +1,6 @@
-mixin button(name, text, style, wrap, type1)
+mixin button(name, text, style, wrap, view)
     div(class= wrap)
-        button.button(type=type1 name= name class= style)
+        button.button(type=view name= name class= style)
             span.button__text!= text
             span.button__arrow.material-icons
 
