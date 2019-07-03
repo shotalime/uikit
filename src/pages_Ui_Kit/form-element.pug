@@ -17,294 +17,349 @@ block content
     include ../components/subscription-text-field/subscription-text-field
     include ../components/masked-text-field/masked-text-field
     include ../components/date-dropdown/date-dropdown
-
-    .input-text-field-default.form-element
-        .form-element__titel
-            .leftstr Text field  
-            .rightstrDefault 
-            
-        +input-text-field({
-                name: "Email",
-                value: "",
-                placeholder: "Email"
-            })                
-
-
-      
-    .input-text-field-focus.form-element
-        .form-element__titel
-            .leftstr Text field  
-            .rightstr Hover / focus
-            
-        +input-text-field({
-                name: "text-field",
-                value: "This is pretty awesome",
-                placeholder: ""
-            })                
-
     
-    
-    .dropdown-rooms-default.form-element
-        .form-element__titel
-            .leftstr dropdown
-            .rightstr Default
-            
-        include ../components/dropdown-rooms/dropdown-rooms
-        
-    
-    
-    .dropdown-guests-default.form-element
-        .form-element__titel
-            .leftstr dropdown
-            .rightstr
-           
-        include ../components/dropdown-guests/dropdown-guests
-
-    
-    
-    .subscription-text-field-default.form-element
-        .form-element__titel
-            .leftstr subscription text field 
-            .rightstr
-            
-        +subscription-text-field({
-                type: "text",
-                name: "Email",
-                value: "",
-                placeholder: "Email"
-            })       
-
-    
-    
-    .masked-text-field-default.form-element
-        .form-element__titel
-            .leftstr masked-text-field
-            .rightstr
-            
-        +masked-text-field({
-                id: "#date",
-                name: "",
-                value: "",
-                placeholder: "ДД.ММ.ГГГГ"
-            }) 
-        
-        
-
-    
-    .expandable-checkbox-list-default.form-element
-        .form-element__titel
-            .leftstr
-            .rightstr                
-        
-        +expandable-checkbox-list("expandable checkbox list", [{
-                description: 'Завтрак',
-                name: 'expandable-checkbox-list__item',
-                checked: false
-            },
-            {
-                description: 'Письменный стол',
-                name: 'expandable-checkbox-list__item',
-                checked: false
-            },
-            {
-                description: 'Стул для кормления',
-                name: 'expandable-checkbox-list__item',
-                checked: ''
-            },
-            {
-                description: 'Кроватка',
-                name: 'expandable-checkbox-list__item',
-                checked: ''
-            },
-            {
-                description: 'Телевизор',
-                name: 'expandable-checkbox-list__item',
-                checked: ''
-            },
-            {
-                description: 'Шампунь',
-                name: 'expandable-checkbox-list__item',
-                checked: false
-            },
-            {
-                description: 'Телевизор',
-                name: 'expandable-checkbox-list__item',
-                checked: false
-            }])
-
-    
-    
-    .checkbox-buttons-default.form-element
-        .form-element__titel
-            .leftstr checkbox buttons
-            .rightstr
-                        
-        +checkbox-buttons([{
-                description: 'Можно курить',
-                name: 'expandable-checkbox-list__item',
-                checked: false
-            },
-            {
-                description: 'Можно с питомцами',
-                name: 'expandable-checkbox-list__item',
-                checked: ''
-            },
-            {
-                description: 'Можно пригласить гостей <br>(до 10 человек)',
-                name: 'expandable-checkbox-list__item',
-                checked: ''
-            }])
-    
-
-    
-    .radio-buttons-default.form-element
-        .form-element__titel
-            .leftstr radio buttons
-            .rightstr                
-        
-        +radio-button("gender", "men", "checked", "Мужчина")
-        +radio-button("gender", "woman", false, "Женщина")
-
-
-
-    .toggle-buttons-default.form-element
-        .form-element__titel
-            .leftstr toggle buttons
-            .rightstr
-                        
-        +toggle-button("special_offer", "yes", "checked", "Получать спецпредложения")
-        +toggle-button("special_offer", "no", false, "Получать спецпредложения")
-    
-
-
-    .like-buttons-default.form-element
-        .form-element__titel
-            .leftstr like buttons
-            .rightstr
-                        
-        +like-button({
-            name: "like",
-            count: "2"
-        })
-        +like-button({
-            name: "like",
-            count: "11"
-        })
-
-
-
-    .rate-buttons-default.form-element
-        .form-element__titel
-            .leftstr rate buttons
-            .rightstr
+    .form-element
+        .input-text-field-default.form-element
+            .form-element__title
+                .leftstr Text field  
+                .rightstr Default
                 
-        +rate-button("4")
-        +rate-button("5")
+            +input-text-field({
+                    name: "Email",
+                    value: "",
+                    placeholder: "Email"
+                })                
 
 
-
-    .range-slider-default.form-element
-        .form-element__titel
-            .leftstr 
-            .rightstr
+        
+        .input-text-field-focus.form-element
+            .form-element__title
+                .leftstr Text field  
+                .rightstr Hover / focus
                 
-        +range-slider("range slider", "0", "20000", "&#8381")
+            +input-text-field({
+                    name: "text-field",
+                    value: "This is pretty awesome",
+                    placeholder: ""
+                })                
+            
+        
+        
+        .dropdown-guests-default.form-element
+            .form-element__title
+                .leftstr dropdown
+                .rightstr Default
+            
+            include ../components/dropdown-guests/dropdown-guests
+
+
+
+        .masked-text-field-default.form-element
+            .form-element__title
+                .leftstr masked-text-field
+                .rightstr Default
+                
+            +masked-text-field({
+                    id: "#date",
+                    name: "",
+                    value: "",
+                    placeholder: "ДД.ММ.ГГГГ"
+                }) 
+
+
+
+        .date-dropdown-default.form-element
+            .form-element__title
+                .str date dropdown
+                
+
+            +date-dropdown("start")   
     
+        .filter-date-dropdown
+        //- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-
-    .button-default.form-element
-        .form-element__titel
-            .leftstr 
-            .rightstr
-                
-        +button("solid", "Click me", "button_style_solid")
-        +button("solid", "Click me", "button_style_solid")
-        +button("solid", "Click me", "button_style_framed", "button-wrap")
-        +button("solid", "Click me", "button_style_framed", "button-wrap")
-        +button("solid", "Click me", "button_style_noframe")
-        +button("solid", "Click me", "button_style_noframe-gray")
-        +button("solid", "Перейти к оплате", "button_style_link")
-
-
-
-    .pagination-default.form-element
-        .form-element__titel
-            .leftstr Pagination
-            .rightstr
-        
-        +pagination("15")
-
-
-
-    .checkbox-buttons_rich.form-element
-        .form-element__titel
-            .leftstr Rich checkbox buttons 
-            .rightstr
-        
-        +checkbox-buttons-rich([{
-                title: "Широкий коридор",
-                description: 'Ширина коридоров в номере<br> не менее 91 см.',
-                name: ' ',
-                checked: false
-            },
-            {   
-                title: "Помощник для инвалидов",
-                description: 'На 1 этаже вас встретит специалист<br> и проводит до номера.',
-                name: ' ',
-                checked: 'checked'
-            }])
-
-
-
-    .bullet-list-default.form-element
-            .form-element__titel
-                .leftstr bullet list
+        .subscription-text-field-default.form-element
+            .form-element__title
+                .leftstr subscription text field 
                 .rightstr
+                
+            +subscription-text-field({
+                    type: "text",
+                    name: "Email",
+                    value: "",
+                    placeholder: "Email"
+                })             
             
-            +bullet-list(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00,<br> а выезд до 12:00"])
+        .dropdown-rooms-default.form-element
+            .form-element__title
+                .leftstr dropdown
+                .rightstr Default
+                
+            include ../components/dropdown-rooms/dropdown-rooms
+
+
+        .dropdown-rooms-expanded.form-element
+            .form-element__title
+                .leftstr dropdown
+                .rightstr Expanded
+                
+            include ../components/dropdown-rooms/dropdown-rooms
+        
+        .expandable-checkbox-list-default.form-element
+            .form-element__title
+                .leftstr
+                .rightstr                
+            
+            +expandable-checkbox-list("expandable checkbox list", [{}])
+
+
+        .expandable-checkbox-list-expanded.form-element
+            .form-element__title
+                .leftstr
+                .rightstr                
+            
+            +expandable-checkbox-list("expandable checkbox list", [{
+                    description: 'Завтрак',
+                    name: 'expandable-checkbox-list__item',
+                    checked: false
+                },
+                {
+                    description: 'Письменный стол',
+                    name: 'expandable-checkbox-list__item',
+                    checked: ''
+                },
+                {
+                    description: 'Стул для кормления',
+                    name: 'expandable-checkbox-list__item',
+                    checked: ''
+                },
+                {
+                    description: 'Кроватка',
+                    name: 'expandable-checkbox-list__item',
+                    checked: ''
+                },
+                {
+                    description: 'Телевизор',
+                    name: 'expandable-checkbox-list__item',
+                    checked: false
+                },
+                {
+                    description: 'Шампунь',
+                    name: 'expandable-checkbox-list__item',
+                    checked: false
+                },
+                {
+                    description: 'Телевизор',
+                    name: 'expandable-checkbox-list__item',
+                    checked: false
+                },
+                {
+                    description: 'Шампунь',
+                    name: 'expandable-checkbox-list__item',
+                    checked: false
+                }])
 
 
 
-    .review-default.form-element
-            .form-element__titel
-                .leftstr review
+        .icon-text-list-default.form-element
+                .form-element__title
+                    .leftstr icon text list
+                    .rightstr
+                
+                +icon-text-list({
+                    image_url: "/img/comfort.svg",
+                    title: "Комфорт",
+                    description: "Шумопоглащающие стены"
+                    })
+                +icon-text-list({
+                    image_url: "/img/location-city.svg",
+                    title: "Удобство",
+                    description: "Окно в каждой из спален"
+                    })
+
+
+
+        .icon-text-list-default.form-element
+                .form-element__title
+                    .leftstr icon text list
+                    .rightstr
+                
+                +icon-text-list({
+                    image_url: "/img/comfort.svg",
+                    title: "Комфорт",
+                    description: "Шумопоглащающие стены"
+                    })
+                +icon-text-list({
+                    image_url: "/img/location-city.svg",
+                    title: "Удобство",
+                    description: "Окно в каждой из спален"
+                    })
+        
+
+
+        
+        .checkbox-buttons-default.form-element
+            .form-element__title
+                .leftstr checkbox buttons
                 .rightstr
-            
-            +review({
-                name: "Мурад Сарафанов",
-                image_url: "/img/murad.png",
-                date: "5 дней назад",
-                text: "Великолепный матрас на кровати в основной спальне!\
-                    А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие.\
-                    Выкрикивал комплименты повару — никто не жаловался из соседей.",
-                likes: "12"
+                            
+            +checkbox-buttons([{
+                    description: 'Можно курить',
+                    name: 'expandable-checkbox-list__item',
+                    checked: false
+                },
+                {
+                    description: 'Можно с питомцами',
+                    name: 'expandable-checkbox-list__item',
+                    checked: ''
+                },
+                {
+                    description: 'Можно пригласить гостей <br>(до 10 человек)',
+                    name: 'expandable-checkbox-list__item',
+                    checked: ''
+                }])
+        
+
+        
+        .radio-buttons-default.form-element
+            .form-element__title
+                .str radio buttons               
+            .radio-buttons-default__wrap
+                +radio-button("gender", "men", "checked", "Мужчина")
+                +radio-button("gender", "woman", false, "Женщина")
+
+
+
+        .toggle-buttons-default.form-element
+            .form-element__title
+                .leftstr toggle
+                .rightstr
+            .toggle-buttons-default__wrap                  
+                +toggle-button("special_offer", "yes", "checked", "Получать спецпредложения")
+                +toggle-button("special_offer", "no", false, "Получать спецпредложения")
+        
+
+
+        .like-buttons-default.form-element
+            .form-element__title
+                .str like buttons
+            .like-buttons-default__wrap                
+                +like-button({
+                    name: "like",
+                    count: "2"
+                })
+                +like-button({
+                    name: "like",
+                    count: "11"
                 })
 
 
 
-    .icon-text-list-default.form-element
-            .form-element__titel
-                .leftstr icon text list
+        .rate-buttons-default.form-element
+            .form-element__title
+                .str rate buttons
+            .rate-buttons-default__wrap            
+                +rate-button("4")
+                +rate-button("5")
+
+
+        .dropdown-guests-expanded-clear.form-element
+            .form-element__title
+                .leftstr dropdown
+                .rightstr Expanded
+            
+            include ../components/dropdown-guests/dropdown-guests
+
+        .dropdown-guests-expanded.form-element
+            .form-element__title
+                .leftstr dropdown
+                .rightstr Expanded
+            
+            include ../components/dropdown-guests/dropdown-guests
+
+
+
+        .checkbox-buttons_rich.form-element
+            .form-element__title
+                .str Rich checkbox buttons 
+            
+            +checkbox-buttons-rich([{
+                    title: "Широкий коридор",
+                    description: 'Ширина коридоров в номере<br> не менее 91 см.',
+                    name: ' ',
+                    checked: false
+                },
+                {   
+                    title: "Помощник для инвалидов",
+                    description: 'На 1 этаже вас встретит специалист<br> и проводит до номера.',
+                    name: ' ',
+                    checked: 'checked'
+                }])
+
+
+
+        .range-slider-default.form-element
+            .form-element__title
+                .leftstr 
+                .rightstr
+                    
+            +range-slider("range slider", "0", "20000", "&#8381")
+        
+
+
+        .button-default.form-element
+            .form-element__title
+                .leftstr Buttons
+                .rightstr
+            .button-default__wrap       
+                +button("solid", "Click me", "button_style_solid")
+                +button("solid", "Click me", "button_style_solid")
+                +button("solid", "Click me", "button_style_framed", "button-wrap")
+                +button("solid", "Click me", "button_style_framed", "button-wrap")
+                +button("solid", "Click me", "button_style_noframe")
+                +button("solid", "Click me", "button_style_noframe-gray")
+                +button("solid", "Перейти к оплате", "button_style_link")
+
+
+
+        .pagination-default.form-element
+            .form-element__title
+                .leftstr Pagination
                 .rightstr
             
-            +icon-text-list({
-                image_url: "/img/comfort.svg",
-                title: "Комфорт",
-                description: "Шумопоглащающие стены"
-                })
-            +icon-text-list({
-                image_url: "/img/location-city.svg",
-                title: "Удобство",
-                description: "Окно в каждой из спален"
-                })
+            +pagination("15")
+
+
+        .bullet-list-default.form-element
+                .form-element__title
+                    .leftstr bullet list
+                    .rightstr
+                
+                +bullet-list(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00,<br> а выезд до 12:00"])
 
 
 
-    .icon-text-list-default.form-element
-            .form-element__titel
-                .leftstr date dropdown
-                .rightstr
+        .review-default.form-element
+                .form-element__title
+                    .leftstr review
+                    .rightstr
+                
+                +review({
+                    name: "Мурад Сарафанов",
+                    image_url: "/img/murad.png",
+                    date: "5 дней назад",
+                    text: "Великолепный матрас на кровати в основной спальне!\
+                        А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие.\
+                        Выкрикивал комплименты повару — никто не жаловался из соседей.",
+                    likes: "12"
+                    })
 
-            +date-dropdown("start")
+
+
+
+
+
+
+
 
 

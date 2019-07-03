@@ -1,6 +1,15 @@
+.form-elemet
+    height: 1440px
+    width: 1853px
+    margin: 0
+    padding: 0
+
+
 .leftstr,
 .rightstr
     width:50%
+.str 
+    +label-text
 
 .leftstr
     +label-text
@@ -11,14 +20,14 @@
     +body-text
     text-transform: uppercase
     font-size: 12px
-    line-height: 133%
-    letter-spacing: 0.02em 
+    line-height: 16px
+    letter-spacing: -0.1pt
     text-align: right
     
 .form-element
     padding-bottom: 20px
     
-.form-element__titel
+.form-element__title
     margin-bottom: 5px
     width: 100%
     display: flex
@@ -26,33 +35,197 @@
     justify-content: space-between
 
 
-.input-text-field-default,
-.input-text-field-focus
+.input-text-field-default
+    position: absolute
+    left: 141px
+    top: 143px
     width: 320px
 
-.dropdown-rooms-default
-    width: 266px
+.input-text-field-focus
+    position: absolute
+    left: 141px
+    top: 226px
+    width: 320px
+
+
 
 .dropdown-guests-default
+    position: absolute
+    left: 141px
+    top: 310px
     width: 320px
 
+
+.masked-text-field-default
+    position: absolute
+    left: 141px
+    top: 398px
+
+.date-dropdown-default
+    position: absolute
+    left: 141px
+    top: 502px
+
+
 .subscription-text-field-default
+    position: absolute
+    left: 141px
+    top: 712px
     width: 350px
 
+
+.dropdown-rooms-default
+    position: absolute
+    left: 140px
+    top: 875px
+    width: 266px
+
+.dropdown-rooms-expanded
+    position: absolute
+    left: 140px
+    top: 959px
+    width: 266px
+
+.expandable-checkbox-list-default
+    position: absolute
+    left: 140px
+    top: 1185px
+
+.expandable-checkbox-list-expanded
+    position: absolute
+    left: 140px
+    top: 1249px
+
+.icon-text-list-default
+    position: absolute
+    left: 144px
+    top: 1543px
+
+.icon-text-list-default .icon-text-list
+    margin-bottom: 26px
+
+.checkbox-buttons-default
+    position: absolute
+    left: 587px
+    top: 143px
+
+.checkbox-buttons-default .checkbox-buttons
+    margin-top: 17px
+
+
+.radio-buttons-default
+    position: absolute
+    left: 587px
+    top: 313px
+
+.radio-buttons-default__wrap
+    display: flex
+    justify-content: space-between
+    width: 220px
+    margin-top: 12px
+    
+
+.toggle-buttons-default
+    position: absolute
+    left: 587px
+    top: 404px
+
+.toggle-buttons-default__wrap 
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 58px
+    margin-top: 14px
+
+
 .like-buttons-default
+    position: absolute
+    left: 587px
+    top: 534px
     display: flex
     flex-wrap: wrap
 
-// .rate-buttons-default
-//     display: flex
-//     flex-wrap: wrap
+.like-buttons-default__wrap
+    display: flex
+    justify-content: space-between
+    width: 90px
+    margin-top: 11px
+
+
+.rate-buttons-default
+    position: absolute
+    left: 587px
+    top: 625px
+
+.rate-buttons-default__wrap   
+    display: flex
+    justify-content: space-between
+    width: 260px
+    margin-top: 18px
+
+.dropdown-guests-expanded-clear
+    position: absolute
+    left: 587px
+    top: 876px
+
+.dropdown-guests-expanded
+    position: absolute
+    left: 979px
+    top: 876px
+
+.checkbox-buttons_rich
+    position: absolute
+    left: 587px
+    top: 1197px
+
+.checkbox-buttons_rich .form-element__title
+    margin-bottom: 16px
+
+
+
+.range-slider-default
+    position: absolute
+    left: 979px
+    top: 139px
 
 
 .button-default
+    position: absolute
+    left: 979px
+    top: 232px
     display: flex
     flex-wrap: wrap
     width: 350px
 
-.button-default button
+.button-default__wrap
+    display: flex
+    flex-wrap: wrap
+    width: 320px
+    margin-top: 10px
+
+.button-default__wrap .button
     margin-right: 20px
-    margin-bottom: 20px
+    margin-bottom: 30px
+
+.button-default__wrap .button-wrap
+    margin-right: 20px
+    margin-bottom: 2px
+
+.pagination-default
+    position: absolute
+    left: 980px
+    top: 541px
+
+.pagination-default .form-element__title
+    margin-bottom: 22px
+
+.bullet-list-default
+    position: absolute
+    left: 979px
+    top: 1196px
+
+
+.review-default
+    position: absolute
+    left: 587px
+    top: 1553px
