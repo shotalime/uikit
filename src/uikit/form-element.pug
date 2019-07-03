@@ -17,6 +17,7 @@ block content
     include ../components/subscription-text-field/subscription-text-field
     include ../components/masked-text-field/masked-text-field
     include ../components/date-dropdown/date-dropdown
+    include ../components/filter-date-dropdown/filter-date-dropdown
     
     .form-element
         .input-text-field-default.form-element
@@ -71,12 +72,17 @@ block content
         .date-dropdown-default.form-element
             .form-element__title
                 .str date dropdown
-                
 
             +date-dropdown("start")   
     
-        .filter-date-dropdown
-        //- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+        .filter-date-dropdown-default.form-element
+            .form-element__title
+                .str Filter date dropdown
+
+            +filter-date-dropdown('19 авг', '23 авг')
+
 
         .subscription-text-field-default.form-element
             .form-element__title
