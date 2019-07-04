@@ -9,17 +9,8 @@
     display: flex
     flex-wrap: wrap
     justify-content: space-between
-    
-.datepicker__wrap .button[name="clear"]
-    margin-top: -4px
-    margin-left: 5px
 
-.datepicker__wrap .button[name="accept"]
-    margin-top: -4px
-    margin-right: 12px
-    // margin-left: 103px
 
-    
 .datepicker__wrap-hide
     display: none
 
@@ -27,13 +18,17 @@
 //header
 
 
-.ui-datepicker-header 
+.ui-datepicker .ui-datepicker-header 
     position: relative
     background-color: #ffffff
     border: none
+    width: 90%
+    margin: auto
 
 .datepicker .ui-datepicker-inline
     margin-top: 13px
+    width: 109.5%
+    border: none
 
 .ui-datepicker-title 
     text-align: center
@@ -83,11 +78,10 @@
     margin-top: 24px !important
     margin-left: auto !important
     margin-right: auto !important
+    margin-bottom: 0px !important
     width: 90% !important
     border-collapse: collapse
     background-color: #ffffff
-
-
 
 
 //Дни недели
@@ -233,3 +227,11 @@
 .ui-datepicker-buttonpane .ui-priority-primary 
 
 
+// buttons
+.datepicker__buttons    
+    display: flex
+    justify-content: space-between
+    width: 90%
+    margin-top: -29px
+    margin-left: auto
+    margin-right: auto

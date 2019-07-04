@@ -2,5 +2,6 @@ include ../button/button
 mixin datepicker
     .datepicker__wrap
         .datepicker
-        +button("clear", "Очистить", "button_style_noframe-gray", "button__nowrap", "button")
-        +button("accept", "Применить", "button_style_noframe","button__nowrap", "button")
+        .datepicker__buttons
+            +button("clear", "Очистить", "button_style_noframe-gray", "button__nowrap", "button")
+            +button("accept", "Применить", "button_style_noframe","button__nowrap", "button")
