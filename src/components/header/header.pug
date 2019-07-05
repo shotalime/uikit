@@ -19,9 +19,8 @@ mixin header(header_array, is_registered, user, button)
                     .header__registered-nickname
                         !=user.nickname  
             else
-                +button(button[0].name, button[0].text, button[0].style, button[0].wrap, button[0].view)
-                +button(button[1].name, button[1].text, button[1].style, button[1].wrap, button[1].view)
-                    
+                +button_framed(button[0])
+                +button(button[1])
 
 //- +header([
 //-                 {
