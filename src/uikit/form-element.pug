@@ -318,13 +318,26 @@ block content
                 .leftstr Buttons
                 .rightstr
             .button-default__wrap       
-                +button("solid", "Click me", "button_style_solid")
-                +button("solid", "Click me", "button_style_solid")
-                +button("solid", "Click me", "button_style_framed", "button-wrap")
-                +button("solid", "Click me", "button_style_framed", "button-wrap")
-                +button("solid", "Click me", "button_style_noframe")
-                +button("solid", "Click me", "button_style_noframe-gray")
-                +button("solid", "Перейти к оплате", "button_style_link")
+                +button({
+                    type: 'button',
+                    name: 'button',
+                    text: 'CLICK ME',
+                })
+                +button_framed({
+                    type: 'button',
+                    name: 'button',
+                    text: 'CLICK ME',
+                })
+                +button_unframe({
+                    type: 'button',
+                    name: 'button',
+                    text: 'CLICK ME',
+                })
+                +button_link({
+                    type: 'button',
+                    name: 'button',
+                    text: 'Перейти к оплате',
+                })
 
 
 
