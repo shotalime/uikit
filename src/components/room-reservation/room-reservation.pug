@@ -46,4 +46,9 @@ mixin room-reservation(room)
             hr.room-reservation__in-total-line
             .room-reservation__in-total-val
         .room-reservation__button
-            +button("button-room-reservation", "Забронировать", "button_style_link","button__nowrap", "submit")
+            +button_link({
+                    type: 'submit',
+                    name: 'button',
+                    text: 'Забронировать',
+                    value: 'room-reservation'
+                })

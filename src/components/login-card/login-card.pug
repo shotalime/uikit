@@ -21,8 +21,17 @@ mixin  login-card
                     placeholder: "Пароль"
                 }) 
 
-            +button("button-login-card-login", "Войти", "button_style_link")
+            +button_link({
+                    type: 'submit',
+                    name: 'button-login-card-login',
+                    text: 'Войти',
+                    value: 'button-login-card-login'
+                })
 
             .login-card__login-link
                 .login-card__login-link-text Нет аккаунта на Toxin?
-                +button("button-login-card", "Создать", "button_style_framed", "button-wrap")
+                +button_framed({
+                    type: 'button',
+                    name: 'register',
+                    text: 'Создать',
+                })

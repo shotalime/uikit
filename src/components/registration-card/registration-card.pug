@@ -53,9 +53,18 @@ mixin registration-card
                 }) 
 
             +toggle-button("special_offer", "no", false, "Получать спецпредложения")
-
-            +button("button-registration-card-registration", "перейти к оплате", "button_style_link")
+            
+            +button_link({
+                    type: 'submit',
+                    name: 'buttbutton-registration-card-registrationon',
+                    text: 'перейти к оплате',
+                    value: 'room-reservation'
+                })
 
             .registration-card__login-link
                 .registration-card__login-link-text Уже есть аккаунт на Toxin
-                +button("button-registration-card", "Войти", "button_style_framed", "button-wrap")
+                +button_framed({
+                    type: 'button',
+                    name: 'registration-card-login',
+                    text: 'Войти',
+                })

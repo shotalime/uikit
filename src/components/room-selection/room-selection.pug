@@ -16,5 +16,10 @@ mixin room-selection
         .room-selection__guests
                 h3 Гости
                 include ../dropdown-guests/dropdown-guests
-        +button("button-room-selection", "Подобрать номер", "button_style_link")
+        +button_link({
+                    type: 'submit',
+                    name: 'button',
+                    text: 'Подобрать номер',
+                    value: 'room-selection'
+                })
 
