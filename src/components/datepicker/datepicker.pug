@@ -3,5 +3,13 @@ mixin datepicker
     .datepicker__wrap
         .datepicker
         .datepicker__buttons
-            +button("clear", "Очистить", "button_style_noframe-gray", "button__nowrap", "button")
-            +button("accept", "Применить", "button_style_noframe","button__nowrap", "button")
+            +button_unframe({
+                    type: 'button',
+                    name: 'clear',
+                    text: 'Очистить',
+                })
+            +button_unframe({
+                    type: 'button',
+                    name: 'accept',
+                    text: 'Применить',
+                })
