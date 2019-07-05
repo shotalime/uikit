@@ -1,19 +1,20 @@
 include ../quantity-buttons/quantity-buttons
-.dropdown-rooms
-    .dropdown-rooms__button
-        input.dropdown-rooms__input(type = "text" value = "Сколько комнат" disabled)
-        i.material-icons keyboard_arrow_down
+mixin dropdown-rooms
+    .dropdown-rooms
+        .dropdown-rooms__button
+            input.dropdown-rooms__input(type = "text" value = "Сколько комнат" disabled)
+            i.material-icons keyboard_arrow_down
 
-    .dropdown-rooms__wrap
-        .dropdown-rooms__bedrooms.dropdown-rooms__buttons
-            div Спальни
-            +quantity-buttons
-        .dropdown-rooms__beds.dropdown-rooms__buttons
-            div Кровати
-            +quantity-buttons
-        .dropdown-rooms__bathrooms.dropdown-rooms__buttons
-            div Ванные комнаты
-            +quantity-buttons
-                 
+        .dropdown-rooms__wrap
+            .dropdown-rooms__bedrooms.dropdown-rooms__buttons
+                div Спальни
+                +quantity-buttons
+            .dropdown-rooms__beds.dropdown-rooms__buttons
+                div Кровати
+                +quantity-buttons
+            .dropdown-rooms__bathrooms.dropdown-rooms__buttons
+                div Ванные комнаты
+                +quantity-buttons
+                    
             
 

@@ -1,6 +1,7 @@
 include ../button/button
 include ../date-dropdown/date-dropdown
 include ../datepicker/datepicker
+include ../dropdown-guests/dropdown-guests
 
 mixin room-selection
     form.room-selection
@@ -15,7 +16,7 @@ mixin room-selection
             +datepicker
         .room-selection__guests
                 h3 Гости
-                include ../dropdown-guests/dropdown-guests
+                +dropdown-guests
         +button_link({
                     type: 'submit',
                     name: 'button',

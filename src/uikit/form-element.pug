@@ -19,6 +19,8 @@ block content
     include ../components/masked-text-field/masked-text-field
     include ../components/date-dropdown/date-dropdown
     include ../components/filter-date-dropdown/filter-date-dropdown
+    include ../components/dropdown-guests/dropdown-guests
+    include ../components/dropdown-rooms/dropdown-rooms
     
     .form-element
         .input-text-field-default.form-element
@@ -52,7 +54,7 @@ block content
                 .leftstr dropdown
                 .rightstr Default
             
-            include ../components/dropdown-guests/dropdown-guests
+            +dropdown-guests
 
 
 
@@ -102,7 +104,7 @@ block content
                 .leftstr dropdown
                 .rightstr Default
                 
-            include ../components/dropdown-rooms/dropdown-rooms
+            +dropdown-rooms
 
 
         .dropdown-rooms-expanded.form-element
@@ -110,7 +112,7 @@ block content
                 .leftstr dropdown
                 .rightstr Expanded
                 
-            include ../components/dropdown-rooms/dropdown-rooms
+            +dropdown-rooms
         
         .expandable-checkbox-list-default.form-element
             .form-element__title
@@ -275,14 +277,14 @@ block content
                 .leftstr dropdown
                 .rightstr Expanded
             
-            include ../components/dropdown-guests/dropdown-guests
+            +dropdown-guests
 
         .dropdown-guests-expanded.form-element
             .form-element__title
                 .leftstr dropdown
                 .rightstr Expanded
             
-            include ../components/dropdown-guests/dropdown-guests
+            +dropdown-guests
 
 
 
