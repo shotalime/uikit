@@ -1,7 +1,7 @@
 include ../button/button
 include ../date-dropdown/date-dropdown
 include ../datepicker/datepicker
-
+include ../dropdown-guests/dropdown-guests
 
 mixin room-reservation(room)
     form.room-reservation
@@ -25,7 +25,7 @@ mixin room-reservation(room)
         .room-reservation__item-wrap.room-reservation__input-guests
             .room-reservation__guests
                 h3 Гости
-                include ../dropdown-guests/dropdown-guests
+                +dropdown-guests
         .room-reservation__item-wrap.room-reservation__cost
             span.room-reservation__cost-item
             span.room-reservation__cost-total
