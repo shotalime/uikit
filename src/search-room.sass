@@ -1,0 +1,78 @@
+.search-room
+    max-width: 1440px
+    min-height: 1273px
+    background-color: #ffffff
+    margin: auto
+
+
+.search-room__header
+    max-width: 1440px
+    margin: auto
+    height: 5.21%
+
+
+.search-room__article
+    max-width: 1180px
+    position: relative
+    display: flex
+    margin: auto
+    height: 67.8%
+ 
+.search-room__filter
+    display: grid
+    grid-template-rows: 84px 97px 99px 160px 176px 87px
+    grid-template-columns: 270px
+    margin-top: 30px
+    margin-left: 10px
+
+.search-room__filter-item
+    position: relative
+    
+.search-room__filter-item-title
+    margin-bottom: 5px
+    +label-text
+
+.search-room__filter-item-datepicker    
+    position: absolute
+    z-index: 5
+    display: none
+
+.search-room__filter-checkbox-title
+    margin-bottom: 17px
+    +label-text
+
+.search-room__filter-item-desctiption
+    padding-top: 11px
+    +body-text
+    font-size: 12px
+    color: nth($colors, 3)
+
+.search-room__filter-item .dropdown-guests
+    width: 266px
+
+
+.search-room__rooms
+    display: flex
+    flex-wrap: wrap
+    margin-top: 10px
+    margin-left: 3.74%
+
+.search-room__rooms-title
+    width: 100%
+    margin-left: 11px
+    margin-bottom: 21px
+
+.search-room__rooms-item
+    padding-bottom: 20px
+    padding-left: 12px
+
+.search-room__rooms-pagination
+    margin: auto
+    margin-top: 22px
+    padding-bottom: 72px
+
+
+.search-room___footer
+    position: relative
+    width: 100%
+    height: 33%
