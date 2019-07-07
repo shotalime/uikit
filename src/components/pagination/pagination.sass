@@ -3,53 +3,61 @@
     margin: 0
     padding: 0
     box-sizing: border-box
-    list-style-type: none
-    display: flex
-    width: 240px
-    justify-content: space-between
+    width: 300px
+
 
 .pagination__item
+    display: inline-block
     width: 40px
+    height: 40px
     text-align: center
-    
+    line-height: 35px
+
+
     
 .pagination__item-link
     text-decoration: none
     font-weight: normal
+    
+
 
 .pagination__item-link:not(.material-icons)
     +label-text
     color: nth($colors, 3)
     font-weight: normal
 
+.pagination__item_active 
+    border-radius: 20px
+    +primary-gradient
+    text-align: center
+
 .pagination__item_active .pagination__item-link
     color: #ffffff 
-    font-weight: bold  
+    font-weight: bold
+    
 
-.pagination__item_active::before
-    width: 40px
-    height: 40px
-    content: ""
-    position: absolute
-    top: -6px
-    left: 0px
-    border-radius: 100%
-    +primary-gradient
-    z-index: -1
 
-.pagination__item:last-child::before
-    width: 40px
-    height: 40px
-    content: ""
-    position: absolute
-    top: -6px
-    left: 200px
+// .pagination__item_active::before
+//     width: 40px
+//     height: 40px
+//     content: ""
+//     position: absolute
+//     top: -6px
+//     left: 0px
+//     border-radius: 100%
+//     +primary-gradient
+//     z-index: 0
+    
+.pagination__item:last-child
     border-radius: 100%
     +second-gradient
-    z-index: -1
+    
+
     
 .pagination__item .material-icons
+    display: inline-block
     color: #ffffff 
+    vertical-align: middle
 
 .pagination__description
-    margin: 10px 0 0 5px
+    margin: 5px 0 0 7px
