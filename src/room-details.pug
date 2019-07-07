@@ -1,0 +1,58 @@
+extends layouts/home
+block variables
+block content
+
+    include /components/header/header
+    include /components/footer/footer
+    include /components/copyright-bar/copyright-bar
+
+    .room-details
+        .room-details__header
+            +header([
+                        {
+                            text: 'О нас',
+                            icon: ''
+                        },
+                        {
+                            text: 'Услуги',
+                            icon: 'expand_more'
+                        },
+                        {
+                            text: 'Вакансии',
+                            icon: ''
+                        },
+                        {
+                            text: 'Новости',
+                            icon: ''
+                        },
+                        {
+                            text: 'Соглашения',
+                            icon: 'expand_more'
+                        }],{
+                            is_registered: false
+                        },{
+                            nickname: ''
+                        },[{
+                            type: 'button', 
+                            name: 'login', 
+                            text: 'Войти'
+                        },{
+                            type: 'button', 
+                            name: 'register', 
+                            text: 'Зарегистрироваться'
+                        }])
+
+        article.room-details__article
+            .room-details__images
+                img.room-details__image(src='/img/hotelroom/hotelroom-888-details-1.jpg' alt='first image')
+                img.room-details__image(src='/img/hotelroom/hotelroom-888-details-2.jpg' alt='second image')
+                img.room-details__image(src='/img/hotelroom/hotelroom-888-details-3.jpg' alt='third image')
+            .room-details__details
+                .room-details__content
+                    .room-details__data
+                    .room-details__impressions   
+                    .room-details__reviews
+                    .room-details__rules
+                    .room-details__cancellation  
+                .room-details__room-reservation
+        .room-details__footer
