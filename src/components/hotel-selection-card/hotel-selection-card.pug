@@ -1,7 +1,7 @@
 include ../image-slider/image-slider
 include ../rate-button/rate-button
 
-mixin hotel-selection-card(image, room, stars, val)
+mixin hotel-selection-card(image, room, review)
     .hotel-selection-card
         +image-slider(image)
         .hotel-selection-card__description
@@ -18,9 +18,9 @@ mixin hotel-selection-card(image, room, stars, val)
                     span.hotel-selection-card__number-perday  в сутки
             hr.hotel-selection-card__line
             .hotel-selection-card__review-wrap
-                +rate-button(stars)
+                +rate-button(review.stars)
                 .hotel-selection-card__review
-                    span.hotel-selection-card__val 
-                        !=val
+                    span.hotel-selection-card__val=review.count
+                        
                     span.hotel-selection-card__text
             
