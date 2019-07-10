@@ -7,6 +7,7 @@ $(document).ready(function() {
             $input.text(count);
             $(this).find(".material-icons").text("favorite");
             $(this).addClass("like-button__button_clicked");
+            $(this).parent().addClass("like-button_clicked");
         }       
     });
 });
