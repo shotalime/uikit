@@ -7,8 +7,8 @@ mixin review(review_object)
                 .review-author__date= review_object.date
         +like-button({
             name: "like",
-            count: "11",
-            clicked: 'clicked'
+            count: review_object.likes,
+            clicked: review_object.clicked
         })
         .review__text= review_object.text
 
