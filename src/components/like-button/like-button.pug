@@ -1,5 +1,5 @@
 mixin like-button(like_object)
     .like-button
-        button.like-button__button(name= like_object.name id= like_object.id)
+        button.like-button__button(name= like_object.name id= like_object.id class=like_object.clicked)
             .material-icons favorite_border
             .like-button__count=like_object.count

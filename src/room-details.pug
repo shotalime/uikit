@@ -72,7 +72,7 @@ block content
                                 })
                     .room-details__impressions   
                     .room-details__reviews
-                        .room-details__reviews-title Сведения о номере
+                        .room-details__reviews-title Отзывы поситителей номера
                         .room-details__reviews-items
                             +review({
                                 name: "Мурад Сарафанов",
@@ -83,6 +83,15 @@ block content
                                     Выкрикивал комплименты повару — никто не жаловался из соседей.",
                                 likes: "12"
                                 })
+                        .room-details__reviews-items
+                            +review({
+                                name: "Мурад Сарафанов",
+                                image_url: "/img/murad.png",
+                                date: "5 дней назад",
+                                text: "Великолепный матрас на кровати в основной спальне!\
+                                    А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие.\
+                                    Выкрикивал комплименты повару — никто не жаловался из соседей.",
+                                likes: "3"
                     .room-details__rules
                     .room-details__cancellation  
                 .room-details__room-reservation
