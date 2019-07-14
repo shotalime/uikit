@@ -1,0 +1,52 @@
+.impressions
+    position: relative
+    display: flex
+    flex-flow: row nowrap
+    align-items: center
+    
+.impressions__donut
+    width: 152px
+    
+.impressions__count 
+    position: absolute
+    display: flex
+    flex-flow: column nowrap
+    align-items: center
+    left: 14%
+    top: 32%
+    font-family: Quicksand
+    font-style: normal
+    font-weight: bold
+    font-size: 24px
+    line-height: 30px
+    color: #BC9CFF
+
+.impressions__count-text
+    font-family: Montserrat
+    font-size: 12px
+    line-height: 15px
+    text-align: center
+    text-transform: uppercase
+
+.impressions__list
+    list-style: none
+    padding: 25px 0 0 14px
+
+
+.impressions__list-item::before
+    display: inline-block
+    content: " "
+    width: 10px
+    height: 10px
+    border-radius: 5px
+    margin-right: 5px
+    background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%)
+    
+.impressions__list-item:nth-child(2)::before
+    +second-gradient
+
+.impressions__list-item:nth-child(3)::before
+    +primary-gradient
+
+.impressions__list-item:nth-child(4)::before
+    background: linear-gradient(180deg, #919191 0%, #3D4975 100%)

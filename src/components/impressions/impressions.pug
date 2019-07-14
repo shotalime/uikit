@@ -1,0 +1,72 @@
+mixin impressions(n)
+    .impressions 
+        //- Отрисовка диаграммы
+        .impressions__donut 
+            //- считаем общее количество отзывов
+
+            -var totalReviews = n.sumptuously + n.good + n.satisfactorily + n.disappointed
+            
+            
+            //- переводим количество отзывов в проценты, рассчитываем начало отсчета для каждого сегмента
+
+            -var firstSegment = {length: n.sumptuously/totalReviews * 100, offset: 75}
+            -var secondSegment = {length: n.good/totalReviews * 100, offset: (100 - firstSegment.length + firstSegment.offset)}
+            -var thirdSegment = {length: n.satisfactorily/totalReviews * 100, offset: (100 - secondSegment.length + secondSegment.offset)}
+            -var fourthSegment = {length: n.disappointed/totalReviews * 100, offset: (100 - thirdSegment.length + thirdSegment.offset)}
+        
+            //- для учета зазора вводим переменную и пересчитываем все отзывы
+
+            -var gap = 1
+
+            -
+                function addGap (segment, gapVal) {
+                    if(segment.length > 0)
+                        segment.length = segment.length - gapVal;
+                        segment.offset = segment.offset - gapVal/2;
+                        segment.restCircle = 100 - segment.length;
+                    return segment;
+                };
+                    
+            -
+                addGap (firstSegment, gap);
+                addGap (secondSegment, gap);
+                addGap (thirdSegment, gap);
+                addGap (fourthSegment, gap);
+
+            //- присваиваем значения и рисуем диаграмму
+            svg(width="100%" height="100%" fill="none" viewBox="0 0 42 42")
+                
+                
+
+                circle.impressions__donut-segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#paint0_linear)" stroke-width="2" stroke-dasharray=(firstSegment.length + " " + firstSegment.restCircle)  stroke-dashoffset=firstSegment.offset)
+                circle.impressions__donut-segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#paint2_linear)" stroke-width="4" stroke-dasharray=(secondSegment.length + " " + secondSegment.restCircle) stroke-dashoffset=secondSegment.offset)
+                circle.impressions__donut-segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#paint1_linear)" stroke-width="2" stroke-dasharray=(thirdSegment.length + " " + thirdSegment.restCircle) stroke-dashoffset=thirdSegment.offset)
+                circle.impressions__donut-segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#paint3_linear)" stroke-width="2" stroke-dasharray=(fourthSegment.length + " " + fourthSegment.restCircle) stroke-dashoffset=fourthSegment.offset)
+                circle.impressions__donut-ring(cx="21" cy="21" r="19" fill="transparent" stroke="#fff" stroke-width="5") 
+
+                linearGradient#paint0_linear(x1="21" y1="0" x2="21" y2="42" gradientUnits="userSpaceOnUse")
+                    stop(stop-color="#FFE39C")
+                    stop(offset="1" stop-color="#FFBA9C")
+
+                linearGradient#paint1_linear(x1="21" y1="0" x2="21" y2="42" gradientUnits="userSpaceOnUse")
+                    stop(stop-color="#6FCF97")
+                    stop(offset="1" stop-color="#66D2EA")
+
+                linearGradient#paint2_linear(x1="21" y1="0" x2="21" y2="42" gradientUnits="userSpaceOnUse")
+                    stop(stop-color="#BC9CFF")
+                    stop(offset="1" stop-color="#8BA4F9")
+
+                linearGradient#paint3_linear(x1="21" y1="0" x2="21" y2="42" gradientUnits="userSpaceOnUse")
+                    stop(stop-color="#919191")
+                    stop(offset="1" stop-color="#3D4975")
+
+            //- конец отрисовки диаграммы
+        .impressions__count 
+            .impressions__count-val #{totalReviews} 
+            .impressions__count-text голосов   
+        ul.impressions__list
+            li.impressions__list-item Великолепно
+            li.impressions__list-item Хорошо
+            li.impressions__list-item Удовлетворительно
+            li.impressions__list-item Разочарован
+
