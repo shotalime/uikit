@@ -1,8 +1,16 @@
 .room-details
-    max-width: 1440px
-    min-height: 1273px
+    min-height: 100%
+    display: flex
+    flex-direction: column
+    max-width: 1440px 
+    margin: 0 auto
     background-color: #ffffff
-    margin: auto
+    
+.room-details__wrap
+    flex: 1
+    min-height: 100%
+    
+    // margin: 0 auto
 
 
 .room-details__article
@@ -28,11 +36,22 @@
 
 
 .room-details__details
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
     width: 80.5%
     margin: auto
-    padding-top: 71px
+    padding-top: 41px
+
+
+.room-details__content
+    display: flex
+    flex-flow: row wrap
+    max-width: 712px
 
 .room-details__data
+    padding-top: 30px
+    margin-right: 64px
 
 .room-details__data-title
     padding-bottom: 19px
@@ -44,12 +63,56 @@
     justify-content: space-between
     height: 248px
 
+.room-details__impressions
+    padding-top: 30px
+
+.room-details__impressions-title 
+    padding: 0 0 3px 15px
+    +large-text
+
+
 .room-details__reviews
     padding-top: 12px
 
+.room-details__reviews-description
+    display: flex
+    justify-content: space-between
 
 .room-details__reviews-title
     padding-bottom: 19px
     +large-text
 
+
+.room-details__reviews-item
+    padding-bottom: 23px
+
+
+.room-details__rules   
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    max-width: 702px
+    width: 100%
+
+.room-details__rule
+    width: 341px
+
+.room-details__rule-title
+    padding: 10px 0 3px 20px
+    +large-text
+
+
+    
+.room-details__cancellation-title
+    padding: 10px 0 18px 0px
+    +large-text
+
+.room-details__room-reservation
+    padding-top: 30px 
+
+
+.room-details__footer    
+    width: 100%
+    margin: 0 auto
+    margin-top: 4%
     
