@@ -38,12 +38,12 @@ block content
 
         .card-room-reservation
             +room-reservation({
-                number: '888',
-                type: 'Люкс',
-                cost: '9990',
-                discount: '2179',
-                serviceCharge: '0',
-                adServiceCharge: '300'
+                number: "888",
+                type: "Люкс",
+                cost: "9990",
+                discount: "2179",
+                serviceCharge: "0",
+                adServiceCharge: "300"
             })
 
 
@@ -55,43 +55,49 @@ block content
 
         .card-hotel-selection-card
             +hotel-selection-card([{
-                src: '/img/hotelroom/hotelroom-1.png',
-                alt: 'First img'
+                src: "/img/hotelroom/hotelroom-1.jpg",
+                alt: "First img"
             },
             {
-                src: '/img/hotelroom/hotelroom-2.png',
-                alt: 'Second img'
+                src: "/img/hotelroom/hotelroom-2.jpg",
+                alt: "Second img"
             },   
             {
-                src: '/img/hotelroom/hotelroom-1.png',
-                alt: 'Third img'
+                src: "/img/hotelroom/hotelroom-1.jpg",
+                alt: "Third img"
             },   
             {
-                src: '/img/hotelroom/hotelroom-2.png',
-                alt: 'Fourth img'
+                src: "/img/hotelroom/hotelroom-2.jpg",
+                alt: "Fourth img"
             }],{
-                number: '888',
-                type: 'Люкс',
-                cost: '9 990₽'
+                number: "888",
+                type: "Люкс",
+                cost: "9 990₽"
             },{
-                stars:'5', 
-                count:'145'})
+                stars:"5", 
+                count:"145"
+            },{
+                details: "/components/change-me.pug"
+            })
             
         .card-hotel-selection-card-second
             +hotel-selection-card([{
-                src: '/img/hotelroom/hotelroom-2.png',
-                alt: 'Third img'
+                src: "/img/hotelroom/hotelroom-2.jpg",
+                alt: "Third img"
             },   
             {
-                src: '/img/hotelroom/hotelroom-1.png',
-                alt: 'Fourth img'
+                src: "/img/hotelroom/hotelroom-1.jpg",
+                alt: "Fourth img"
             }],{
-                number: '840',
-                type: 'Люкс',
-                cost: '9 900₽'
+                number: "840",
+                type: "Люкс",
+                cost: "9 900₽"
             },{
-                stars:'4', 
-                count:'65'})
+                stars:"4", 
+                count:"65"
+            },{
+                details: "/components/change-me.pug"
+            })
 
     <script type="text/javascript" src="/jQuery/jquery-3.4.0.js"></script>          
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>

@@ -22,43 +22,45 @@ block content
         .search-room__header
             +header([
                         {
-                            text: 'О нас',
-                            icon: ''
+                            text: "О нас",
+                            icon: ""
                         },
                         {
-                            text: 'Услуги',
-                            icon: 'expand_more'
+                            text: "Услуги",
+                            icon: "expand_more"
                         },
                         {
-                            text: 'Вакансии',
-                            icon: ''
+                            text: "Вакансии",
+                            icon: ""
                         },
                         {
-                            text: 'Новости',
-                            icon: ''
+                            text: "Новости",
+                            icon: ""
                         },
                         {
-                            text: 'Соглашения',
-                            icon: 'expand_more'
+                            text: "Соглашения",
+                            icon: "expand_more"
                         }],{
                             is_registered: false
                         },{
-                            nickname: ''
+                            nickname: ""
                         },[{
-                            type: 'button', 
-                            name: 'login', 
-                            text: 'Войти'
+                            type: "button", 
+                            name: "login", 
+                            text: "Войти",
+                            onclick: "window.location='/login.html'"
                         },{
-                            type: 'button', 
-                            name: 'register', 
-                            text: 'Зарегистрироваться'
+                            type: "button", 
+                            name: "register", 
+                            text: "Зарегистрироваться",
+                            onclick: "window.location='/registration.html'"
                         }])
         article.search-room__article
             .search-room__filter
 
                 .search-room__filter-item
                     .search-room__filter-item-title Даты пребывания в отеле
-                    +filter-date-dropdown('19 авг', '23 авг')
+                    +filter-date-dropdown("19 авг", "23 авг")
                     .search-room__filter-item-datepicker
                         +datepicker
                 .search-room__filter-item
@@ -66,82 +68,82 @@ block content
                     +dropdown-guests
 
                 .search-room__filter-item
-                    +range-slider('Диапазон цены', '0', '20000', '&#8381')
+                    +range-slider("Диапазон цены", "0", "20000", "&#8381")
                     .search-room__filter-item-desctiption Стоимость за сутки пребывания в номере
 
                 .search-room__filter-item
                     .search-room__filter-checkbox-title Checkbox buttons
                     +checkbox-buttons([{
-                            description: 'Можно курить',
-                            name: 'expandable-checkbox-list__item',
+                            description: "Можно курить",
+                            name: "expandable-checkbox-list__item",
                             checked: false
                         },
                         {
-                            description: 'Можно с питомцами',
-                            name: 'expandable-checkbox-list__item',
-                            checked: ''
+                            description: "Можно с питомцами",
+                            name: "expandable-checkbox-list__item",
+                            checked: ""
                         },
                         {
-                            description: 'Можно пригласить гостей <br>(до 10 человек)',
-                            name: 'expandable-checkbox-list__item',
-                            checked: ''
+                            description: "Можно пригласить гостей <br>(до 10 человек)",
+                            name: "expandable-checkbox-list__item",
+                            checked: ""
                         }])
                 .search-room__filter-item
                     .search-room__filter-checkbox-title Доступность
                     +checkbox-buttons-rich([{
                         title: "Широкий коридор",
-                        description: 'Ширина коридоров в номере<br> не менее 91 см.',
-                        name: ' ',
+                        description: "Ширина коридоров в номере<br> не менее 91 см.",
+                        name: " ",
                         checked: false
                     },
                     {   
                         title: "Помощник для инвалидов",
-                        description: 'На 1 этаже вас встретит специалист<br> и проводит до номера.',
-                        name: ' ',
-                        checked: 'checked'
+                        description: "На 1 этаже вас встретит специалист<br> и проводит до номера.",
+                        name: " ",
+                        checked: "checked"
                     }])
                 .search-room__filter-item
                     .search-room__filter-item-title Удобства номера
                     +dropdown-rooms
                 .search-room__filter-item
-                    +expandable-checkbox-list('Дополнительные удобства', [{
-                        description: 'Завтрак',
-                        name: 'expandable-checkbox-list__item',
+                    +expandable-checkbox-list("Дополнительные удобства", [{
+                        description: "Завтрак",
+                        name: "expandable-checkbox-list__item",
                         checked: false
                     },
                     {
-                        description: 'Письменный стол',
-                        name: 'expandable-checkbox-list__item',
-                        checked: ''
+                        description: "Письменный стол",
+                        name: "expandable-checkbox-list__item",
+                        checked: ""
                     },
                     {
-                        description: 'Стул для кормления',
-                        name: 'expandable-checkbox-list__item',
-                        checked: ''
+                        description: "Стул для кормления",
+                        name: "expandable-checkbox-list__item",
+                        checked: ""
                     },
                     {
-                        description: 'Кроватка',
-                        name: 'expandable-checkbox-list__item',
-                        checked: ''
+                        description: "Кроватка",
+                        name: "expandable-checkbox-list__item",
+                        checked: ""
                     },
                     {
-                        description: 'Телевизор',
-                        name: 'expandable-checkbox-list__item',
+                        description: "Телевизор",
+                        name: "expandable-checkbox-list__item",
                         checked: false
                     },
                     {
-                        description: 'Шампунь',
-                        name: 'expandable-checkbox-list__item',
+                        description: "Шампунь",
+                        name: "expandable-checkbox-list__item",
                         checked: false
                     },
                     {
-                        description: 'Телевизор',
-                        name: 'expandable-checkbox-list__item',
+                        description: "Телевизор",
+                        name: "expandable-checkbox-list__item",
                         checked: false
                     },
                     {
-                        description: 'Шампунь',
-                        name: 'expandable-checkbox-list__item',
+                        description: "Шампунь",
+                        name: "expandable-checkbox-list__item",
                         checked: false
                     }])
 
@@ -150,61 +152,61 @@ block content
                 h1.search-room__rooms-title Номера, которые мы для вас подобрали
                 -for(var i=0; i<room_array.length; i++)
                     .search-room__rooms-item
-                        +hotel-selection-card(room_array[i].images, room_array[i].num, room_array[i].review)
+                        +hotel-selection-card(room_array[i].images, room_array[i].num, room_array[i].review, room_array[i].details)
                 .search-room__rooms-pagination
-                    +pagination('15')
+                    +pagination("15")
 
 
 
         .search-room__footer
-            +footer('Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
+            +footer("Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
                         [{
-                            text: 'О нас',
-                            title: 'навигация'
+                            text: "О нас",
+                            title: "навигация"
                         },
                         {
-                            text: 'Новости'
+                            text: "Новости"
                         },
                         {
-                            text: 'Служба поддержки'
+                            text: "Служба поддержки"
                         },
                         {
-                            text: 'Услуги'
+                            text: "Услуги"
                         }],
                         [{
-                            text: 'О сервисе',
-                            title: 'о нас'
+                            text: "О сервисе",
+                            title: "о нас"
                         },
                         {
-                            text: 'Наша команда'
+                            text: "Наша команда"
                         },
                         {
-                            text: 'Вакансии'
+                            text: "Вакансии"
                         },
                         {
-                            text: 'Инвесторы'
+                            text: "Инвесторы"
                         }],
                         [{
-                            text: 'Соглашения',
-                            title: 'Служба поддержки'
+                            text: "Соглашения",
+                            title: "Служба поддержки"
                         },
                         {
-                            text: 'Сообщества'
+                            text: "Сообщества"
                         },
                         {
-                            text: 'Связь с нами'
+                            text: "Связь с нами"
                         }],{
-                            title: 'Подписка',
-                            description: 'Получайте специальные предложения и новости сервиса'
+                            title: "Подписка",
+                            description: "Получайте специальные предложения и новости сервиса"
                         },{        
-                            type: 'email',
-                            name: 'Email',
-                            value: '',
-                            placeholder: 'Email'
+                            type: "email",
+                            name: "Email",
+                            value: "",
+                            placeholder: "Email"
                         })
 
                        
-            +copyright-bar('Copyright © 2018 Toxin отель. Все права зачищены')
+            +copyright-bar("Copyright © 2018 Toxin отель. Все права зачищены.")
 
 
 

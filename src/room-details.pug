@@ -19,62 +19,64 @@ block content
             .room-details__header
                 +header([
                             {
-                                text: 'О нас',
-                                icon: ''
+                                text: "О нас",
+                                icon: ""
                             },
                             {
-                                text: 'Услуги',
-                                icon: 'expand_more'
+                                text: "Услуги",
+                                icon: "expand_more"
                             },
                             {
-                                text: 'Вакансии',
-                                icon: ''
+                                text: "Вакансии",
+                                icon: ""
                             },
                             {
-                                text: 'Новости',
-                                icon: ''
+                                text: "Новости",
+                                icon: ""
                             },
                             {
-                                text: 'Соглашения',
-                                icon: 'expand_more'
+                                text: "Соглашения",
+                                icon: "expand_more"
                             }],{
                                 is_registered: false
                             },{
-                                nickname: ''
+                                nickname: ""
                             },[{
-                                type: 'button', 
-                                name: 'login', 
-                                text: 'Войти'
+                                type: "button", 
+                                name: "login", 
+                                text: "Войти",
+                                onclick: "window.location='/login.html'"
                             },{
-                                type: 'button', 
-                                name: 'register', 
-                                text: 'Зарегистрироваться'
+                                type: "button", 
+                                name: "register", 
+                                text: "Зарегистрироваться",
+                                onclick: "window.location='/registration.html'"
                             }])
 
             article.room-details__article
                 .room-details__images
-                    img.room-details__image(src='/img/hotelroom/hotelroom-888-details-1.jpg' alt='first image')
-                    img.room-details__image(src='/img/hotelroom/hotelroom-888-details-2.jpg' alt='second image')
-                    img.room-details__image(src='/img/hotelroom/hotelroom-888-details-3.jpg' alt='third image')
+                    img.room-details__image(src="/img/hotelroom/hotelroom-888-details-1.jpg" alt="first image")
+                    img.room-details__image(src="/img/hotelroom/hotelroom-888-details-2.jpg" alt="second image")
+                    img.room-details__image(src="/img/hotelroom/hotelroom-888-details-3.jpg" alt="third image")
                 .room-details__details
                     .room-details__content
                         .room-details__data
                             .room-details__data-title Сведения о номере
                             .room-details__data-icons
                                 +icon-text-list({
-                                    icon: 'insert_emoticon',
-                                    title: 'Комфорт',
-                                    description: 'Шумопоглощающие стены'
+                                    icon: "insert_emoticon",
+                                    title: "Комфорт",
+                                    description: "Шумопоглощающие стены"
                                     })
                                 +icon-text-list({
-                                    icon: 'location_city',
-                                    title: 'Удобство',
-                                    description: 'Окно в каждой из спален'
+                                    icon: "location_city",
+                                    title: "Удобство",
+                                    description: "Окно в каждой из спален"
                                     })
                                 +icon-text-list({
-                                    icon: 'whatshot',
-                                    title: 'Уют',
-                                    description: 'Номер оснащён камином'
+                                    icon: "whatshot",
+                                    title: "Уют",
+                                    description: "Номер оснащён камином"
                                     })
                         .room-details__impressions 
                             .room-details__impressions-title Впечатления от номера
@@ -90,24 +92,24 @@ block content
                                 .room-details__reviews-text 2 Отзыва
                             .room-details__reviews-item
                                 +review({
-                                    name: 'Мурад Сарафанов',
-                                    image_url: '/img/murad.png',
-                                    date: '5 дней назад',
-                                    text: 'Великолепный матрас на кровати в основной спальне!\
+                                    name: "Мурад Сарафанов",
+                                    image_url: "/img/murad.jpg",
+                                    date: "5 дней назад",
+                                    text: "Великолепный матрас на кровати в основной спальне!\
                                         А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие.\
-                                        Выкрикивал комплименты повару — никто не жаловался из соседей.',
-                                    likes: '12',
-                                    clicked: 'clicked'
+                                        Выкрикивал комплименты повару — никто не жаловался из соседей.",
+                                    likes: "12",
+                                    clicked: "clicked"
                                     })
                             .room-details__reviews-item
                                 +review({
-                                    name: 'Патрисия Стёклышкова',
-                                    image_url: '/img/patricia.jpg',
-                                    date: 'Неделю назад',
-                                    text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать,\
-                                        каждый день новое блюдо и десерт как комплимент.',
-                                    likes: '2',
-                                    clicked: 'clicked'
+                                    name: "Патрисия Стёклышкова",
+                                    image_url: "/img/patricia.jpg",
+                                    date: "Неделю назад",
+                                    text: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать,\
+                                        каждый день новое блюдо и десерт как комплимент.",
+                                    likes: "2",
+                                    clicked: "clicked"
                                     })
                         .room-details__rules
                             .room-details__rule
@@ -121,62 +123,62 @@ block content
                                                                         |возврат за вычетом сбора за услуги.
                     .room-details__room-reservation
                         +room-reservation({
-                            number: '888',
-                            type: 'Люкс',
-                            cost: '9990',
-                            discount: '2179',
-                            serviceCharge: '0',
-                            adServiceCharge: '300'
+                            number: "888",
+                            type: "Люкс",
+                            cost: "9990",
+                            discount: "2179",
+                            serviceCharge: "0",
+                            adServiceCharge: "300"
                         })
         .room-details__footer
-            +footer('Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
+            +footer("Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
                         [{
-                            text: 'О нас',
-                            title: 'навигация'
+                            text: "О нас",
+                            title: "навигация"
                         },
                         {
-                            text: 'Новости'
+                            text: "Новости"
                         },
                         {
-                            text: 'Служба поддержки'
+                            text: "Служба поддержки"
                         },
                         {
-                            text: 'Услуги'
+                            text: "Услуги"
                         }],
                         [{
-                            text: 'О сервисе',
-                            title: 'о нас'
+                            text: "О сервисе",
+                            title: "о нас"
                         },
                         {
-                            text: 'Наша команда'
+                            text: "Наша команда"
                         },
                         {
-                            text: 'Вакансии'
+                            text: "Вакансии"
                         },
                         {
-                            text: 'Инвесторы'
+                            text: "Инвесторы"
                         }],
                         [{
-                            text: 'Соглашения',
-                            title: 'Служба поддержки'
+                            text: "Соглашения",
+                            title: "Служба поддержки"
                         },
                         {
-                            text: 'Сообщества'
+                            text: "Сообщества"
                         },
                         {
-                            text: 'Связь с нами'
+                            text: "Связь с нами"
                         }],{
-                            title: 'Подписка',
-                            description: 'Получайте специальные предложения и новости сервиса'
+                            title: "Подписка",
+                            description: "Получайте специальные предложения и новости сервиса"
                         },{        
-                            type: 'email',
-                            name: 'Email',
-                            value: '',
-                            placeholder: 'Email'
+                            type: "email",
+                            name: "Email",
+                            value: "",
+                            placeholder: "Email"
                         })
 
                        
-            +copyright-bar('Copyright © 2018 Toxin отель. Все права зачищены')
+            +copyright-bar("Copyright © 2018 Toxin отель. Все права зачищены.")
 
 
     <script type="text/javascript" src="/jQuery/jquery-3.4.0.js"></script>          
@@ -184,7 +186,7 @@ block content
     <script type="text/javascript" src="/jQuery/jquery.datepicker.extension.range.min.js"></script>        
     <script type="text/javascript" src="/jQuery/jquery.maskedinput.js"></script>
     <script type="text/javascript" src="/components/quantity-buttons/quantity-buttons.js"></script>
-    <script type='text/javascript' src='/components/like-button/like-button.js'></script>
+    <script type="text/javascript" src="/components/like-button/like-button.js"></script>
     <script type="text/javascript" src="/components/dropdown-guests/dropdown-guests.js"></script> 
     <script type="text/javascript" src="/components/datepicker/datepicker.js"></script>
     <script type="text/javascript" src="/components/room-reservation/room-reservation.js"></script>

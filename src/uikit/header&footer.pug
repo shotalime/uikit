@@ -12,124 +12,126 @@ block content
         .header-standart
             +header([
                 {
-                    text: 'Home',
-                    icon: ''
+                    text: "Home",
+                    icon: ""
                 },
                 {
-                    text: 'About Us',
-                    icon: ''
+                    text: "About Us",
+                    icon: ""
                 },
                 {
-                    text: 'Services',
-                    icon: 'expand_more'
+                    text: "Services",
+                    icon: "expand_more"
                 },
                 {
-                    text: 'Careers',
-                    icon: ''
+                    text: "Careers",
+                    icon: ""
                 },
                 {
-                    text: 'News',
-                    icon: ''
+                    text: "News",
+                    icon: ""
                 },
                 {
-                    text: 'Documentation',
-                    icon: ''
+                    text: "Documentation",
+                    icon: ""
                 }],{
                     is_registered: false
                 },{
-                    nickname: ''
+                    nickname: ""
                 },[{
-                    type: 'button', 
-                    name: 'login', 
-                    text: 'Login'
+                    type: "button", 
+                    name: "login", 
+                    text: "Login",
+                    onclick: "window.location='/registration.html'"
                 },{
-                    type: 'button', 
-                    name: 'register', 
-                    text: 'Register'
+                    type: "button", 
+                    name: "register", 
+                    text: "Register",
+                    onclick: "window.location='/registration.html'"
                 }])
 
         .header-registered
             +header([
                 {
-                    text: 'Home',
-                    icon: ''
+                    text: "Home",
+                    icon: ""
                 },
                 {
-                    text: 'About Us',
-                    icon: ''
+                    text: "About Us",
+                    icon: ""
                 },
                 {
-                    text: 'Services',
-                    icon: 'expand_more'
+                    text: "Services",
+                    icon: "expand_more"
                 },
                 {
-                    text: 'Careers',
-                    icon: ''
+                    text: "Careers",
+                    icon: ""
                 },
                 {
-                    text: 'News',
-                    icon: ''
+                    text: "News",
+                    icon: ""
                 },
                 {
-                    text: 'Documentation',
-                    icon: ''
+                    text: "Documentation",
+                    icon: ""
                 }],{
                     is_registered: true
                 },{
-                    nickname: 'Cosmin Negoita'
+                    nickname: "Cosmin Negoita"
                 })
 
         .footer-standart
-            +footer('Lorem ipsum dolor sit amet consectetur adipiscing' + 
-            ' elit aliquam eget nullam pellentesque aliquam curabitur cociis.',
+            +footer("Lorem ipsum dolor sit amet consectetur adipiscing" + 
+            " elit aliquam eget nullam pellentesque aliquam curabitur cociis.",
             [{
-                text: 'About Us',
-                title: 'Navigation'
+                text: "About Us",
+                title: "Navigation"
             },
             {
-                text: 'News'
+                text: "News"
             },
             {
-                text: 'Support'
+                text: "Support"
             },
             {
-                text: 'Products'
+                text: "Products"
             }],
             [{
-                text: 'Who we are',
-                title: 'About Us'
+                text: "Who we are",
+                title: "About Us"
             },
             {
-                text: 'Our team'
+                text: "Our team"
             },
             {
-                text: 'Careers'
+                text: "Careers"
             },
             {
-                text: 'Investors'
+                text: "Investors"
             }],
             [{
-                text: 'Documentation',
-                title: 'Support'
+                text: "Documentation",
+                title: "Support"
             },
             {
-                text: 'Community'
+                text: "Community"
             },
             {
-                text: 'Get in Touch'
+                text: "Get in Touch"
             }],{
-                title: 'Subscribe to our newsletter',
-                description: 'Receive our latest news and promotions in your inbox!'
+                title: "Subscribe to our newsletter",
+                description: "Receive our latest news and promotions in your inbox!"
             },{        
-                type: 'email',
-                name: 'Email',
-                value: '',
-                placeholder: 'Your email address'
+                type: "email",
+                name: "Email",
+                value: "",
+                placeholder: "Your email address"
             })
             
 
         .copyright-bar-standart
-            +copyright-bar('Copyright © 2018 Toxin UI Kit. All rights reserved.')
+            +copyright-bar("Copyright © 2018 Toxin UI Kit. All rights reserved.")
 
         .footer-creative-standart
-            +footer-creative('Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.')
+            +footer-creative("Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.")

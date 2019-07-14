@@ -14,36 +14,38 @@ block content
             .room-details__header
                 +header([
                             {
-                                text: 'О нас',
-                                icon: ''
+                                text: "О нас",
+                                icon: ""
                             },
                             {
-                                text: 'Услуги',
-                                icon: 'expand_more'
+                                text: "Услуги",
+                                icon: "expand_more"
                             },
                             {
-                                text: 'Вакансии',
-                                icon: ''
+                                text: "Вакансии",
+                                icon: ""
                             },
                             {
-                                text: 'Новости',
-                                icon: ''
+                                text: "Новости",
+                                icon: ""
                             },
                             {
-                                text: 'Соглашения',
-                                icon: 'expand_more'
+                                text: "Соглашения",
+                                icon: "expand_more"
                             }],{
                                 is_registered: false
                             },{
-                                nickname: ''
+                                nickname: ""
                             },[{
-                                type: 'button', 
-                                name: 'login', 
-                                text: 'Войти'
+                                type: "button", 
+                                name: "login", 
+                                text: "Войти",
+                                onclick: "window.location='/login.html'"
                             },{
-                                type: 'button', 
-                                name: 'register', 
-                                text: 'Зарегистрироваться'
+                                type: "button", 
+                                name: "register", 
+                                text: "Зарегистрироваться",
+                                onclick: "window.location='/registration.html'"
                             }])
             article.registration__article
                 .registration__registration-card
@@ -52,49 +54,49 @@ block content
 
 
         .registration__footer
-            +footer('Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
+            +footer("Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
                         [{
-                            text: 'О нас',
-                            title: 'навигация'
+                            text: "О нас",
+                            title: "навигация"
                         },
                         {
-                            text: 'Новости'
+                            text: "Новости"
                         },
                         {
-                            text: 'Служба поддержки'
+                            text: "Служба поддержки"
                         },
                         {
-                            text: 'Услуги'
+                            text: "Услуги"
                         }],
                         [{
-                            text: 'О сервисе',
-                            title: 'о нас'
+                            text: "О сервисе",
+                            title: "о нас"
                         },
                         {
-                            text: 'Наша команда'
+                            text: "Наша команда"
                         },
                         {
-                            text: 'Вакансии'
+                            text: "Вакансии"
                         },
                         {
-                            text: 'Инвесторы'
+                            text: "Инвесторы"
                         }],
                         [{
-                            text: 'Соглашения',
-                            title: 'Служба поддержки'
+                            text: "Соглашения",
+                            title: "Служба поддержки"
                         },
                         {
-                            text: 'Сообщества'
+                            text: "Сообщества"
                         },
                         {
-                            text: 'Связь с нами'
+                            text: "Связь с нами"
                         }],{
-                            title: 'Подписка',
-                            description: 'Получайте специальные предложения и новости сервиса'
+                            title: "Подписка",
+                            description: "Получайте специальные предложения и новости сервиса"
                         },{        
-                            type: 'email',
-                            name: 'Email',
-                            value: '',
-                            placeholder: 'Email'
+                            type: "email",
+                            name: "Email",
+                            value: "",
+                            placeholder: "Email"
                         })
-            +copyright-bar('Copyright © 2018 Toxin отель. Все права зачищены')
+            +copyright-bar("Copyright © 2018 Toxin отель. Все права зачищены.")

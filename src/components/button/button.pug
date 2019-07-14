@@ -1,25 +1,13 @@
 mixin button(obj)
-    button.button(type=obj.type name=obj.name form=obj.form value=obj.value)=obj.text
+    button.button(type=obj.type name=obj.name form=obj.form value=obj.value onclick=obj.onclick)=obj.text
 
 mixin button_framed(obj)
     .button_framed__wrap
-        button.button_framed(type=obj.type name=obj.name form=obj.form value=obj.value)=obj.text
+        button.button_framed(type=obj.type name=obj.name form=obj.form value=obj.value onclick=obj.onclick)=obj.text
 
 mixin button_unframe(obj)
-    button.button.button_unframe(type=obj.type name=obj.name form=obj.form value=obj.value)=obj.text
+    button.button.button_unframe(type=obj.type name=obj.name form=obj.form value=obj.value onclick=obj.onclick)=obj.text
 
 mixin button_link(obj)
-    button.button.button_link(type=obj.type name=obj.name form=obj.form value=obj.value)=obj.text
+    button.button.button_link(type=obj.type name=obj.name form=obj.form value=obj.value onclick=obj.onclick)=obj.text
         .button_link__arrow.material-icons
-//- style:
-        button_style_solid
-        button_style_framed
-        button_style_noframe
-        button_style_noframe-gray
-        button_style_link
-
- mixin button(name, text, style, wrap, view)
-    div(class= wrap)
-        button.button(type=view name= name class= style)
-            span.button__text!= text
-            span.button__arrow.material-icons

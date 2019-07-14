@@ -54,10 +54,10 @@
       url('materialIcons-Regular.svg') format('svg'),
       url('materialIcons-Regular.woff') format('woff'),
       url('materialIcons-Regular.ttf') format('truetype');
-  }
+}
 
 
-  @font-face {
+@font-face {
     font-family: 'Font Awesome 5 Brands-Regular';
     font-style: normal;
     font-weight: 400;
@@ -65,4 +65,4 @@
       url('Font Awesome 5 Brands-Regular.svg') format('svg'),
       url('Font Awesome 5 Brands-Regular.woff') format('woff'),
       url('Font Awesome 5 Brands-Regular.ttf') format('truetype');
-  }
+}

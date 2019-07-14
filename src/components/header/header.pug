@@ -8,7 +8,7 @@ mixin header(header_array, is_registered, user, button)
                 +logo-color
             nav.header__nav
                 - for(var i=0; i<header_array.length; i++)
-                    a.header__nav-item(href='#') 
+                    a.header__nav-item(href="/components/change-me.pug") 
                         span.header__nav-item-text
                             !=header_array[i].text
                         span.header__nav-item-icon.material-icons
@@ -24,32 +24,32 @@ mixin header(header_array, is_registered, user, button)
 
 //- +header([
 //-                 {
-//-                     text: 'Home',
-//-                     icon: ''
+//-                     text: "Home",
+//-                     icon: ""
 //-                 },
 //-                 {
-//-                     text: 'About Us',
-//-                     icon: ''
+//-                     text: "About Us",
+//-                     icon: ""
 //-                 },
 //-                 {
-//-                     text: 'Services',
-//-                     icon: 'expand_more'
+//-                     text: "Services",
+//-                     icon: "expand_more"
 //-                 },
 //-                 {
-//-                     text: 'Careers',
-//-                     icon: ''
+//-                     text: "Careers",
+//-                     icon: ""
 //-                 },
 //-                 {
-//-                     text: 'News',
-//-                     icon: ''
+//-                     text: "News",
+//-                     icon: ""
 //-                 },
 //-                 {
-//-                     text: 'Documentation',
-//-                     icon: ''
+//-                     text: "Documentation",
+//-                     icon: ""
 //-                 }],{
 //-                     is_registered: false
 //-                 },{
-//-                     nickname: ''
+//-                     nickname: ""
 //-                 },[{
 //-                     name: "login", 
 //-                     text: "LOGIN", 
