@@ -1,15 +1,17 @@
 extends layouts/uikit
 
 block variables
+    - var title="Colors & type-kit"
+
+block content
+    
+    include ./../components/logo/logo.pug
+
     mixin rectangle-card(colorName, colorCode)
         .colorDescription
             .rectangle
             h2.rectangle_color-name #{colorName}
             h2.rectangle_color-code #{colorCode}
-
-block content
-    
-    include ./../components/logo/logo.pug
 
     .container
         .rectangles 
