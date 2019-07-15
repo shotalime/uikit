@@ -4,7 +4,7 @@ include ../datepicker/datepicker
 include ../dropdown-guests/dropdown-guests
 
 mixin room-reservation(room)
-    form.room-reservation
+    form.room-reservation(action="" method="post")
         .room-reservation__item-wrap.room-reservation__header
             span.room-reservation__number-sym № 
             span.room-reservation__number 
