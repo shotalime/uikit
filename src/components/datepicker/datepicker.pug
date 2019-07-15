@@ -3,13 +3,13 @@ mixin datepicker
     .datepicker__wrap
         .datepicker
         .datepicker__buttons
-            +button_unframe({
+            +button_unframe-cancel({
                     type: 'button',
-                    name: 'clear',
+                    name: 'datepicker_clear',
                     text: 'Очистить',
                 })
             +button_unframe({
                     type: 'button',
-                    name: 'accept',
+                    name: 'datepicker_accept',
                     text: 'Применить',
                 })

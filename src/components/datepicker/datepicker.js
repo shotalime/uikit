@@ -23,13 +23,13 @@ jQuery(function($) {
       
       $('.datepicker').datepicker('setDate', ['+3d', '+7d']);
     
-      $('[name=accept]').on('click', function(){
+      $('[name=datepicker_accept]').on('click', function(){
 
         $('.datepicker__wrap').addClass('datepicker__wrap-hide');
 
       });
 
-      $('[name=clear]').on('click', function(){
+      $('[name=datepicker_clear]').on('click', function(){
 
         $( '.datepicker' ).datepicker('setDate', [null, null]);
         $('[name=startDate]').val("ДД.ММ.ГГ");
