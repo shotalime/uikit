@@ -59,7 +59,7 @@ jQuery(function($) {
                 
         });
         
-        $(this).find(".dropdown-guests__clear").on('click', function() {
+        $(this).find("[name='clear']").on('click', function() {
             
             $(this).parents('.dropdown-guests').find(".quantity-buttons__input").val(0);
             $(this).parents('.dropdown-guests').find('.dropdown-guests__input').val("0 гостей");
@@ -73,14 +73,14 @@ jQuery(function($) {
             
         });
     
-        $(".dropdown-guests__accept").on('click', function() {
+        $("[name='accept']").on('click', function() {
             $(this).parents(".dropdown-guests__wrap").removeClass( "dropdown-guests__wrap-visible" );
             $(this).parents(".dropdown-guests__wrap").prev('.dropdown-guests__button').removeClass( "dropdown-guests__button-visible" );
         });
 
-        $(".dropdown-guests__clear").css('visibility', 'hidden');
+        $("[name='clear']").css('visibility', 'hidden');
         $(this).find('.quantity-buttons__button').on('click', function() {
-            $(".dropdown-guests__clear").css('visibility', 'visible');
+            $("[name='clear']").css('visibility', 'visible');
         });
 
         

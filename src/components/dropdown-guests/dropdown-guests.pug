@@ -1,4 +1,7 @@
 include ../quantity-buttons/quantity-buttons
+include ../button/button
+
+
 mixin dropdown-guests
     .dropdown-guests
         .dropdown-guests__button
@@ -15,7 +18,15 @@ mixin dropdown-guests
             .dropdown-guests__babies.dropdown-guests__buttons
                 div Младенцы
                 +quantity-buttons
-            .dropdown-guests__buttons
-                button.dropdown-guests__clear.dropdown-guests__buttons-no-background Очистить   
-                button.dropdown-guests__accept.dropdown-guests__buttons-no-background Применить  
+            .dropdown-guests__buttons.dropdown-guests__control
+                +button_unframe-cancel({
+                    type: "button",
+                    name: "clear",
+                    text: "Очистить",
+                }) 
+                +button_unframe({
+                    type: "button",
+                    name: "accept",
+                    text: "Применить",
+                })
         

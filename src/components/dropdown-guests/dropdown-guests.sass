@@ -3,7 +3,7 @@
     
 .dropdown-guests__wrap
     width: inherit
-    height: 159px
+    height: 157px
     border: 1px solid nth($colors, 4)
     background: #ffffff
     border-top: none
@@ -23,6 +23,18 @@
     background: #ffffff
     z-index: 5
     
+.dropdown-guests__input
+    background: none
+    border: none
+    +body-text
+    line-height: 129%
+    cursor: pointer
+
+.quantity-buttons
+    display: inline-block
+
+.dropdown-guests__input-arrow
+    color: nth($colors, 3)
 
 .dropdown-guests__button
     display: flex
@@ -48,34 +60,5 @@
     +label-text
 
 
-.dropdown-guests__buttons:last-child
-    padding-top: 13px 
-    padding-right: 0px
-
-
-.dropdown-guests__input
-    background: none
-    border: none
-    +body-text
-    line-height: 129%
-    cursor: pointer
-
-.quantity-buttons
-    display: inline-block
-    
-
-.dropdown-guests__buttons-no-background
-    border: none
-    background: none
-    +label-text
-    cursor: pointer
-
-.dropdown-guests__clear
+.dropdown-guests__control
     padding: 0
-    color: nth($colors, 3)
-
-.dropdown-guests__accept
-    color: nth($colors, 6)
-
-.dropdown-guests__input-arrow
-    color: nth($colors, 3)

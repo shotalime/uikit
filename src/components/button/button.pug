@@ -8,6 +8,9 @@ mixin button_framed(obj)
 mixin button_unframe(obj)
     button.button.button_unframe(type=obj.type name=obj.name form=obj.form value=obj.value onclick=obj.onclick)=obj.text
 
+mixin button_unframe-cancel(obj)
+    button.button.button_unframe-cancel(type=obj.type name=obj.name form=obj.form value=obj.value onclick=obj.onclick)=obj.text
+
 mixin button_link(obj)
     button.button.button_link(type=obj.type name=obj.name form=obj.form value=obj.value onclick=obj.onclick)=obj.text
         .button_link__arrow.material-icons
