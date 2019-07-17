@@ -66,3 +66,25 @@
       url('Font Awesome 5 Brands-Regular.woff') format('woff'),
       url('Font Awesome 5 Brands-Regular.ttf') format('truetype');
 }
+
+
+@font-face {
+    font-family: 'opensans';
+    src: url('OpenSans-Regular.woff') format('woff'),
+         url('OpenSans-Regular.ttf') format('truetype'),
+         url('OpenSans-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'opensans';
+    src: url('OpenSans-Bold.woff') format('woff'),
+         url('OpenSans-Bold.ttf') format('truetype'),
+         url('OpenSans-Bold.svg') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
