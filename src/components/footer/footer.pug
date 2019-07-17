@@ -2,7 +2,7 @@ include ../logo-color/logo-color
 include ../subscription-text-field/subscription-text-field
 mixin nav(nav_array)
     - for(var i=0; i<nav_array.length; i++)
-                    a.footer__nav-item(href="/components/change-me.pug") 
+                    a.footer__nav-item(href=nav_array[i].link) 
                             !=nav_array[i].text
 
 mixin footer(description, navigation, aboutus, support, subscription, subscriptionInput)
