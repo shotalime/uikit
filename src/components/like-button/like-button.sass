@@ -4,40 +4,34 @@
     position: relative
     border: 1px solid nth($colors, 4)
     border-radius: 10px
-    
-
 
 .like-button_clicked
-    width: 40px 
-    height: 20px
-    position: relative
-    border-radius: 10px
     border-color: transparent
     color: nth($colors, 6) 
     +primary-gradient
+    box-sizing: padding-box
 
-.like-button__button
+.like-button__button 
+    position: absolute
+    width: 100% 
+    height: 100%
+    margin: 0
+    padding: 0
+    border: none
+    border-radius: inherit
+    border-color: transparent
+    +label-text
+    color: nth($colors, 4) 
+    background-color: #ffffff    
+    cursor: pointer
+    outline: none  
+    font-size: 10px
+
+.like-button__text
     position: relative
     display: flex
     justify-content: space-around
     align-items: center
-    width: 38px 
-    height: 100%
-    padding: 0 6px 0 1px
-    border-radius: inherit
-    +label-text
-    color: nth($colors, 4)    
-    background-color: #ffffff
-    // background-clip: padding-box
-    border-color: transparent
-    cursor: pointer
-    outline: none  
-    font-size: 10px
-    line-height: 9px
-    cursor: pointer   
-    border-width: 1px
-    
-    
 
 .like-button__button .material-icons
     font-size: 10px
@@ -46,12 +40,8 @@
 
 .like-button__button_clicked
     color: nth($colors, 6)
-    position: relative
-    // background-clip: padding-box
-    border: solid 1px transparent
     border-radius: inherit
 
-
-
 .like-button__count
-    padding-left: 0px
+    padding-right: 6px
+
