@@ -36,14 +36,14 @@ jQuery(function($) {
     calculationСostTotal(cost, daysCount);
     calculationInTotalVal(cost, daysCount, discount, serviceCharge, adServiceCharge);
 
-    $('.room-reservation').find('[name = accept]').on('click', function() {
+    $('.room-reservation').find('[name = datepicker_accept]').on('click', function() {
 
         //Расчет количества дней
 
         startDate = $('.date-dropdown').find('[name = startDate]').val();
         endDate = $('.date-dropdown').find('[name = endDate]').val();
         daysCount = count_diff(endDate, startDate);
-
+        alert("a")
         //Расчет стоимости
 
         calculationСostItem(cost, daysCount);
