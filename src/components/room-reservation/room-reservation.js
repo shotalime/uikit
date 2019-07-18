@@ -43,7 +43,7 @@ jQuery(function($) {
         startDate = $('.date-dropdown').find('[name = startDate]').val();
         endDate = $('.date-dropdown').find('[name = endDate]').val();
         daysCount = count_diff(endDate, startDate);
-        alert("a")
+
         //Расчет стоимости
 
         calculationСostItem(cost, daysCount);
